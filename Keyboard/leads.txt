@@ -1,2 +1,0 @@
-https://www.instructables.com/Make-a-ThinkPad-keyboard-USB-adapter-with-Arduino/
-https://github.com/rampadc/arduino-thinkpadkb-usb

@@ -1,0 +1,17 @@
+,SENSE<0>,SENSE<1>,SENSE<2>,SENSE<3>,SENSE<4>,SENSE<5>,SENSE<6>,SENSE<7>
+DRIVE<0>,Back-Tick,1,Q,Tab,A,Esc,Z,
+DRIVE<1>,F1,2,W,Caps-Lock,S,ISO-102,X,
+DRIVE<2>,F2,3,E,F3,D,F4,C,
+DRIVE<3>,5,4,R,T,F,G,V,B
+DRIVE<4>,6,7,U,Y,J,H,M,N
+DRIVE<5>,Equal,8,I,Right-Brace,K,F6,Comma,
+DRIVE<6>,F8,9,O,F7,L,,Period,
+DRIVE<7>,Minus,0,P,Left-Brace,Semi-colon,Quote,ISO-103,Forward-Slash
+DRIVE<8>,F9,F10,,Back-Space,Back-Slash,F5,Enter,Space
+DRIVE<9>,Insert,F12,,,,,,Arrow-Right
+DRIVE<10>,Delete,F11,Volume-Up,Volume-Down,Mute,Think-Vantage,,Arrow-Down
+DRIVE<11>,Page-Up,Page-Down,GUI,,Menu,,Page-Left,Page-Right
+DRIVE<12>,Home,End,,,,Arrow-Up,Pause,Arrow-Left
+DRIVE<13>,,Print-Screen,Scroll-Lock,,,Alt-L,,Alt-R
+DRIVE<14>,,,,Shift-L,,,Shift-R,
+DRIVE<15>,Ctrl-L,,,,,,Ctrl-R,
