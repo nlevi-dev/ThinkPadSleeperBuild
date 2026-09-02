@@ -1,0 +1,13 @@
+Keyboard Connector
+
+Circuit Count: 40 Positions (Dual Row)
+Contact Pitch: 0.50 mm
+Center Island Size: 9.7 mm (Length) × 1.1 mm (Width)
+Mating Insertion Depth: 1.2 mm
+
+Confirmed Parts:
+- JAE AA01B-S040VA1-R3000
+
+Unconfimed Parts:
+- Molex SlimStack 543630478
+- Molex SlimStack 543630479

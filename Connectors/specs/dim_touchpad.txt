@@ -1,0 +1,10 @@
+Touchpad Connector
+
+Circuit Count: 20 Positions (Dual Row)
+Contact Pitch: 0.30 mm
+Mating Cavity Opening: 5.60 mm (Length) × 2.50 mm (Width)
+Mating Insertion Depth: 2.00 mm
+
+Unconfimed Parts:
+- Hirose DF12NB(3.0)-20DP-0.5V(51) 
+- TXGA FBB05008-F20S1013W5MH44
