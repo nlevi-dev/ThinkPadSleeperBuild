@@ -1,0 +1,21 @@
+Hydis HV150UX2-100
+- 15 inch
+- 1600 x 1200
+- LED backlight
+- LVDS
+- Drop in replacement: NO
+- https://www.tpart.net/product/hv150ux2-100-led-inverter-screen-cable-set-for-t60-t70-t700-led-back-light
+
+Samsung_LTN141P4-L03
+- 14 inch
+- 1400 x 1050
+- CCFL backlight
+- LVDS
+- Drop in replacement: YES
+
+Innolux G150XJE-E01
+- 15 inch
+- 1024 x 768
+- LED backlight
+- EDP
+- Drop in replacement: NO
