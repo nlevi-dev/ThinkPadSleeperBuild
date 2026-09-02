@@ -24,7 +24,7 @@ See [Candidates](Candidates/candidates.md) for the full list of boards that fit.
 `arduino.sh` in the root compiles, uploads, and opens a serial monitor for a given sketch. Usage:
 
 ```
-./arduino.sh Keyboard/scanner
+./arduino.sh Keyboard/test_keyboard
 ```
 
 Requires [arduino-cli](https://arduino.github.io/arduino-cli/). Targets `/dev/ttyUSB0` at 9600 baud.
@@ -35,7 +35,7 @@ Requires [arduino-cli](https://arduino.github.io/arduino-cli/). Targets `/dev/tt
 |---|---|
 | [Candidates](Candidates/candidates.md) | Candidate laptops that fit the chassis dimensions |
 | [Connectors](Connectors/connectors.md) | T60 internal connector specs and replacement leads |
-| [Keyboard](Keyboard/keyboard.md) | Matrix interface, PS2 joystick, breakout board, verified matrix |
+| [Keyboard](Keyboard/keyboard.md) | Matrix interface, TrackPoint, breakout board, verified matrix |
 | [Touchpad](Touchpad/touchpad.md) | PS2 interface, connector status |
 | [Screen](Screen/screen.md) | Panel options, CCFL→LED swap, LVDS problem |
 | [Sound](Sound/sound.md) | Current status |

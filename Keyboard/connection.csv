@@ -35,7 +35,7 @@ JAE Pin,Arduino Mega Pin,Signal Name
 34,,PWR GND
 35,,No connect NC
 36,47,HOTKEY_RTN
-37,,Level Translated TP_DATA
-38,,5 volts from TPS60150 TP_5V
-39,,Level Translated TP_CLK
-40,,Reset Generator TP_RESET
+37,2,TP_DATA
+38,,TP_5V
+39,3,TP_CLK
+40,48,TP_RESET
