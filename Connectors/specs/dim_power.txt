@@ -1,6 +1,0 @@
-DC-in Header
-
-Circuit Count: 5 Positions
-Contact Pitch: 2.50 mm
-Housing Body Envelope: 14.30 mm (Length) × 3.45 mm (Width)
-Pin Excursion: 4.20 mm

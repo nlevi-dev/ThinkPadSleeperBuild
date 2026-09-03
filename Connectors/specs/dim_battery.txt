@@ -1,9 +1,0 @@
-Battery Connector
-
-Circuit Count: 8 Positions
-Contact Pitch: 2.00 mm
-Contact Terminal Width: 0.55 mm
-Contact Terminal Length: 4.20 mm / 3.50 mm (Dual-length contacts)
-Contact Terminal Height: 2.60 mm (Above PCB reference plane)
-Contact Elevation: 0.60 mm (PCB clearance)
-Plastic Boss Dimensions: 1.30 mm (Width) × 5.70 mm (Length)

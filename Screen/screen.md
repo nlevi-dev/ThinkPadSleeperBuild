@@ -8,11 +8,11 @@ The screen situation is probably the most complicated part of the whole build. T
 
 Three panels are in scope. Specs are in this folder.
 
-**Samsung LTN141P4-L03** — 14 inch, 1400x1050, CCFL backlight, LVDS. This is the stock panel and a drop-in fit. No modern eDP replacement has been found for this size.
+**Samsung [LTN141P4-L03](specs_14inch_Samsung_LTN141P4-L03.pdf)** — 14 inch, 1400x1050, CCFL backlight, LVDS. This is the stock panel and a drop-in fit. No modern eDP replacement has been found for this size.
 
-**Hydis HV150UX2-100** — 15 inch, 1600x1200, LED backlight, LVDS. Has a known replacement kit available ([tpart.net](https://www.tpart.net/product/hv150ux2-100-led-inverter-screen-cable-set-for-t60-t70-t700-led-back-light)) but it's not a drop-in — different pinouts and no inverter needed.
+**Hydis [HV150UX2-100](specs_15inch_Hydis_HV150UX2-100.pdf)** — 15 inch, 1600x1200, LED backlight, LVDS. Has a known replacement kit available ([tpart.net](https://www.tpart.net/product/hv150ux2-100-led-inverter-screen-cable-set-for-t60-t70-t700-led-back-light)) but it's not a drop-in — different pinouts and no inverter needed.
 
-**Innolux G150XJE-E01** — 15 inch, 1024x768, LED backlight, eDP. Not a drop-in either, and the resolution is a significant downgrade.
+**Innolux [G150XJE-E01](specs_15inch_Innolux_G150XJE-E01.pdf)** — 15 inch, 1024x768, LED backlight, eDP. Not a drop-in either, and the resolution is a significant downgrade.
 
 ## CCFL → LED Swap
 
@@ -39,4 +39,6 @@ So the path forward is likely sourcing a bridge IC directly and either finding o
 
 ## Connector
 
-The screen assembly connector is 80-position, 0.60 mm pitch. The closest match found (Hirose FX8C-80S-SV) is off by 0.5 mm on the center island width. See [Connectors](../Connectors/connectors.md#screen-assembly) for the full breakdown.
+See [Connectors](../Connectors/connectors.md#screen-assembly) for the confirmed part.
+
+![Screen schematic](../Schematic/specs_Screen.svg)

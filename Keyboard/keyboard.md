@@ -6,13 +6,15 @@ The T60 keyboard is a plain matrix interface — no active components on the key
 
 The connector is confirmed. See [Connectors](../Connectors/connectors.md#keyboard) for the full spec.
 
+![Keyboard schematic](../Schematic/specs_Keyboard.svg)
+
 ## Bridging it
 
 The plan is to make a fully open source version. Prototyping started with a breakout board and an Arduino Mega to reverse engineer the matrix.
 
 The main reference is Frank Adams' Pi Pico T61 keyboard controller — practically a complete solution, just not widely surfaced. The Scribd document is mirrored locally at `docs/specs.pdf` since Scribd is paywalled behind ads. The GitHub repo has the full source:
 
-- `docs/specs.pdf` — [Pi Pico T61 Keyboard Controller](https://www.scribd.com/document/997574050/Pi-Pico-T61-Keyboard-Controller)
+- [docs/specs.pdf](docs/specs.pdf) — [Pi Pico T61 Keyboard Controller](https://www.scribd.com/document/997574050/Pi-Pico-T61-Keyboard-Controller)
 - [Pico_T61_Keyboard](https://github.com/thedalles77/USB_Laptop_Keyboard_Controller/tree/master/Example_Keyboards/Pico_T61_Keyboard)
 
 The gerber for the breakout board is in this folder: `Gerber_T60_Keyboard-Breakout.zip`

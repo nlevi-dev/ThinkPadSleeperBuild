@@ -1,9 +1,0 @@
-Speaker Header
-
-Circuit Count: 4 Positions
-Contact Pitch: 1.15 mm
-Housing Body Envelope: 5.40 mm (Length) × 2.15 mm (Width)
-Pin Excursion: 0.80 mm
-
-Leads:
-- Molex PicoBlade JT-A1250WV-4P

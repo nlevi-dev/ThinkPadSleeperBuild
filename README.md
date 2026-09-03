@@ -31,14 +31,14 @@ Requires [arduino-cli](https://arduino.github.io/arduino-cli/). Targets `/dev/tt
 
 ## Navigation
 
-| Section | What's in there |
+| Section | Description |
 |---|---|
-| [Candidates](Candidates/candidates.md) | Candidate laptops that fit the chassis dimensions |
-| [Connectors](Connectors/connectors.md) | T60 internal connector specs and replacement leads |
-| [Keyboard](Keyboard/keyboard.md) | Matrix interface, TrackPoint, breakout board, verified matrix |
-| [Touchpad](Touchpad/touchpad.md) | PS2 interface, connector status |
-| [Screen](Screen/screen.md) | Panel options, CCFL→LED swap, LVDS problem |
-| [Sound](Sound/sound.md) | Current status |
-| [Power](Power/power.md) | V2 power delivery challenges |
-| [Cooling](Cooling/cooling.md) | V2 cooling challenges |
+| [Candidates](Candidates/candidates.md) | All boards that physically fit the 14" and 15" chassis, with specs and dimensions |
+| [Connectors](Connectors/connectors.md) | Confirmed T60 internal connectors identified from the original schematic |
+| [Keyboard](Keyboard/keyboard.md) | Full matrix reverse-engineered, TrackPoint over PS2, breakout board gerbers, Arduino test sketches |
+| [Touchpad](Touchpad/touchpad.md) | PS2 interface, connector identified |
+| [Screen](Screen/screen.md) | Panel options, CCFL→LED swap, eDP→LVDS converter problem, 4:3 resolution dead ends |
+| [Sound](Sound/sound.md) | Speaker connector identified, audio bridge TBD |
+| [Power](Power/power.md) | V2 only — USB-C PD chain, battery problem |
+| [Cooling](Cooling/cooling.md) | V2 only — custom cooling approach |
 | [Cosmetic](Cosmetic/cosmetic.md) | Rubberized coating cleanup |
