@@ -28,7 +28,8 @@ All connectors were identified from the original T60 schematic — see [specs_IB
 
 **Status: confirmed from schematic**
 
-- ✅ TE Connectivity [5353190-6](specs_screen_TE_Connectivity_5353190-6.pdf)
+- ✅ TE Connectivity [5353190-6](specs_screen_TE_Connectivity_5353190-6.pdf) — discontinued, unreasonably pricy to source
+- ❓ TE Connectivity 5353190-0 *(140-pin variant of the same connector — middle section may be carefully cut down to 80 pins, unconfirmed)*
 
 ---
 
@@ -36,7 +37,8 @@ All connectors were identified from the original T60 schematic — see [specs_IB
 
 **Status: confirmed from schematic**
 
-- ✅ TE Connectivity [440371-4](specs_speaker_TE_Connectivity_440371-4.pdf)
+- ✅ TE Connectivity [440371-4](specs_speaker_TE_Connectivity_440371-4.pdf) — discontinued, impossible to source
+- ❓ Molex PicoBlade [JT-A1250WV-4P](specs_speaker_Molex_PicoBlade_JT-A1250WV-4P.pdf) *(possible replacement, unconfirmed)*
 
 ---
 
