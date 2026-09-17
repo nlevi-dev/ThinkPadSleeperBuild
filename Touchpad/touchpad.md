@@ -1,6 +1,6 @@
-# Touchpad
-
 ← [Back to README](../README.md)
+
+# Touchpad
 
 The T60 touchpad runs over PS/2. The connector is confirmed. See [Connectors](../Connectors/connectors.md#touchpad) for the full spec.
 

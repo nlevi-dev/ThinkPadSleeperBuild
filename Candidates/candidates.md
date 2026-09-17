@@ -1,6 +1,6 @@
-# Candidates
-
 ← [Back to README](../README.md)
+
+# Candidates
 
 The T60 chassis puts a hard cap on what can physically fit. The 14 inch model allows up to **311 x 255 mm** and the 15 inch up to **329 x 268 mm**. Anything wider or deeper won't close.
 

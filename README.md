@@ -41,4 +41,4 @@ Requires [arduino-cli](https://arduino.github.io/arduino-cli/). Targets `/dev/tt
 | [Sound](Sound/sound.md) | Speaker connector identified, audio bridge TBD |
 | [Power](Power/power.md) | V2 only — USB-C PD chain, battery problem |
 | [Cooling](Cooling/cooling.md) | V2 only — custom cooling approach |
-| [Cosmetic](Cosmetic/cosmetic.md) | Rubberized coating cleanup |
+| [Cosmetic](Cosmetic/cosmetic.md) | Rubberized coating cleanup, broken lid latch hook (3D printed replacement) |

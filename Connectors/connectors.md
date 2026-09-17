@@ -1,6 +1,6 @@
-# Connectors
-
 ← [Back to README](../README.md)
+
+# Connectors
 
 All connectors were identified from the original T60 schematic — see [specs_IBM_Thinkpad_T60.pdf](../Schematic/specs_IBM_Thinkpad_T60.pdf). It's dense but contains a lot of useful information beyond just connectors.
 

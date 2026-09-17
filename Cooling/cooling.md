@@ -1,6 +1,6 @@
-# Cooling
-
 ← [Back to README](../README.md)
+
+# Cooling
 
 *This is a V2 full sleeper concern. V1 keeps the candidate's own cooling solution.*
 

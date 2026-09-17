@@ -1,6 +1,6 @@
-# Screen
-
 ← [Back to README](../README.md)
+
+# Screen
 
 The screen situation is probably the most complicated part of the whole build. There are problems on multiple fronts: the backlight technology, the signal protocol, and the physical connector.
 

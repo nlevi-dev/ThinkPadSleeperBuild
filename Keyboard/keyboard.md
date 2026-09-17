@@ -1,6 +1,6 @@
-# Keyboard
-
 ← [Back to README](../README.md)
+
+# Keyboard
 
 The T60 keyboard is a plain matrix interface — no active components on the keyboard itself, just a grid of switches. It also carries the PS2 TrackPoint lanes on the same cable.
 

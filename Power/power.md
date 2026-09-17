@@ -1,6 +1,6 @@
-# Power Delivery
-
 ← [Back to README](../README.md)
+
+# Power Delivery
 
 *This is a V2 full sleeper concern. V1 keeps the candidate's own battery and charging as-is.*
 

@@ -1,6 +1,6 @@
-# Sound
-
 ← [Back to README](../README.md)
+
+# Sound
 
 This is completely in the dark for now. What kind of bridge is needed between the candidate's audio output and the T60's speakers depends entirely on what the candidate board is actually driving — the output type, impedance, power level — and how that compares to the T60's speakers.
 
