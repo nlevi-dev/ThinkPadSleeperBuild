@@ -17,7 +17,7 @@ All connectors were identified from the original T60 schematic — see [specs_IB
 
 ## Touchpad
 
-**Status: confirmed from schematic**
+**Status: confirmed**
 
 - ✅ Hirose [DF12NB(3.0)-20DP-0.5V(51)](specs_touchpad_Hirose_DF12NB-20DP-05V.pdf) *(primary)*
 - ❓ TXGA [FBB05008-F20S1013W5MH44](specs_touchpad_TXGA_FBB05008-F20S1013W5MH44.pdf) *(secondary)*
