@@ -16,9 +16,11 @@ Three panels are in scope. Specs are in this folder.
 
 ## CCFL → LED Swap
 
-For the 14 inch, one option is to keep the Samsung panel and swap the CCFL backlight for an LED strip using a conversion kit. It's a delicate operation — forums are pretty consistent that the first attempt almost always results in uneven backlight. Not impossible, just fiddly.
+For the 14 inch, one option is to keep the Samsung panel and swap the CCFL backlight for an LED strip. The motivation would be to avoid the inverter circuit and get a more modern backlight.
 
-Best lead: https://www.youtube.com/watch?v=OePaH6EyblY
+In practice it's not worth it. The disassembly is fiddly, there's hidden glue that will cause you to snap the CCFL tube if you don't know about it, and the end result is dimmer than the original with bad color balance.
+
+Full teardown notes and photos from an attempt on the LTN141P4: [backlight.md](backlight.md).
 
 ## The LVDS Problem
 
