@@ -1,0 +1,129 @@
+Address (HEX),FUNCTION,Value (HEX),BIN,DEC,ASCII or Data,Notes
+00,Header,00,00000000,0,,EDID Header
+01,Header,FF,11111111,255,,EDID Header
+02,Header,FF,11111111,255,,EDID Header
+03,Header,FF,11111111,255,,EDID Header
+04,Header,FF,11111111,255,,EDID Header
+05,Header,FF,11111111,255,,EDID Header
+06,Header,FF,11111111,255,,EDID Header
+07,Header,00,00000000,0,,EDID Header
+08,ID Manufacturer Name,4C,01001100,76,SEC,3 character ID
+09,ID Manufacturer Name,A3,10100011,163,SEC,3 character ID
+0A,ID Product Code,00,00000000,0,,
+0B,ID Product Code,00,00000000,0,,
+0C,32-bit serial no.,00,00000000,0,,
+0D,32-bit serial no.,00,00000000,0,,
+0E,32-bit serial no.,00,00000000,0,,
+0F,32-bit serial no.,00,00000000,0,,
+10,Week of manufacture,00,00000000,0,,
+11,Year of manufacture,0D,00001101,13,2003,
+12,EDID Structure Ver.,01,00000001,1,1,EDID Ver. 1.0
+13,EDID revision #,03,00000011,3,3,EDID Rev. 3
+14,Video input definition,80,10000000,128,,
+15,Max H image size,1D,00011101,29,29,29 cm(approx)
+16,Max V image size,15,00010101,21,21,21 cm(approx)
+17,Display Gamma,78,01111000,120,2.2,Gamma 2.2
+18,Feature support,0A,00001010,10,,
+19,Red/green low bits,43,01000011,67,,10000111
+1A,Blue/white low bits,DE,11011110,222,,11111110
+1B,Red x/ high bits,98,10011000,152,0.595,Red x 0.580 = 1001010010
+1C,Red y,57,01010111,87,0.340,Red y 0.340 = 0101011100
+1D,Green x,52,01010010,82,0.320,Green x 0.310 = 0100111101
+1E,Green y,8C,10001100,140,0.550,Green y 0.550 = 1000110011
+1F,Blue x,27,00100111,39,0.155,Blue x 0.155 = 0010011111
+20,Blue y,21,00100001,33,0.130,Blue y 0.155 = 0010011111
+21,White x,50,01010000,80,0.315,White x 0.315 = 0101000011
+22,White y,54,01010100,84,0.330,White y 0.330 = 0101010010
+23,Established timing 1,00,00000000,0,,
+24,Established timing 2,00,00000000,0,,
+25,Established timing 3,00,00000000,0,,
+26,Standard timing #1,01,00000001,1,,not used
+27,Standard timing #1,01,00000001,1,,not used
+28,Standard timing #2,01,00000001,1,,not used
+29,Standard timing #2,01,00000001,1,,not used
+2A,Standard timing #3,01,00000001,1,,not used
+2B,Standard timing #3,01,00000001,1,,not used
+2C,Standard timing #4,01,00000001,1,,not used
+2D,Standard timing #4,01,00000001,1,,not used
+2E,Standard timing #5,01,00000001,1,,not used
+2F,Standard timing #5,01,00000001,1,,not used
+30,Standard timing #6,01,00000001,1,,not used
+31,Standard timing #6,01,00000001,1,,not used
+32,Standard timing #7,01,00000001,1,,not used
+33,Standard timing #7,01,00000001,1,,not used
+34,Standard timing #8,01,00000001,1,,not used
+35,Standard timing #8,01,00000001,1,,not used
+36,Detailed timing/monitor descriptor #1,30,00110000,48,108.00,Main clock = 108.00 MHz
+37,Detailed timing/monitor descriptor #1,2A,00101010,42,108.00,Main clock = 108.00 MHz
+38,Detailed timing/monitor descriptor #1,78,01111000,120,1400,Hor active = 1400 pixels
+39,Detailed timing/monitor descriptor #1,20,00100000,32,288,Hor blanking = 288 pixels
+3A,Detailed timing/monitor descriptor #1,51,01010001,81,,4bit : 4bit
+3B,Detailed timing/monitor descriptor #1,1A,00011010,26,1050,Vertical active = 1050 lines
+3C,Detailed timing/monitor descriptor #1,10,00010000,16,16,Vertical blanking=16 lines
+3D,Detailed timing/monitor descriptor #1,40,01000000,64,,4bit : 4bit
+3E,Detailed timing/monitor descriptor #1,30,00110000,48,48,Hor sync. Offset=24 pixels
+3F,Detailed timing/monitor descriptor #1,70,01110000,112,112,H sync. Width=56 pixels
+40,Detailed timing/monitor descriptor #1,14,00010100,20,1 4,V sync. Offset=1 lines & V sync. Width=4 lines
+41,Detailed timing/monitor descriptor #1,00,00000000,0,,2bit : 2bit :2bit :2bit
+42,Detailed timing/monitor descriptor #1,1E,00011110,30,286,H image size= 286 mm(approx)
+43,Detailed timing/monitor descriptor #1,D6,11010110,214,214,V image size = 214 mm(approx)
+44,Detailed timing/monitor descriptor #1,10,00010000,16,,
+45,Detailed timing/monitor descriptor #1,00,00000000,0,,No Horizontal Border
+46,Detailed timing/monitor descriptor #1,00,00000000,0,,No Vertical Border
+47,Detailed timing/monitor descriptor #1,19,00011001,25,,
+48,Detailed timing/monitor descriptor #2,00,00000000,0,,Manufacturer Specified (Timing)
+49,Detailed timing/monitor descriptor #2,00,00000000,0,,Manufacturer Specified (Timing)
+4A,Detailed timing/monitor descriptor #2,00,00000000,0,,Manufacturer Specified (Timing)
+4B,Detailed timing/monitor descriptor #2,0F,00001111,15,,Manufacturer Specified (Timing)
+4C,Detailed timing/monitor descriptor #2,00,00000000,0,,Manufacturer Specified (Timing)
+4D,Detailed timing/monitor descriptor #2,00,00000000,0,,Value = HSPWmin / 2
+4E,Detailed timing/monitor descriptor #2,00,00000000,0,,Value = HSPWmax / 2
+4F,Detailed timing/monitor descriptor #2,00,00000000,0,,Value = Thbpmin / 2
+50,Detailed timing/monitor descriptor #2,00,00000000,0,,Value = Thbpmax / 2
+51,Detailed timing/monitor descriptor #2,00,00000000,0,,Value = VSPWmin / 2
+52,Detailed timing/monitor descriptor #2,00,00000000,0,,Value = VSPWmax / 2
+53,Detailed timing/monitor descriptor #2,00,00000000,0,,Value = Tvbpmin / 2
+54,Detailed timing/monitor descriptor #2,00,00000000,0,,Value = Tvbpmax / 2
+55,Detailed timing/monitor descriptor #2,0F,00001111,15,,Thpmin = value * 2 + HA pixelclks
+56,Detailed timing/monitor descriptor #2,F2,11110010,242,,Thpmax = value * 2 + HA pixelclks
+57,Detailed timing/monitor descriptor #2,02,00000010,2,,Tvpmin = value * 2 + VA lines
+58,Detailed timing/monitor descriptor #2,4B,01001011,75,,Tvpmax = value * 2 + VA lines
+59,Detailed timing/monitor descriptor #2,00,00000000,0,,Module revision
+5A,Detailed timing/monitor descriptor #3,00,00000000,0,,ASCII Data String Tag
+5B,Detailed timing/monitor descriptor #3,00,00000000,0,,ASCII Data String Tag
+5C,Detailed timing/monitor descriptor #3,00,00000000,0,,ASCII Data String Tag
+5D,Detailed timing/monitor descriptor #3,FE,11111110,254,,ASCII Data String Tag
+5E,Detailed timing/monitor descriptor #3,00,00000000,0,,ASCII Data String Tag
+5F,Detailed timing/monitor descriptor #3,53,01010011,83,[S],
+60,Detailed timing/monitor descriptor #3,41,01000001,65,[A],
+61,Detailed timing/monitor descriptor #3,4D,01001101,77,[M],
+62,Detailed timing/monitor descriptor #3,53,01010011,83,[S],
+63,Detailed timing/monitor descriptor #3,55,01010101,85,[U],
+64,Detailed timing/monitor descriptor #3,4E,01001110,78,[N],
+65,Detailed timing/monitor descriptor #3,47,01000111,71,[G],
+66,Detailed timing/monitor descriptor #3,0A,00001010,10,[^],
+67,Detailed timing/monitor descriptor #3,20,00100000,32,[ ],
+68,Detailed timing/monitor descriptor #3,20,00100000,32,[ ],
+69,Detailed timing/monitor descriptor #3,20,00100000,32,[ ],
+6A,Detailed timing/monitor descriptor #3,20,00100000,32,[ ],
+6B,Detailed timing/monitor descriptor #3,20,00100000,32,[ ],
+6C,Detailed timing/monitor descriptor #4,00,00000000,0,,Monitor Name Tag (ASCII)
+6D,Detailed timing/monitor descriptor #4,00,00000000,0,,Monitor Name Tag (ASCII)
+6E,Detailed timing/monitor descriptor #4,00,00000000,0,,Monitor Name Tag (ASCII)
+6F,Detailed timing/monitor descriptor #4,FE,11111110,254,,Monitor Name Tag (ASCII)
+70,Detailed timing/monitor descriptor #4,00,00000000,0,,Monitor Name Tag (ASCII)
+71,Detailed timing/monitor descriptor #4,4C,01001100,76,[L],
+72,Detailed timing/monitor descriptor #4,54,01010100,84,[T],
+73,Detailed timing/monitor descriptor #4,4E,01001110,78,[N],
+74,Detailed timing/monitor descriptor #4,31,00110001,49,[1],
+75,Detailed timing/monitor descriptor #4,34,00110100,52,[4],
+76,Detailed timing/monitor descriptor #4,31,00110001,49,[1],
+77,Detailed timing/monitor descriptor #4,50,01010000,80,[P],
+78,Detailed timing/monitor descriptor #4,34,00110100,52,[4],
+79,Detailed timing/monitor descriptor #4,2D,00101101,45,[-],
+7A,Detailed timing/monitor descriptor #4,4C,01001100,76,[L],
+7B,Detailed timing/monitor descriptor #4,30,00110000,48,[0],
+7C,Detailed timing/monitor descriptor #4,33,00110011,51,[3],
+7D,Detailed timing/monitor descriptor #4,0A,00001010,10,[^],
+7E,Extension Flag,00,00000000,0,,
+7F,Checksum,5B,01011011,91,,
