@@ -51,14 +51,15 @@ if __name__ == "__main__":
         sys.exit(1)
 
     fw_path, csv_path = sys.argv[1], sys.argv[2]
-    out_path = fw_path.rsplit(".", 1)[0] + "_patched.bin"
+    out_path = fw_path.rsplit(".", 1)[0] + "_patched.txt"
 
     rom  = load_rom(fw_path)
     edid = load_edid_csv(csv_path)
     copies = patch(rom, edid)
 
-    with open(out_path, "wb") as f:
-        f.write(rom)
+    with open(out_path, "w") as f:
+        for i in range(0, len(rom), 16):
+            f.write(" ".join(f"{b:02X}" for b in rom[i:i+16]) + "\n")
 
     print(f"Patched {copies} EDID copies -> {out_path}")
     print(f"Checksum: 0x{edid[0x7F]:02X}")
