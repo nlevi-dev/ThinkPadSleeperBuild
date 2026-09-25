@@ -39,6 +39,14 @@ Off-the-shelf converters are mostly built for 16:9 common resolutions and won't 
 
 So the path forward is likely sourcing a bridge IC directly and either finding one with the right resolution support or going deeper into the datasheet to see if it can be configured.
 
+### CS5211 ROM notes
+
+The CS5211's 8 KiB serial ROM dump has been mapped into repeated EDID slots,
+bridge configuration data, and 8051 firmware. It has no RGB/gamma calibration
+lookup table, so it is not a promising way to correct the poor colour balance
+from the CCFL-to-LED conversion. See [DumpROM notes](DumpROM/README.md) for the
+layout, reproducible analyzer, and the configuration-table location.
+
 ## Connector
 
 See [Connectors](../Connectors/connectors.md#screen-assembly) for the confirmed part.
