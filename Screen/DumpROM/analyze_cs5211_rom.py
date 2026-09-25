@@ -11,6 +11,9 @@ from pathlib import Path
 EDID_SIZE = 128
 ROM_SIZE = 8192
 FIRMWARE_OFFSET = 0x1000
+PROFILE_BASE = 0x1010
+PROFILE_COUNT = 16
+PROFILE_SIZE = 16
 
 
 def load_hex_dump(path: Path) -> bytes:
@@ -81,6 +84,12 @@ def main() -> None:
     )
     print(f"8051 reset vector: {firmware[:3].hex(' ')}")
     print("panel constants: firmware 0x0110–0x0122 (ROM 0x1110–0x1122)")
+    profiles = [
+        rom[PROFILE_BASE + profile * PROFILE_SIZE : PROFILE_BASE + (profile + 1) * PROFILE_SIZE]
+        for profile in range(PROFILE_COUNT)
+    ]
+    print(f"GPIO profile records: {PROFILE_COUNT}; unique records: {len(set(profiles))}")
+    print("profile[0]: " + profiles[0].hex(" "))
     luts = monotonic_lut_lengths(firmware)
     print("monotonic LUT candidates: " + (str(luts) if luts else "none"))
 

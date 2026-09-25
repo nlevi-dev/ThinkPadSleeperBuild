@@ -42,10 +42,13 @@ So the path forward is likely sourcing a bridge IC directly and either finding o
 ### CS5211 ROM notes
 
 The CS5211's 8 KiB serial ROM dump has been mapped into repeated EDID slots,
-bridge configuration data, and 8051 firmware. It has no RGB/gamma calibration
-lookup table, so it is not a promising way to correct the poor colour balance
-from the CCFL-to-LED conversion. See [DumpROM notes](DumpROM/README.md) for the
-layout, reproducible analyzer, and the configuration-table location.
+bridge configuration data, and 8051 firmware. Its 16 selectable firmware
+profiles are currently identical and program the LVDS output registers during
+boot. This is the likely cause of the post-EDID-patch colour artifacts: the
+replacement panel expects three-lane, dual-pixel 18-bit LVDS, while the bridge
+is likely outputting VESA/SPWG 24-bit mapping. See [DumpROM notes]
+(DumpROM/README.md) for the layout, reproducible analyzer, and controlled
+profile-test tool.
 
 ## Connector
 
