@@ -65,6 +65,17 @@ Off-the-shelf converters are mostly built for common 16:9 resolutions and won't 
 
 Detailed public documentation is hard to come by for all of them. The standout is the [CS5211](docs/specs_CapStone_CS5211.pdf) — it has the most open documentation, mostly surfaced through Chinese electronics forums. There's also a relatively well-documented third-party board design by [Shenzhen Jingxin Quartz Technology](docs/specs_JX_EDP_LVDS_CS5211.pdf) built around it, with schematics and notes that have circulated widely. More notes and teardown on that design: [lvds.md](lvds.md).
 
+### CS5211 ROM notes
+
+The CS5211's 8 KiB serial ROM dump has been mapped into repeated EDID slots,
+bridge configuration data, and 8051 firmware. Its 16 selectable firmware
+profiles are currently identical and program the LVDS output registers during
+boot. This is the likely cause of the post-EDID-patch colour artifacts: the
+replacement panel expects three-lane, dual-pixel 18-bit LVDS, while the bridge
+is likely outputting VESA/SPWG 24-bit mapping. See [DumpROM notes]
+(DumpROM/README.md) for the layout, reproducible analyzer, and controlled
+profile-test tool.
+
 ## Connector
 
 See [Connectors](../Connectors/connectors.md#screen-assembly) for the confirmed part.
