@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-import os, time, glob, serial, subprocess, logging
+import os, time, glob, serial, subprocess, logging, shutil, argparse
 import cv2, requests
-from tqdm import tqdm
 
 DIR        = os.path.dirname(__file__)
 CREDS_DIR  = os.path.join(DIR, "credentials")
@@ -121,23 +120,56 @@ def probe_display():
         time.sleep(2)
     raise RuntimeError("Timed out waiting for SSH")
 
+FIRMWARES_DIR = os.path.join(DIR, "firmwares")
+DONE_DIR      = os.path.join(DIR, "firmwares_done")
+os.makedirs(DONE_DIR, exist_ok=True)
+
+def move_to_done(fw_path):
+    name = os.path.basename(fw_path)
+    stem, ext = os.path.splitext(name)
+    dst = os.path.join(DONE_DIR, name)
+    if os.path.exists(dst):
+        n = 1
+        while os.path.exists(os.path.join(DONE_DIR, f"{stem}_{n}{ext}")):
+            n += 1
+        dst = os.path.join(DONE_DIR, f"{stem}_{n}{ext}")
+    shutil.move(fw_path, dst)
+
 def main():
     import urllib3
     urllib3.disable_warnings()
 
-    firmware_files = sorted(glob.glob(os.path.join(DIR, "firmwares", "*.txt")))
-    if not firmware_files:
-        raise RuntimeError("No firmware files found")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--manual", action="store_true")
+    args = parser.parse_args()
+
+    # Ensure machine is powered on before starting
+    state = pikvm_get("/api/atx")
+    if not state["result"]["leds"]["power"]:
+        print("Machine is off — powering on and waiting 60s...")
+        pikvm_post("/api/atx/click?button=power")
+        time.sleep(60)
 
     ser = open_serial()
 
-    # Dump current EEPROM state once to seed the diff
+    # Seed current ROM from the first available firmware size
+    first_files = sorted(f for f in os.listdir(FIRMWARES_DIR) if f.endswith(".txt"))
+    if not first_files:
+        raise RuntimeError("No firmware files found")
     cmd(ser, "POWER_ON")
-    current_rom = dump_rom(ser, len(load_rom(firmware_files[0])))
+    current_rom = dump_rom(ser, len(load_rom(os.path.join(FIRMWARES_DIR, first_files[0]))))
     cmd(ser, "POWER_OFF")
 
-    for i, fw_path in enumerate(tqdm(firmware_files, desc="Firmwares")):
-        label = os.path.splitext(os.path.basename(fw_path))[0]
+    while True:
+        queue = sorted(f for f in os.listdir(FIRMWARES_DIR) if f.endswith(".txt"))
+        if not queue:
+            ssh_root_poweroff()
+            break
+        print(f"Remaining: {len(queue)}")
+
+        fw_name = queue[0]
+        fw_path = os.path.join(FIRMWARES_DIR, fw_name)
+        label   = os.path.splitext(fw_name)[0]
         next_rom = load_rom(fw_path)
 
         cmd(ser, "POWER_ON")
@@ -159,7 +191,9 @@ def main():
         except RuntimeError as e:
             result = f"ERROR: {e}"
 
-        if connected:
+        if args.manual:
+            input(f"[{label}] Press Enter to continue...")
+        elif connected:
             time.sleep(3)
             cap = cv2.VideoCapture(2)
             cap.set(cv2.CAP_PROP_AUTO_EXPOSURE, 1)
@@ -167,13 +201,14 @@ def main():
             cap.set(cv2.CAP_PROP_GAIN, 255)
             cap.set(cv2.CAP_PROP_BRIGHTNESS, 255)
             cap.set(cv2.CAP_PROP_CONTRAST, 255)
-            for _ in range(5): cap.read()  # let settings settle
+            for _ in range(5): cap.read()
             ret, frame = cap.read()
             cap.release()
             if ret:
                 cv2.imwrite(os.path.join(IMAGES_DIR, f"{label}.png"), frame)
 
         logging.info(f"{label}  {result}")
+        move_to_done(fw_path)
 
     ser.close()
 
