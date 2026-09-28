@@ -1,0 +1,2629 @@
+{
+  "scope": "firmware reads/writes only; no claim about autonomous hardware ROM loading",
+  "fields": [
+    {
+      "region": "profile",
+      "byte": 0,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 0",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "009f",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct bit; changing whole byte zero/nonzero also changes clock branch"
+    },
+    {
+      "region": "profile",
+      "byte": 0,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 0",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "009f",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct bit; changing whole byte zero/nonzero also changes clock branch"
+    },
+    {
+      "region": "profile",
+      "byte": 0,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 0",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "009f",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct bit; changing whole byte zero/nonzero also changes clock branch"
+    },
+    {
+      "region": "profile",
+      "byte": 0,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 0",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "009f",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct bit; changing whole byte zero/nonzero also changes clock branch"
+    },
+    {
+      "region": "profile",
+      "byte": 0,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 0",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "009f",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct bit; changing whole byte zero/nonzero also changes clock branch"
+    },
+    {
+      "region": "profile",
+      "byte": 0,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 0",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "009f",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct bit; changing whole byte zero/nonzero also changes clock branch"
+    },
+    {
+      "region": "profile",
+      "byte": 0,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 0",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "009f",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct bit; changing whole byte zero/nonzero also changes clock branch"
+    },
+    {
+      "region": "profile",
+      "byte": 0,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 0",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "009f",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct bit; changing whole byte zero/nonzero also changes clock branch"
+    },
+    {
+      "region": "profile",
+      "byte": 1,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 1",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01dc",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 1,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 1",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01dc",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 1,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 1",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01dc",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 1,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 1",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01dc",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 1,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 1",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01dc",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 1,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 1",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01dc",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 1,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 1",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01dc",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 1,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 1",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01dc",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 2,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 2",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01de",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 2,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 2",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01de",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 2,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 2",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01de",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 2,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 2",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01de",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 2,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 2",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01de",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 2,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 2",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01de",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 2,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 2",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01de",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 2,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 2",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01de",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 3,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 3",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e1",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 3,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 3",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e1",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 3,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 3",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e1",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 3,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 3",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": "01e1",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "forced clear"
+    },
+    {
+      "region": "profile",
+      "byte": 3,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 3",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e1",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 3,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 3",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e1",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 3,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 3",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e1",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 3,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 3",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e1",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 4,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 4",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 4,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 4",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 4,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 4",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 4,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 4",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": "01e2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "forced set"
+    },
+    {
+      "region": "profile",
+      "byte": 4,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 4",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 4,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 4",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 4,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 4",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 4,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 4",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 5,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 5",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 5,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 5",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 5,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 5",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 5,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 5",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 5,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 5",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 5,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 5",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 5,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 5",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 5,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 5",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 6,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 6",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 6,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 6",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 6,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 6",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 6,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 6",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 6,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 6",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 6,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 6",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 6,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 6",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 6,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 6",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 7,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 7",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e7",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 7,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 7",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e7",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 7,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 7",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e7",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 7,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 7",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e7",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 7,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 7",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e7",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 7,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 7",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e7",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 7,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 7",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e7",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 7,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 7",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01e7",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 8,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 8",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01ed",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 8,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 8",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01ed",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 8,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 8",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01ed",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 8,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 8",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01ed",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 8,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 8",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01ed",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 8,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 8",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01ed",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 8,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 8",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01ed",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 8,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 8",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01ed",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 9,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 9",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 9,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 9",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 9,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 9",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 9,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 9",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 9,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 9",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 9,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 9",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 9,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 9",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 9,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 9",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f2",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 10,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 10",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 10,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 10",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 10,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 10",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 10,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 10",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 10,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 10",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 10,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 10",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 10,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 10",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 10,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 10",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f3",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 11,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 11",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 11,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 11",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 11,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 11",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 11,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 11",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "direct output bit; silicon semantics unknown"
+    },
+    {
+      "region": "profile",
+      "byte": 11,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 11",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "OR with ROM[1122].bit0; cannot clear output if global bit is set"
+    },
+    {
+      "region": "profile",
+      "byte": 11,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 11",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "OR with ROM[1122].bit1; cannot clear output if global bit is set"
+    },
+    {
+      "region": "profile",
+      "byte": 11,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 11",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "OR with ROM[1122].bit2; cannot clear output if global bit is set"
+    },
+    {
+      "region": "profile",
+      "byte": 11,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 11",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": true,
+      "target": "01f4",
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "OR with ROM[1122].bit3; cannot clear output if global bit is set"
+    },
+    {
+      "region": "profile",
+      "byte": 12,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 12",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 12,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 12",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 12,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 12",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 12,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 12",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 12,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 12",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 12,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 12",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 12,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 12",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 12,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 12",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 13,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 13",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 13,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 13",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 13,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 13",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 13,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 13",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 13,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 13",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 13,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 13",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 13,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 13",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 13,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 13",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 14,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 14",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 14,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 14",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 14,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 14",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 14,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 14",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 14,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 14",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 14,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 14",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 14,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 14",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 14,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 14",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 15,
+      "bit": 0,
+      "physical_formula": "0x1010 + 16 * profile_index + 15",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 15,
+      "bit": 1,
+      "physical_formula": "0x1010 + 16 * profile_index + 15",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 15,
+      "bit": 2,
+      "physical_formula": "0x1010 + 16 * profile_index + 15",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 15,
+      "bit": 3,
+      "physical_formula": "0x1010 + 16 * profile_index + 15",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 15,
+      "bit": 4,
+      "physical_formula": "0x1010 + 16 * profile_index + 15",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 15,
+      "bit": 5,
+      "physical_formula": "0x1010 + 16 * profile_index + 15",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 15,
+      "bit": 6,
+      "physical_formula": "0x1010 + 16 * profile_index + 15",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "profile",
+      "byte": 15,
+      "bit": 7,
+      "physical_formula": "0x1010 + 16 * profile_index + 15",
+      "selection": "profile_index = XDATA[00ca] & 15, latched at reset",
+      "firmware_effective": false,
+      "target": null,
+      "application": "initial link setup and every subsequent successful recovery",
+      "effect": "no MOVC use in mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "1110",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "0602",
+      "effect": "direct bit at initialization"
+    },
+    {
+      "region": "global",
+      "physical": "1110",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "0602",
+      "effect": "direct bit at initialization"
+    },
+    {
+      "region": "global",
+      "physical": "1110",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "0602",
+      "effect": "direct bit at initialization"
+    },
+    {
+      "region": "global",
+      "physical": "1110",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "0602",
+      "effect": "direct bit at initialization"
+    },
+    {
+      "region": "global",
+      "physical": "1110",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "0602",
+      "effect": "direct bit at initialization"
+    },
+    {
+      "region": "global",
+      "physical": "1110",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "0602",
+      "effect": "direct bit at initialization"
+    },
+    {
+      "region": "global",
+      "physical": "1110",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "0602",
+      "effect": "direct bit at initialization"
+    },
+    {
+      "region": "global",
+      "physical": "1110",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "0602",
+      "effect": "direct bit at initialization"
+    },
+    {
+      "region": "global",
+      "physical": "1111",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "0603",
+      "effect": "OR with 0x80 retained from firmware write of 0x82; bit 7 forced set"
+    },
+    {
+      "region": "global",
+      "physical": "1111",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "0603",
+      "effect": "OR with 0x80 retained from firmware write of 0x82; bit 7 forced set"
+    },
+    {
+      "region": "global",
+      "physical": "1111",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "0603",
+      "effect": "OR with 0x80 retained from firmware write of 0x82; bit 7 forced set"
+    },
+    {
+      "region": "global",
+      "physical": "1111",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "0603",
+      "effect": "OR with 0x80 retained from firmware write of 0x82; bit 7 forced set"
+    },
+    {
+      "region": "global",
+      "physical": "1111",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "0603",
+      "effect": "OR with 0x80 retained from firmware write of 0x82; bit 7 forced set"
+    },
+    {
+      "region": "global",
+      "physical": "1111",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "0603",
+      "effect": "OR with 0x80 retained from firmware write of 0x82; bit 7 forced set"
+    },
+    {
+      "region": "global",
+      "physical": "1111",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "0603",
+      "effect": "OR with 0x80 retained from firmware write of 0x82; bit 7 forced set"
+    },
+    {
+      "region": "global",
+      "physical": "1111",
+      "bit": 7,
+      "firmware_effective": false,
+      "target": "0603",
+      "effect": "OR with 0x80 retained from firmware write of 0x82; bit 7 forced set"
+    },
+    {
+      "region": "global",
+      "physical": "1112",
+      "bit": 0,
+      "firmware_effective": true,
+      "effect": "low two bits jointly select brightness mode"
+    },
+    {
+      "region": "global",
+      "physical": "1112",
+      "bit": 1,
+      "firmware_effective": true,
+      "effect": "low two bits jointly select brightness mode"
+    },
+    {
+      "region": "global",
+      "physical": "1112",
+      "bit": 2,
+      "firmware_effective": false,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "1112",
+      "bit": 3,
+      "firmware_effective": false,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "1112",
+      "bit": 4,
+      "firmware_effective": true,
+      "effect": "enable power-button routine and clear its state on link loss"
+    },
+    {
+      "region": "global",
+      "physical": "1112",
+      "bit": 5,
+      "firmware_effective": true,
+      "effect": "swap brightness button directions, effective only if low two bits == 1"
+    },
+    {
+      "region": "global",
+      "physical": "1112",
+      "bit": 6,
+      "firmware_effective": false,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "1112",
+      "bit": 7,
+      "firmware_effective": false,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "1113",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "01d1",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1113",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "01d1",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1113",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "01d1",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1113",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "01d1",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1113",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "01d1",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1113",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "01d1",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1113",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "01d1",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1113",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "01d1",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1114",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "01f7",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1114",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "01f7",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1114",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "01f7",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1114",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "01f7",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1114",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "01f7",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1114",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "01f7",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1114",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "01f7",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1114",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "01f7",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1115",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "01d0",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1115",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "01d0",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1115",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "01d0",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1115",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "01d0",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1115",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "01d0",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1115",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "01d0",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1115",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "01d0",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1115",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "01d0",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1116",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "01d3",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1116",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "01d3",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1116",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "01d3",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1116",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "01d3",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1116",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "01d3",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1116",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "01d3",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1116",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "01d3",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1116",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "01d3",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1117",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "01f8",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1117",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "01f8",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1117",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "01f8",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1117",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "01f8",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1117",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "01f8",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1117",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "01f8",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1117",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "01f8",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1117",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "01f8",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1118",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "01d4",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1118",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "01d4",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1118",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "01d4",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1118",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "01d4",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1118",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "01d4",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1118",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "01d4",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1118",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "01d4",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1118",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "01d4",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1119",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "01f9",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1119",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "01f9",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1119",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "01f9",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1119",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "01f9",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1119",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "01f9",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1119",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "01f9",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1119",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "01f9",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "1119",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "01f9",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "111a",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "01d6",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "111a",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "01d6",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "111a",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "01d6",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "111a",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "01d6",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "111a",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "01d6",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "111a",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "01d6",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "111a",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "01d6",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "111a",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "01d6",
+      "effect": "direct bit at initialization; also participates in 16-bit wrapping busy-wait argument"
+    },
+    {
+      "region": "global",
+      "physical": "111b",
+      "bit": 0,
+      "firmware_effective": true,
+      "effect": "initial level if whole byte <= 10; otherwise level=10, lower=0, upper=10"
+    },
+    {
+      "region": "global",
+      "physical": "111b",
+      "bit": 1,
+      "firmware_effective": true,
+      "effect": "initial level if whole byte <= 10; otherwise level=10, lower=0, upper=10"
+    },
+    {
+      "region": "global",
+      "physical": "111b",
+      "bit": 2,
+      "firmware_effective": true,
+      "effect": "initial level if whole byte <= 10; otherwise level=10, lower=0, upper=10"
+    },
+    {
+      "region": "global",
+      "physical": "111b",
+      "bit": 3,
+      "firmware_effective": true,
+      "effect": "initial level if whole byte <= 10; otherwise level=10, lower=0, upper=10"
+    },
+    {
+      "region": "global",
+      "physical": "111b",
+      "bit": 4,
+      "firmware_effective": true,
+      "effect": "initial level if whole byte <= 10; otherwise level=10, lower=0, upper=10"
+    },
+    {
+      "region": "global",
+      "physical": "111b",
+      "bit": 5,
+      "firmware_effective": true,
+      "effect": "initial level if whole byte <= 10; otherwise level=10, lower=0, upper=10"
+    },
+    {
+      "region": "global",
+      "physical": "111b",
+      "bit": 6,
+      "firmware_effective": true,
+      "effect": "initial level if whole byte <= 10; otherwise level=10, lower=0, upper=10"
+    },
+    {
+      "region": "global",
+      "physical": "111b",
+      "bit": 7,
+      "firmware_effective": true,
+      "effect": "initial level if whole byte <= 10; otherwise level=10, lower=0, upper=10"
+    },
+    {
+      "region": "global",
+      "physical": "111c",
+      "bit": 0,
+      "firmware_effective": true,
+      "effect": "lower raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111c",
+      "bit": 1,
+      "firmware_effective": true,
+      "effect": "lower raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111c",
+      "bit": 2,
+      "firmware_effective": true,
+      "effect": "lower raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111c",
+      "bit": 3,
+      "firmware_effective": true,
+      "effect": "lower raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111c",
+      "bit": 4,
+      "firmware_effective": true,
+      "effect": "lower raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111c",
+      "bit": 5,
+      "firmware_effective": true,
+      "effect": "lower raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111c",
+      "bit": 6,
+      "firmware_effective": true,
+      "effect": "lower raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111c",
+      "bit": 7,
+      "firmware_effective": true,
+      "effect": "lower raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111d",
+      "bit": 0,
+      "firmware_effective": true,
+      "effect": "upper raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111d",
+      "bit": 1,
+      "firmware_effective": true,
+      "effect": "upper raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111d",
+      "bit": 2,
+      "firmware_effective": true,
+      "effect": "upper raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111d",
+      "bit": 3,
+      "firmware_effective": true,
+      "effect": "upper raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111d",
+      "bit": 4,
+      "firmware_effective": true,
+      "effect": "upper raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111d",
+      "bit": 5,
+      "firmware_effective": true,
+      "effect": "upper raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111d",
+      "bit": 6,
+      "firmware_effective": true,
+      "effect": "upper raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111d",
+      "bit": 7,
+      "firmware_effective": true,
+      "effect": "upper raw level bound",
+      "condition": "ROM[111b] <= 10; affects later output through buttons when (ROM[1112] & 3) == 1"
+    },
+    {
+      "region": "global",
+      "physical": "111e",
+      "bit": 0,
+      "firmware_effective": true,
+      "effect": "bit 0 selects 01bb/00e3 setup and gates 111f..1121 copy"
+    },
+    {
+      "region": "global",
+      "physical": "111e",
+      "bit": 1,
+      "firmware_effective": false,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "111e",
+      "bit": 2,
+      "firmware_effective": false,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "111e",
+      "bit": 3,
+      "firmware_effective": false,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "111e",
+      "bit": 4,
+      "firmware_effective": false,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "111e",
+      "bit": 5,
+      "firmware_effective": false,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "111e",
+      "bit": 6,
+      "firmware_effective": false,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "111e",
+      "bit": 7,
+      "firmware_effective": false,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "111f",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "00e4",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "111f",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "00e4",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "111f",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "00e4",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "111f",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "00e4",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "111f",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "00e4",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "111f",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "00e4",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "111f",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "00e4",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "111f",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "00e4",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1120",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "00e5",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1120",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "00e5",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1120",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "00e5",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1120",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "00e5",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1120",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "00e5",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1120",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "00e5",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1120",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "00e5",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1120",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "00e5",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1121",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "00e6",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1121",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "00e6",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1121",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "00e6",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1121",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "00e6",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1121",
+      "bit": 4,
+      "firmware_effective": true,
+      "target": "00e6",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1121",
+      "bit": 5,
+      "firmware_effective": true,
+      "target": "00e6",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1121",
+      "bit": 6,
+      "firmware_effective": true,
+      "target": "00e6",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1121",
+      "bit": 7,
+      "firmware_effective": true,
+      "target": "00e6",
+      "condition": "(ROM[111e] & 1) == 0 AND ROM[1121] != 0xaa",
+      "effect": "full byte copy; 1121 also serves as whole-byte sentinel"
+    },
+    {
+      "region": "global",
+      "physical": "1122",
+      "bit": 0,
+      "firmware_effective": true,
+      "target": "01f4",
+      "effect": "OR into output bit 4 with profile[11]; cannot clear profile-set bit"
+    },
+    {
+      "region": "global",
+      "physical": "1122",
+      "bit": 1,
+      "firmware_effective": true,
+      "target": "01f4",
+      "effect": "OR into output bit 5 with profile[11]; cannot clear profile-set bit"
+    },
+    {
+      "region": "global",
+      "physical": "1122",
+      "bit": 2,
+      "firmware_effective": true,
+      "target": "01f4",
+      "effect": "OR into output bit 6 with profile[11]; cannot clear profile-set bit"
+    },
+    {
+      "region": "global",
+      "physical": "1122",
+      "bit": 3,
+      "firmware_effective": true,
+      "target": "01f4",
+      "effect": "OR into output bit 7 with profile[11]; cannot clear profile-set bit"
+    },
+    {
+      "region": "global",
+      "physical": "1122",
+      "bit": 4,
+      "firmware_effective": false,
+      "target": null,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "1122",
+      "bit": 5,
+      "firmware_effective": false,
+      "target": null,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "1122",
+      "bit": 6,
+      "firmware_effective": false,
+      "target": null,
+      "effect": "not used by mapped application"
+    },
+    {
+      "region": "global",
+      "physical": "1122",
+      "bit": 7,
+      "firmware_effective": false,
+      "target": null,
+      "effect": "not used by mapped application"
+    }
+  ]
+}

@@ -1,0 +1,1984 @@
+Program: cs5211-8051-firmware.bin
+Language: 8051:BE:16:default
+
+FUNCTIONS
+CODE:0000 Reset_Vector [[CODE:0000, CODE:0002]]
+CODE:0130 Reset_Handler [[CODE:0130, CODE:016e] [CODE:0177, CODE:01bb] [CODE:01c0, CODE:0646]]
+CODE:0647 FUN_CODE_0647 [[CODE:0647, CODE:074c]]
+CODE:0750 FUN_CODE_0750 [[CODE:074d, CODE:07ec]]
+CODE:07ed FUN_CODE_07ed [[CODE:07ed, CODE:07f1] [CODE:0800, CODE:082a]]
+CODE:082b FUN_CODE_082b [[CODE:082b, CODE:0861]]
+CODE:0862 FUN_CODE_0862 [[CODE:0862, CODE:0878]]
+CODE:0879 FUN_CODE_0879 [[CODE:0879, CODE:0896]]
+CODE:0897 FUN_CODE_0897 [[CODE:0897, CODE:089d]]
+CODE:089e FUN_CODE_089e [[CODE:089e, CODE:08a0]]
+CODE:08a1 FUN_CODE_08a1 [[CODE:08a1, CODE:08ab]]
+CODE:08ac FUN_CODE_08ac [[CODE:08ac, CODE:08bd]]
+CODE:08be FUN_CODE_08be [[CODE:08be, CODE:090c]]
+CODE:0949 FUN_CODE_0949 [[CODE:090d, CODE:09da]]
+CODE:09db FUN_CODE_09db [[CODE:09db, CODE:09e8]]
+CODE:09e9 FUN_CODE_09e9 [[CODE:09e9, CODE:09f9]]
+CODE:09fa FUN_CODE_09fa [[CODE:09fa, CODE:0a0c]]
+CODE:0a0d FUN_CODE_0a0d [[CODE:0a0d, CODE:0a1f]]
+CODE:0a20 Configure_Clock_From_Ratio [[CODE:0a20, CODE:0c47]]
+CODE:0c48 Timer0_DutyCycle_ISR [[CODE:0c48, CODE:0c48]]
+CODE:0cbc Recover_Peripherals_If_Marker_Changed [[CODE:0cbc, CODE:0d2f]]
+CODE:0d30 Poll_Brightness_Buttons [[CODE:0d30, CODE:0d8c]]
+CODE:0d8d Poll_Power_Button [[CODE:0d8d, CODE:0dd9]]
+CODE:0dda FUN_CODE_0dda [[CODE:0dda, CODE:0deb]]
+CODE:0dec FUN_CODE_0dec [[CODE:0dec, CODE:0dfb]]
+CODE:0dfc BusyWait_Units [[CODE:0dfc, CODE:0e1e]]
+CODE:0e5c Poll_Delay_And_Count_Timeout [[CODE:0e5c, CODE:0e79]]
+CODE:0e7a Initialize_Timer0 [[CODE:0e7a, CODE:0e83]]
+
+INSTRUCTIONS
+CODE:0000  02 01 30     LJMP 0x0130
+CODE:0130  78 7f        MOV R0,#0x7f
+CODE:0132  e4           CLR A
+CODE:0133  f6           MOV @R0,A
+CODE:0134  d8 fd        DJNZ R0,0x0133
+CODE:0136  75 81 3a     MOV 0x81,#0x3a
+CODE:0139  02 01 77     LJMP 0x0177
+CODE:013c  02 01 c0     LJMP 0x01c0
+CODE:013f  e4           CLR A
+CODE:0140  93           MOVC A,@A+DPTR
+CODE:0141  a3           INC DPTR
+CODE:0142  f8           MOV R0,A
+CODE:0143  e4           CLR A
+CODE:0144  93           MOVC A,@A+DPTR
+CODE:0145  a3           INC DPTR
+CODE:0146  40 03        JC 0x014b
+CODE:0148  f6           MOV @R0,A
+CODE:0149  80 01        SJMP 0x014c
+CODE:014b  f2           MOVX @R0,A
+CODE:014c  08           INC R0
+CODE:014d  df f4        DJNZ R7,0x0143
+CODE:014f  80 29        SJMP 0x017a
+CODE:0151  e4           CLR A
+CODE:0152  93           MOVC A,@A+DPTR
+CODE:0153  a3           INC DPTR
+CODE:0154  f8           MOV R0,A
+CODE:0155  54 07        ANL A,#0x7
+CODE:0157  24 0c        ADD A,#0xc
+CODE:0159  c8           XCH A,R0
+CODE:015a  c3           CLR CY
+CODE:015b  33           RLC A
+CODE:015c  c4           SWAP A
+CODE:015d  54 0f        ANL A,#0xf
+CODE:015f  44 20        ORL A,#0x20
+CODE:0161  c8           XCH A,R0
+CODE:0162  83           MOVC A,@A+PC
+CODE:0163  40 04        JC 0x0169
+CODE:0165  f4           CPL A
+CODE:0166  56           ANL A,@R0
+CODE:0167  80 01        SJMP 0x016a
+CODE:0169  46           ORL A,@R0
+CODE:016a  f6           MOV @R0,A
+CODE:016b  df e4        DJNZ R7,0x0151
+CODE:016d  80 0b        SJMP 0x017a
+CODE:0177  90 0e 1f     MOV DPTR,#0xe1f
+CODE:017a  e4           CLR A
+CODE:017b  7e 01        MOV R6,#0x1
+CODE:017d  93           MOVC A,@A+DPTR
+CODE:017e  60 bc        JZ 0x013c
+CODE:0180  a3           INC DPTR
+CODE:0181  ff           MOV R7,A
+CODE:0182  54 3f        ANL A,#0x3f
+CODE:0184  30 e5 09     JNB 0xe5,0x0190
+CODE:0187  54 1f        ANL A,#0x1f
+CODE:0189  fe           MOV R6,A
+CODE:018a  e4           CLR A
+CODE:018b  93           MOVC A,@A+DPTR
+CODE:018c  a3           INC DPTR
+CODE:018d  60 01        JZ 0x0190
+CODE:018f  0e           INC R6
+CODE:0190  cf           XCH A,R7
+CODE:0191  54 c0        ANL A,#0xc0
+CODE:0193  25 e0        ADD A,A
+CODE:0195  60 a8        JZ 0x013f
+CODE:0197  40 b8        JC 0x0151
+CODE:0199  e4           CLR A
+CODE:019a  93           MOVC A,@A+DPTR
+CODE:019b  a3           INC DPTR
+CODE:019c  fa           MOV R2,A
+CODE:019d  e4           CLR A
+CODE:019e  93           MOVC A,@A+DPTR
+CODE:019f  a3           INC DPTR
+CODE:01a0  f8           MOV R0,A
+CODE:01a1  e4           CLR A
+CODE:01a2  93           MOVC A,@A+DPTR
+CODE:01a3  a3           INC DPTR
+CODE:01a4  c8           XCH A,R0
+CODE:01a5  c5 82        XCH A,DPL
+CODE:01a7  c8           XCH A,R0
+CODE:01a8  ca           XCH A,R2
+CODE:01a9  c5 83        XCH A,DPH
+CODE:01ab  ca           XCH A,R2
+CODE:01ac  f0           MOVX @DPTR,A
+CODE:01ad  a3           INC DPTR
+CODE:01ae  c8           XCH A,R0
+CODE:01af  c5 82        XCH A,DPL
+CODE:01b1  c8           XCH A,R0
+CODE:01b2  ca           XCH A,R2
+CODE:01b3  c5 83        XCH A,DPH
+CODE:01b5  ca           XCH A,R2
+CODE:01b6  df e9        DJNZ R7,0x01a1
+CODE:01b8  de e7        DJNZ R6,0x01a1
+CODE:01ba  80 be        SJMP 0x017a
+CODE:01c0  e4           CLR A
+CODE:01c1  f5 29        MOV 0x29,A
+CODE:01c3  f5 2a        MOV 0x2a,A
+CODE:01c5  90 01 1e     MOV DPTR,#0x11e
+CODE:01c8  93           MOVC A,@A+DPTR
+CODE:01c9  f5 26        MOV 0x26,A
+CODE:01cb  e5 26        MOV A,0x26
+CODE:01cd  54 01        ANL A,#0x1
+CODE:01cf  64 01        XRL A,#0x1
+CODE:01d1  70 0e        JNZ 0x01e1
+CODE:01d3  90 01 bb     MOV DPTR,#0x1bb
+CODE:01d6  74 14        MOV A,#0x14
+CODE:01d8  f0           MOVX @DPTR,A
+CODE:01d9  90 00 e3     MOV DPTR,#0xe3
+CODE:01dc  74 10        MOV A,#0x10
+CODE:01de  f0           MOVX @DPTR,A
+CODE:01df  80 2b        SJMP 0x020c
+CODE:01e1  90 01 bb     MOV DPTR,#0x1bb
+CODE:01e4  74 94        MOV A,#0x94
+CODE:01e6  f0           MOVX @DPTR,A
+CODE:01e7  90 00 e3     MOV DPTR,#0xe3
+CODE:01ea  74 50        MOV A,#0x50
+CODE:01ec  f0           MOVX @DPTR,A
+CODE:01ed  90 01 21     MOV DPTR,#0x121
+CODE:01f0  e4           CLR A
+CODE:01f1  93           MOVC A,@A+DPTR
+CODE:01f2  ff           MOV R7,A
+CODE:01f3  64 aa        XRL A,#0xaa
+CODE:01f5  60 15        JZ 0x020c
+CODE:01f7  90 01 1f     MOV DPTR,#0x11f
+CODE:01fa  e4           CLR A
+CODE:01fb  93           MOVC A,@A+DPTR
+CODE:01fc  90 00 e4     MOV DPTR,#0xe4
+CODE:01ff  f0           MOVX @DPTR,A
+CODE:0200  90 01 20     MOV DPTR,#0x120
+CODE:0203  e4           CLR A
+CODE:0204  93           MOVC A,@A+DPTR
+CODE:0205  90 00 e5     MOV DPTR,#0xe5
+CODE:0208  f0           MOVX @DPTR,A
+CODE:0209  a3           INC DPTR
+CODE:020a  ef           MOV A,R7
+CODE:020b  f0           MOVX @DPTR,A
+CODE:020c  90 01 ec     MOV DPTR,#0x1ec
+CODE:020f  74 1f        MOV A,#0x1f
+CODE:0211  f0           MOVX @DPTR,A
+CODE:0212  90 01 f1     MOV DPTR,#0x1f1
+CODE:0215  f0           MOVX @DPTR,A
+CODE:0216  90 01 f5     MOV DPTR,#0x1f5
+CODE:0219  74 ff        MOV A,#0xff
+CODE:021b  f0           MOVX @DPTR,A
+CODE:021c  e4           CLR A
+CODE:021d  90 00 09     MOV DPTR,#0x9
+CODE:0220  f0           MOVX @DPTR,A
+CODE:0221  90 00 08     MOV DPTR,#0x8
+CODE:0224  f0           MOVX @DPTR,A
+CODE:0225  90 07 c8     MOV DPTR,#0x7c8
+CODE:0228  74 ff        MOV A,#0xff
+CODE:022a  f0           MOVX @DPTR,A
+CODE:022b  90 07 c7     MOV DPTR,#0x7c7
+CODE:022e  74 3f        MOV A,#0x3f
+CODE:0230  f0           MOVX @DPTR,A
+CODE:0231  90 07 c6     MOV DPTR,#0x7c6
+CODE:0234  74 05        MOV A,#0x5
+CODE:0236  f0           MOVX @DPTR,A
+CODE:0237  90 07 c5     MOV DPTR,#0x7c5
+CODE:023a  74 ff        MOV A,#0xff
+CODE:023c  f0           MOVX @DPTR,A
+CODE:023d  75 c1 af     MOV 0xc1,#0xaf
+CODE:0240  43 c2 1f     ORL 0xc2,#0x1f
+CODE:0243  90 06 22     MOV DPTR,#0x622
+CODE:0246  74 01        MOV A,#0x1
+CODE:0248  f0           MOVX @DPTR,A
+CODE:0249  90 00 e0     MOV DPTR,#0xe0
+CODE:024c  74 37        MOV A,#0x37
+CODE:024e  f0           MOVX @DPTR,A
+CODE:024f  90 06 03     MOV DPTR,#0x603
+CODE:0252  74 82        MOV A,#0x82
+CODE:0254  f0           MOVX @DPTR,A
+CODE:0255  e4           CLR A
+CODE:0256  90 01 d7     MOV DPTR,#0x1d7
+CODE:0259  f0           MOVX @DPTR,A
+CODE:025a  90 05 83     MOV DPTR,#0x583
+CODE:025d  74 1b        MOV A,#0x1b
+CODE:025f  f0           MOVX @DPTR,A
+CODE:0260  90 00 c0     MOV DPTR,#0xc0
+CODE:0263  74 35        MOV A,#0x35
+CODE:0265  f0           MOVX @DPTR,A
+CODE:0266  90 00 ca     MOV DPTR,#0xca
+CODE:0269  e0           MOVX A,@DPTR
+CODE:026a  54 0f        ANL A,#0xf
+CODE:026c  c4           SWAP A
+CODE:026d  54 f0        ANL A,#0xf0
+CODE:026f  f5 08        MOV 0x08,A
+CODE:0271  90 07 f0     MOV DPTR,#0x7f0
+CODE:0274  74 31        MOV A,#0x31
+CODE:0276  f0           MOVX @DPTR,A
+CODE:0277  90 00 1f     MOV DPTR,#0x1f
+CODE:027a  e0           MOVX A,@DPTR
+CODE:027b  f5 26        MOV 0x26,A
+CODE:027d  e5 26        MOV A,0x26
+CODE:027f  54 fb        ANL A,#0xfb
+CODE:0281  f0           MOVX @DPTR,A
+CODE:0282  90 01 bc     MOV DPTR,#0x1bc
+CODE:0285  74 30        MOV A,#0x30
+CODE:0287  f0           MOVX @DPTR,A
+CODE:0288  90 00 aa     MOV DPTR,#0xaa
+CODE:028b  e0           MOVX A,@DPTR
+CODE:028c  f5 26        MOV 0x26,A
+CODE:028e  43 26 80     ORL 0x26,#0x80
+CODE:0291  e5 26        MOV A,0x26
+CODE:0293  f0           MOVX @DPTR,A
+CODE:0294  90 00 a3     MOV DPTR,#0xa3
+CODE:0297  74 01        MOV A,#0x1
+CODE:0299  f0           MOVX @DPTR,A
+CODE:029a  a3           INC DPTR
+CODE:029b  74 bf        MOV A,#0xbf
+CODE:029d  f0           MOVX @DPTR,A
+CODE:029e  90 01 a5     MOV DPTR,#0x1a5
+CODE:02a1  74 7f        MOV A,#0x7f
+CODE:02a3  f0           MOVX @DPTR,A
+CODE:02a4  90 01 a0     MOV DPTR,#0x1a0
+CODE:02a7  74 10        MOV A,#0x10
+CODE:02a9  f0           MOVX @DPTR,A
+CODE:02aa  a3           INC DPTR
+CODE:02ab  74 ff        MOV A,#0xff
+CODE:02ad  f0           MOVX @DPTR,A
+CODE:02ae  90 01 a3     MOV DPTR,#0x1a3
+CODE:02b1  74 02        MOV A,#0x2
+CODE:02b3  f0           MOVX @DPTR,A
+CODE:02b4  e4           CLR A
+CODE:02b5  a3           INC DPTR
+CODE:02b6  f0           MOVX @DPTR,A
+CODE:02b7  90 01 da     MOV DPTR,#0x1da
+CODE:02ba  74 58        MOV A,#0x58
+CODE:02bc  f0           MOVX @DPTR,A
+CODE:02bd  e4           CLR A
+CODE:02be  90 00 17     MOV DPTR,#0x17
+CODE:02c1  f0           MOVX @DPTR,A
+CODE:02c2  90 01 10     MOV DPTR,#0x110
+CODE:02c5  93           MOVC A,@A+DPTR
+CODE:02c6  90 06 02     MOV DPTR,#0x602
+CODE:02c9  f0           MOVX @DPTR,A
+CODE:02ca  a3           INC DPTR
+CODE:02cb  e0           MOVX A,@DPTR
+CODE:02cc  f5 26        MOV 0x26,A
+CODE:02ce  53 26 e0     ANL 0x26,#0xe0
+CODE:02d1  90 01 11     MOV DPTR,#0x111
+CODE:02d4  e4           CLR A
+CODE:02d5  93           MOVC A,@A+DPTR
+CODE:02d6  45 26        ORL A,0x26
+CODE:02d8  90 06 03     MOV DPTR,#0x603
+CODE:02db  f0           MOVX @DPTR,A
+CODE:02dc  90 01 13     MOV DPTR,#0x113
+CODE:02df  e4           CLR A
+CODE:02e0  93           MOVC A,@A+DPTR
+CODE:02e1  90 01 d1     MOV DPTR,#0x1d1
+CODE:02e4  f0           MOVX @DPTR,A
+CODE:02e5  90 01 14     MOV DPTR,#0x114
+CODE:02e8  e4           CLR A
+CODE:02e9  93           MOVC A,@A+DPTR
+CODE:02ea  90 01 f7     MOV DPTR,#0x1f7
+CODE:02ed  f0           MOVX @DPTR,A
+CODE:02ee  90 01 15     MOV DPTR,#0x115
+CODE:02f1  e4           CLR A
+CODE:02f2  93           MOVC A,@A+DPTR
+CODE:02f3  90 01 d0     MOV DPTR,#0x1d0
+CODE:02f6  f0           MOVX @DPTR,A
+CODE:02f7  90 01 16     MOV DPTR,#0x116
+CODE:02fa  e4           CLR A
+CODE:02fb  93           MOVC A,@A+DPTR
+CODE:02fc  90 01 d3     MOV DPTR,#0x1d3
+CODE:02ff  f0           MOVX @DPTR,A
+CODE:0300  90 01 17     MOV DPTR,#0x117
+CODE:0303  e4           CLR A
+CODE:0304  93           MOVC A,@A+DPTR
+CODE:0305  90 01 f8     MOV DPTR,#0x1f8
+CODE:0308  f0           MOVX @DPTR,A
+CODE:0309  90 01 18     MOV DPTR,#0x118
+CODE:030c  e4           CLR A
+CODE:030d  93           MOVC A,@A+DPTR
+CODE:030e  90 01 d4     MOV DPTR,#0x1d4
+CODE:0311  f0           MOVX @DPTR,A
+CODE:0312  90 01 19     MOV DPTR,#0x119
+CODE:0315  e4           CLR A
+CODE:0316  93           MOVC A,@A+DPTR
+CODE:0317  90 01 f9     MOV DPTR,#0x1f9
+CODE:031a  f0           MOVX @DPTR,A
+CODE:031b  90 01 1a     MOV DPTR,#0x11a
+CODE:031e  e4           CLR A
+CODE:031f  93           MOVC A,@A+DPTR
+CODE:0320  90 01 d6     MOV DPTR,#0x1d6
+CODE:0323  f0           MOVX @DPTR,A
+CODE:0324  e4           CLR A
+CODE:0325  90 00 26     MOV DPTR,#0x26
+CODE:0328  f0           MOVX @DPTR,A
+CODE:0329  90 01 1b     MOV DPTR,#0x11b
+CODE:032c  93           MOVC A,@A+DPTR
+CODE:032d  ff           MOV R7,A
+CODE:032e  f5 26        MOV 0x26,A
+CODE:0330  e5 26        MOV A,0x26
+CODE:0332  d3           SETB CY
+CODE:0333  94 0a        SUBB A,#0xa
+CODE:0335  74 80        MOV A,#0x80
+CODE:0337  94 80        SUBB A,#0x80
+CODE:0339  40 0b        JC 0x0346
+CODE:033b  75 13 0a     MOV 0x13,#0xa
+CODE:033e  75 10 0a     MOV 0x10,#0xa
+CODE:0341  e4           CLR A
+CODE:0342  f5 0f        MOV 0x0f,A
+CODE:0344  80 10        SJMP 0x0356
+CODE:0346  8f 13        MOV 0x13,R7
+CODE:0348  90 01 1d     MOV DPTR,#0x11d
+CODE:034b  e4           CLR A
+CODE:034c  93           MOVC A,@A+DPTR
+CODE:034d  f5 10        MOV 0x10,A
+CODE:034f  90 01 1c     MOV DPTR,#0x11c
+CODE:0352  e4           CLR A
+CODE:0353  93           MOVC A,@A+DPTR
+CODE:0354  f5 0f        MOV 0x0f,A
+CODE:0356  90 01 12     MOV DPTR,#0x112
+CODE:0359  e4           CLR A
+CODE:035a  93           MOVC A,@A+DPTR
+CODE:035b  54 03        ANL A,#0x3
+CODE:035d  f5 26        MOV 0x26,A
+CODE:035f  ff           MOV R7,A
+CODE:0360  7e 00        MOV R6,#0x0
+CODE:0362  64 02        XRL A,#0x2
+CODE:0364  60 2b        JZ 0x0391
+CODE:0366  ad 13        MOV R5,0x13
+CODE:0368  7c 00        MOV R4,#0x0
+CODE:036a  ed           MOV A,R5
+CODE:036b  70 08        JNZ 0x0375
+CODE:036d  90 00 b3     MOV DPTR,#0xb3
+CODE:0370  74 20        MOV A,#0x20
+CODE:0372  f0           MOVX @DPTR,A
+CODE:0373  80 11        SJMP 0x0386
+CODE:0375  ed           MOV A,R5
+CODE:0376  64 0a        XRL A,#0xa
+CODE:0378  4c           ORL A,R4
+CODE:0379  70 08        JNZ 0x0383
+CODE:037b  90 00 b3     MOV DPTR,#0xb3
+CODE:037e  74 2c        MOV A,#0x2c
+CODE:0380  f0           MOVX @DPTR,A
+CODE:0381  80 03        SJMP 0x0386
+CODE:0383  75 14 01     MOV 0x14,#0x1
+CODE:0386  ef           MOV A,R7
+CODE:0387  64 01        XRL A,#0x1
+CODE:0389  4e           ORL A,R6
+CODE:038a  70 0b        JNZ 0x0397
+CODE:038c  75 14 01     MOV 0x14,#0x1
+CODE:038f  80 06        SJMP 0x0397
+CODE:0391  90 00 b3     MOV DPTR,#0xb3
+CODE:0394  74 2f        MOV A,#0x2f
+CODE:0396  f0           MOVX @DPTR,A
+CODE:0397  e5 14        MOV A,0x14
+CODE:0399  64 01        XRL A,#0x1
+CODE:039b  70 09        JNZ 0x03a6
+CODE:039d  12 0e 7a     LCALL 0x0e7a
+CODE:03a0  d2 8c        SETB 0x8c
+CODE:03a2  d2 a9        SETB 0xa9
+CODE:03a4  c2 af        CLR 0xaf
+CODE:03a6  e4           CLR A
+CODE:03a7  90 00 22     MOV DPTR,#0x22
+CODE:03aa  f0           MOVX @DPTR,A
+CODE:03ab  90 06 0b     MOV DPTR,#0x60b
+CODE:03ae  e0           MOVX A,@DPTR
+CODE:03af  54 1f        ANL A,#0x1f
+CODE:03b1  f5 28        MOV 0x28,A
+CODE:03b3  64 01        XRL A,#0x1
+CODE:03b5  70 10        JNZ 0x03c7
+CODE:03b7  90 06 11     MOV DPTR,#0x611
+CODE:03ba  e0           MOVX A,@DPTR
+CODE:03bb  64 07        XRL A,#0x7
+CODE:03bd  70 04        JNZ 0x03c3
+CODE:03bf  7f 01        MOV R7,#0x1
+CODE:03c1  80 12        SJMP 0x03d5
+CODE:03c3  7f 00        MOV R7,#0x0
+CODE:03c5  80 0e        SJMP 0x03d5
+CODE:03c7  90 06 11     MOV DPTR,#0x611
+CODE:03ca  e0           MOVX A,@DPTR
+CODE:03cb  64 77        XRL A,#0x77
+CODE:03cd  70 04        JNZ 0x03d3
+CODE:03cf  7f 01        MOV R7,#0x1
+CODE:03d1  80 02        SJMP 0x03d5
+CODE:03d3  7f 00        MOV R7,#0x0
+CODE:03d5  ef           MOV A,R7
+CODE:03d6  33           RLC A
+CODE:03d7  95 e0        SUBB A,A
+CODE:03d9  fe           MOV R6,A
+CODE:03da  ef           MOV A,R7
+CODE:03db  64 01        XRL A,#0x1
+CODE:03dd  4e           ORL A,R6
+CODE:03de  70 08        JNZ 0x03e8
+CODE:03e0  90 06 13     MOV DPTR,#0x613
+CODE:03e3  e0           MOVX A,@DPTR
+CODE:03e4  44 01        ORL A,#0x1
+CODE:03e6  70 14        JNZ 0x03fc
+CODE:03e8  12 0c bc     LCALL 0x0cbc
+CODE:03eb  ef           MOV A,R7
+CODE:03ec  64 01        XRL A,#0x1
+CODE:03ee  60 b6        JZ 0x03a6
+CODE:03f0  43 c2 02     ORL 0xc2,#0x2
+CODE:03f3  7f 0a        MOV R7,#0xa
+CODE:03f5  7e 00        MOV R6,#0x0
+CODE:03f7  12 0d fc     LCALL 0x0dfc
+CODE:03fa  80 af        SJMP 0x03ab
+CODE:03fc  90 00 22     MOV DPTR,#0x22
+CODE:03ff  74 0e        MOV A,#0xe
+CODE:0401  f0           MOVX @DPTR,A
+CODE:0402  e4           CLR A
+CODE:0403  f5 0d        MOV 0x0d,A
+CODE:0405  f5 0e        MOV 0x0e,A
+CODE:0407  90 00 0c     MOV DPTR,#0xc
+CODE:040a  e0           MOVX A,@DPTR
+CODE:040b  f5 26        MOV 0x26,A
+CODE:040d  e5 26        MOV A,0x26
+CODE:040f  54 20        ANL A,#0x20
+CODE:0411  64 20        XRL A,#0x20
+CODE:0413  60 46        JZ 0x045b
+CODE:0415  e5 28        MOV A,0x28
+CODE:0417  64 01        XRL A,#0x1
+CODE:0419  70 10        JNZ 0x042b
+CODE:041b  90 06 11     MOV DPTR,#0x611
+CODE:041e  e0           MOVX A,@DPTR
+CODE:041f  64 07        XRL A,#0x7
+CODE:0421  70 04        JNZ 0x0427
+CODE:0423  7f 01        MOV R7,#0x1
+CODE:0425  80 12        SJMP 0x0439
+CODE:0427  7f 00        MOV R7,#0x0
+CODE:0429  80 0e        SJMP 0x0439
+CODE:042b  90 06 11     MOV DPTR,#0x611
+CODE:042e  e0           MOVX A,@DPTR
+CODE:042f  64 77        XRL A,#0x77
+CODE:0431  70 04        JNZ 0x0437
+CODE:0433  7f 01        MOV R7,#0x1
+CODE:0435  80 02        SJMP 0x0439
+CODE:0437  7f 00        MOV R7,#0x0
+CODE:0439  ef           MOV A,R7
+CODE:043a  33           RLC A
+CODE:043b  95 e0        SUBB A,A
+CODE:043d  4f           ORL A,R7
+CODE:043e  70 03        JNZ 0x0443
+CODE:0440  02 03 a6     LJMP 0x03a6
+CODE:0443  12 0c bc     LCALL 0x0cbc
+CODE:0446  ef           MOV A,R7
+CODE:0447  64 01        XRL A,#0x1
+CODE:0449  70 03        JNZ 0x044e
+CODE:044b  02 03 a6     LJMP 0x03a6
+CODE:044e  43 c2 02     ORL 0xc2,#0x2
+CODE:0451  12 0e 5c     LCALL 0x0e5c
+CODE:0454  ef           MOV A,R7
+CODE:0455  64 01        XRL A,#0x1
+CODE:0457  70 ae        JNZ 0x0407
+CODE:0459  80 39        SJMP 0x0494
+CODE:045b  90 00 22     MOV DPTR,#0x22
+CODE:045e  74 0d        MOV A,#0xd
+CODE:0460  f0           MOVX @DPTR,A
+CODE:0461  e5 08        MOV A,0x08
+CODE:0463  90 00 10     MOV DPTR,#0x10
+CODE:0466  93           MOVC A,@A+DPTR
+CODE:0467  ff           MOV R7,A
+CODE:0468  12 0a 20     LCALL 0x0a20
+CODE:046b  e4           CLR A
+CODE:046c  f5 0d        MOV 0x0d,A
+CODE:046e  f5 0e        MOV 0x0e,A
+CODE:0470  90 00 0c     MOV DPTR,#0xc
+CODE:0473  e0           MOVX A,@DPTR
+CODE:0474  f5 26        MOV 0x26,A
+CODE:0476  e5 26        MOV A,0x26
+CODE:0478  54 01        ANL A,#0x1
+CODE:047a  64 01        XRL A,#0x1
+CODE:047c  60 21        JZ 0x049f
+CODE:047e  43 c2 02     ORL 0xc2,#0x2
+CODE:0481  12 0c bc     LCALL 0x0cbc
+CODE:0484  ef           MOV A,R7
+CODE:0485  64 01        XRL A,#0x1
+CODE:0487  70 03        JNZ 0x048c
+CODE:0489  02 03 a6     LJMP 0x03a6
+CODE:048c  12 0e 5c     LCALL 0x0e5c
+CODE:048f  ef           MOV A,R7
+CODE:0490  64 01        XRL A,#0x1
+CODE:0492  70 dc        JNZ 0x0470
+CODE:0494  90 00 06     MOV DPTR,#0x6
+CODE:0497  74 20        MOV A,#0x20
+CODE:0499  f0           MOVX @DPTR,A
+CODE:049a  e4           CLR A
+CODE:049b  f0           MOVX @DPTR,A
+CODE:049c  02 03 a6     LJMP 0x03a6
+CODE:049f  e5 08        MOV A,0x08
+CODE:04a1  90 00 10     MOV DPTR,#0x10
+CODE:04a4  93           MOVC A,@A+DPTR
+CODE:04a5  90 00 9f     MOV DPTR,#0x9f
+CODE:04a8  f0           MOVX @DPTR,A
+CODE:04a9  e5 08        MOV A,0x08
+CODE:04ab  90 00 11     MOV DPTR,#0x11
+CODE:04ae  93           MOVC A,@A+DPTR
+CODE:04af  90 01 dc     MOV DPTR,#0x1dc
+CODE:04b2  f0           MOVX @DPTR,A
+CODE:04b3  e5 08        MOV A,0x08
+CODE:04b5  90 00 12     MOV DPTR,#0x12
+CODE:04b8  93           MOVC A,@A+DPTR
+CODE:04b9  90 01 de     MOV DPTR,#0x1de
+CODE:04bc  f0           MOVX @DPTR,A
+CODE:04bd  e5 08        MOV A,0x08
+CODE:04bf  90 00 13     MOV DPTR,#0x13
+CODE:04c2  93           MOVC A,@A+DPTR
+CODE:04c3  54 f7        ANL A,#0xf7
+CODE:04c5  90 01 e1     MOV DPTR,#0x1e1
+CODE:04c8  f0           MOVX @DPTR,A
+CODE:04c9  e5 08        MOV A,0x08
+CODE:04cb  90 00 14     MOV DPTR,#0x14
+CODE:04ce  93           MOVC A,@A+DPTR
+CODE:04cf  44 08        ORL A,#0x8
+CODE:04d1  90 01 e2     MOV DPTR,#0x1e2
+CODE:04d4  f0           MOVX @DPTR,A
+CODE:04d5  e5 08        MOV A,0x08
+CODE:04d7  90 00 15     MOV DPTR,#0x15
+CODE:04da  93           MOVC A,@A+DPTR
+CODE:04db  90 01 e3     MOV DPTR,#0x1e3
+CODE:04de  f0           MOVX @DPTR,A
+CODE:04df  e5 08        MOV A,0x08
+CODE:04e1  90 00 16     MOV DPTR,#0x16
+CODE:04e4  93           MOVC A,@A+DPTR
+CODE:04e5  90 01 e4     MOV DPTR,#0x1e4
+CODE:04e8  f0           MOVX @DPTR,A
+CODE:04e9  e5 08        MOV A,0x08
+CODE:04eb  90 00 17     MOV DPTR,#0x17
+CODE:04ee  93           MOVC A,@A+DPTR
+CODE:04ef  90 01 e7     MOV DPTR,#0x1e7
+CODE:04f2  f0           MOVX @DPTR,A
+CODE:04f3  e5 08        MOV A,0x08
+CODE:04f5  90 00 18     MOV DPTR,#0x18
+CODE:04f8  93           MOVC A,@A+DPTR
+CODE:04f9  90 01 ed     MOV DPTR,#0x1ed
+CODE:04fc  f0           MOVX @DPTR,A
+CODE:04fd  e5 08        MOV A,0x08
+CODE:04ff  90 00 19     MOV DPTR,#0x19
+CODE:0502  93           MOVC A,@A+DPTR
+CODE:0503  90 01 f2     MOV DPTR,#0x1f2
+CODE:0506  f0           MOVX @DPTR,A
+CODE:0507  e5 08        MOV A,0x08
+CODE:0509  90 00 1a     MOV DPTR,#0x1a
+CODE:050c  93           MOVC A,@A+DPTR
+CODE:050d  90 01 f3     MOV DPTR,#0x1f3
+CODE:0510  f0           MOVX @DPTR,A
+CODE:0511  90 01 22     MOV DPTR,#0x122
+CODE:0514  e4           CLR A
+CODE:0515  93           MOVC A,@A+DPTR
+CODE:0516  c4           SWAP A
+CODE:0517  54 f0        ANL A,#0xf0
+CODE:0519  ff           MOV R7,A
+CODE:051a  e5 08        MOV A,0x08
+CODE:051c  90 00 1b     MOV DPTR,#0x1b
+CODE:051f  93           MOVC A,@A+DPTR
+CODE:0520  4f           ORL A,R7
+CODE:0521  90 01 f4     MOV DPTR,#0x1f4
+CODE:0524  f0           MOVX @DPTR,A
+CODE:0525  90 00 22     MOV DPTR,#0x22
+CODE:0528  74 0f        MOV A,#0xf
+CODE:052a  f0           MOVX @DPTR,A
+CODE:052b  90 00 e1     MOV DPTR,#0xe1
+CODE:052e  e0           MOVX A,@DPTR
+CODE:052f  f5 26        MOV 0x26,A
+CODE:0531  e5 26        MOV A,0x26
+CODE:0533  44 80        ORL A,#0x80
+CODE:0535  f0           MOVX @DPTR,A
+CODE:0536  90 01 d7     MOV DPTR,#0x1d7
+CODE:0539  e0           MOVX A,@DPTR
+CODE:053a  54 01        ANL A,#0x1
+CODE:053c  70 24        JNZ 0x0562
+CODE:053e  a3           INC DPTR
+CODE:053f  74 b4        MOV A,#0xb4
+CODE:0541  f0           MOVX @DPTR,A
+CODE:0542  90 01 14     MOV DPTR,#0x114
+CODE:0545  e4           CLR A
+CODE:0546  93           MOVC A,@A+DPTR
+CODE:0547  75 29 00     MOV 0x29,#0x0
+CODE:054a  f5 2a        MOV 0x2a,A
+CODE:054c  e5 2a        MOV A,0x2a
+CODE:054e  75 2a 00     MOV 0x2a,#0x0
+CODE:0551  f5 29        MOV 0x29,A
+CODE:0553  a3           INC DPTR
+CODE:0554  e4           CLR A
+CODE:0555  93           MOVC A,@A+DPTR
+CODE:0556  90 01 13     MOV DPTR,#0x113
+CODE:0559  12 0d da     LCALL 0x0dda
+CODE:055c  90 01 d8     MOV DPTR,#0x1d8
+CODE:055f  74 bc        MOV A,#0xbc
+CODE:0561  f0           MOVX @DPTR,A
+CODE:0562  e5 14        MOV A,0x14
+CODE:0564  64 01        XRL A,#0x1
+CODE:0566  70 02        JNZ 0x056a
+CODE:0568  d2 af        SETB 0xaf
+CODE:056a  90 00 0c     MOV DPTR,#0xc
+CODE:056d  e0           MOVX A,@DPTR
+CODE:056e  f5 26        MOV 0x26,A
+CODE:0570  90 06 11     MOV DPTR,#0x611
+CODE:0573  e0           MOVX A,@DPTR
+CODE:0574  f5 27        MOV 0x27,A
+CODE:0576  43 c2 02     ORL 0xc2,#0x2
+CODE:0579  12 0c bc     LCALL 0x0cbc
+CODE:057c  ef           MOV A,R7
+CODE:057d  64 01        XRL A,#0x1
+CODE:057f  70 03        JNZ 0x0584
+CODE:0581  02 03 a6     LJMP 0x03a6
+CODE:0584  7f 0a        MOV R7,#0xa
+CODE:0586  7e 00        MOV R6,#0x0
+CODE:0588  12 0d fc     LCALL 0x0dfc
+CODE:058b  90 01 12     MOV DPTR,#0x112
+CODE:058e  e4           CLR A
+CODE:058f  93           MOVC A,@A+DPTR
+CODE:0590  54 03        ANL A,#0x3
+CODE:0592  64 01        XRL A,#0x1
+CODE:0594  70 03        JNZ 0x0599
+CODE:0596  12 0d 30     LCALL 0x0d30
+CODE:0599  90 01 12     MOV DPTR,#0x112
+CODE:059c  e4           CLR A
+CODE:059d  93           MOVC A,@A+DPTR
+CODE:059e  54 10        ANL A,#0x10
+CODE:05a0  64 10        XRL A,#0x10
+CODE:05a2  70 03        JNZ 0x05a7
+CODE:05a4  12 0d 8d     LCALL 0x0d8d
+CODE:05a7  e5 26        MOV A,0x26
+CODE:05a9  54 20        ANL A,#0x20
+CODE:05ab  64 20        XRL A,#0x20
+CODE:05ad  70 2f        JNZ 0x05de
+CODE:05af  e5 28        MOV A,0x28
+CODE:05b1  64 01        XRL A,#0x1
+CODE:05b3  70 10        JNZ 0x05c5
+CODE:05b5  90 06 11     MOV DPTR,#0x611
+CODE:05b8  e0           MOVX A,@DPTR
+CODE:05b9  64 07        XRL A,#0x7
+CODE:05bb  70 04        JNZ 0x05c1
+CODE:05bd  7f 01        MOV R7,#0x1
+CODE:05bf  80 12        SJMP 0x05d3
+CODE:05c1  7f 00        MOV R7,#0x0
+CODE:05c3  80 0e        SJMP 0x05d3
+CODE:05c5  90 06 11     MOV DPTR,#0x611
+CODE:05c8  e0           MOVX A,@DPTR
+CODE:05c9  64 77        XRL A,#0x77
+CODE:05cb  70 04        JNZ 0x05d1
+CODE:05cd  7f 01        MOV R7,#0x1
+CODE:05cf  80 02        SJMP 0x05d3
+CODE:05d1  7f 00        MOV R7,#0x0
+CODE:05d3  ef           MOV A,R7
+CODE:05d4  33           RLC A
+CODE:05d5  95 e0        SUBB A,A
+CODE:05d7  fe           MOV R6,A
+CODE:05d8  ef           MOV A,R7
+CODE:05d9  64 01        XRL A,#0x1
+CODE:05db  4e           ORL A,R6
+CODE:05dc  60 8c        JZ 0x056a
+CODE:05de  90 01 12     MOV DPTR,#0x112
+CODE:05e1  e4           CLR A
+CODE:05e2  93           MOVC A,@A+DPTR
+CODE:05e3  54 10        ANL A,#0x10
+CODE:05e5  64 10        XRL A,#0x10
+CODE:05e7  70 04        JNZ 0x05ed
+CODE:05e9  f5 11        MOV 0x11,A
+CODE:05eb  f5 12        MOV 0x12,A
+CODE:05ed  90 01 d7     MOV DPTR,#0x1d7
+CODE:05f0  e0           MOVX A,@DPTR
+CODE:05f1  54 01        ANL A,#0x1
+CODE:05f3  70 24        JNZ 0x0619
+CODE:05f5  a3           INC DPTR
+CODE:05f6  74 b4        MOV A,#0xb4
+CODE:05f8  f0           MOVX @DPTR,A
+CODE:05f9  90 01 17     MOV DPTR,#0x117
+CODE:05fc  e4           CLR A
+CODE:05fd  93           MOVC A,@A+DPTR
+CODE:05fe  75 29 00     MOV 0x29,#0x0
+CODE:0601  f5 2a        MOV 0x2a,A
+CODE:0603  e5 2a        MOV A,0x2a
+CODE:0605  75 2a 00     MOV 0x2a,#0x0
+CODE:0608  f5 29        MOV 0x29,A
+CODE:060a  a3           INC DPTR
+CODE:060b  e4           CLR A
+CODE:060c  93           MOVC A,@A+DPTR
+CODE:060d  90 01 16     MOV DPTR,#0x116
+CODE:0610  12 0d da     LCALL 0x0dda
+CODE:0613  90 01 d8     MOV DPTR,#0x1d8
+CODE:0616  74 94        MOV A,#0x94
+CODE:0618  f0           MOVX @DPTR,A
+CODE:0619  90 00 e1     MOV DPTR,#0xe1
+CODE:061c  e0           MOVX A,@DPTR
+CODE:061d  f5 26        MOV 0x26,A
+CODE:061f  e5 26        MOV A,0x26
+CODE:0621  54 7f        ANL A,#0x7f
+CODE:0623  f0           MOVX @DPTR,A
+CODE:0624  c2 af        CLR 0xaf
+CODE:0626  90 01 19     MOV DPTR,#0x119
+CODE:0629  e4           CLR A
+CODE:062a  93           MOVC A,@A+DPTR
+CODE:062b  75 29 00     MOV 0x29,#0x0
+CODE:062e  f5 2a        MOV 0x2a,A
+CODE:0630  e5 2a        MOV A,0x2a
+CODE:0632  75 2a 00     MOV 0x2a,#0x0
+CODE:0635  f5 29        MOV 0x29,A
+CODE:0637  a3           INC DPTR
+CODE:0638  e4           CLR A
+CODE:0639  93           MOVC A,@A+DPTR
+CODE:063a  25 2a        ADD A,0x2a
+CODE:063c  f5 2a        MOV 0x2a,A
+CODE:063e  e4           CLR A
+CODE:063f  35 29        ADDC A,0x29
+CODE:0641  12 0d ec     LCALL 0x0dec
+CODE:0644  02 03 a6     LJMP 0x03a6
+CODE:0647  ec           MOV A,R4
+CODE:0648  4d           ORL A,R5
+CODE:0649  60 11        JZ 0x065c
+CODE:064b  e8           MOV A,R0
+CODE:064c  49           ORL A,R1
+CODE:064d  70 17        JNZ 0x0666
+CODE:064f  ed           MOV A,R5
+CODE:0650  33           RLC A
+CODE:0651  ec           MOV A,R4
+CODE:0652  33           RLC A
+CODE:0653  04           INC A
+CODE:0654  60 0d        JZ 0x0663
+CODE:0656  e4           CLR A
+CODE:0657  fc           MOV R4,A
+CODE:0658  ff           MOV R7,A
+CODE:0659  fe           MOV R6,A
+CODE:065a  fd           MOV R5,A
+CODE:065b  22           RET
+CODE:065c  e9           MOV A,R1
+CODE:065d  33           RLC A
+CODE:065e  e8           MOV A,R0
+CODE:065f  33           RLC A
+CODE:0660  04           INC A
+CODE:0661  70 f8        JNZ 0x065b
+CODE:0663  02 08 97     LJMP 0x0897
+CODE:0666  12 08 62     LCALL 0x0862
+CODE:0669  58           ANL A,R0
+CODE:066a  04           INC A
+CODE:066b  60 09        JZ 0x0676
+CODE:066d  e4           CLR A
+CODE:066e  cc           XCH A,R4
+CODE:066f  24 81        ADD A,#0x81
+CODE:0671  50 06        JNC 0x0679
+CODE:0673  28           ADD A,R0
+CODE:0674  50 09        JNC 0x067f
+CODE:0676  02 08 a1     LJMP 0x08a1
+CODE:0679  28           ADD A,R0
+CODE:067a  40 03        JC 0x067f
+CODE:067c  02 08 9e     LJMP 0x089e
+CODE:067f  c0 e0        PUSH A
+CODE:0681  eb           MOV A,R3
+CODE:0682  4a           ORL A,R2
+CODE:0683  70 44        JNZ 0x06c9
+CODE:0685  b9 80 06     CJNE R1,#0x80,0x068e
+CODE:0688  d0 e0        POP A
+CODE:068a  fb           MOV R3,A
+CODE:068b  02 08 8d     LJMP 0x088d
+CODE:068e  ef           MOV A,R7
+CODE:068f  4e           ORL A,R6
+CODE:0690  70 1c        JNZ 0x06ae
+CODE:0692  bd 80 08     CJNE R5,#0x80,0x069d
+CODE:0695  eb           MOV A,R3
+CODE:0696  ff           MOV R7,A
+CODE:0697  ea           MOV A,R2
+CODE:0698  fe           MOV R6,A
+CODE:0699  e9           MOV A,R1
+CODE:069a  fd           MOV R5,A
+CODE:069b  80 eb        SJMP 0x0688
+CODE:069d  e9           MOV A,R1
+CODE:069e  8d f0        MOV B,R5
+CODE:06a0  a4           MUL AB
+CODE:06a1  fe           MOV R6,A
+CODE:06a2  e5 f0        MOV A,B
+CODE:06a4  02 07 30     LJMP 0x0730
+CODE:06a7  e9           MOV A,R1
+CODE:06a8  cd           XCH A,R5
+CODE:06a9  f9           MOV R1,A
+CODE:06aa  ea           MOV A,R2
+CODE:06ab  fe           MOV R6,A
+CODE:06ac  eb           MOV A,R3
+CODE:06ad  ff           MOV R7,A
+CODE:06ae  ef           MOV A,R7
+CODE:06af  89 f0        MOV B,R1
+CODE:06b1  a4           MUL AB
+CODE:06b2  fc           MOV R4,A
+CODE:06b3  e5 f0        MOV A,B
+CODE:06b5  ce           XCH A,R6
+CODE:06b6  89 f0        MOV B,R1
+CODE:06b8  a4           MUL AB
+CODE:06b9  2e           ADD A,R6
+CODE:06ba  ff           MOV R7,A
+CODE:06bb  e4           CLR A
+CODE:06bc  35 f0        ADDC A,B
+CODE:06be  cd           XCH A,R5
+CODE:06bf  89 f0        MOV B,R1
+CODE:06c1  a4           MUL AB
+CODE:06c2  2d           ADD A,R5
+CODE:06c3  fe           MOV R6,A
+CODE:06c4  e4           CLR A
+CODE:06c5  35 f0        ADDC A,B
+CODE:06c7  80 67        SJMP 0x0730
+CODE:06c9  ef           MOV A,R7
+CODE:06ca  4e           ORL A,R6
+CODE:06cb  70 05        JNZ 0x06d2
+CODE:06cd  bd 80 d7     CJNE R5,#0x80,0x06a7
+CODE:06d0  80 c3        SJMP 0x0695
+CODE:06d2  ef           MOV A,R7
+CODE:06d3  8b f0        MOV B,R3
+CODE:06d5  a4           MUL AB
+CODE:06d6  ac f0        MOV R4,B
+CODE:06d8  ee           MOV A,R6
+CODE:06d9  8b f0        MOV B,R3
+CODE:06db  a4           MUL AB
+CODE:06dc  2c           ADD A,R4
+CODE:06dd  fc           MOV R4,A
+CODE:06de  e4           CLR A
+CODE:06df  35 f0        ADDC A,B
+CODE:06e1  f8           MOV R0,A
+CODE:06e2  ef           MOV A,R7
+CODE:06e3  8a f0        MOV B,R2
+CODE:06e5  a4           MUL AB
+CODE:06e6  2c           ADD A,R4
+CODE:06e7  e5 f0        MOV A,B
+CODE:06e9  38           ADDC A,R0
+CODE:06ea  fc           MOV R4,A
+CODE:06eb  e4           CLR A
+CODE:06ec  33           RLC A
+CODE:06ed  cb           XCH A,R3
+CODE:06ee  8d f0        MOV B,R5
+CODE:06f0  a4           MUL AB
+CODE:06f1  2c           ADD A,R4
+CODE:06f2  fc           MOV R4,A
+CODE:06f3  e5 f0        MOV A,B
+CODE:06f5  3b           ADDC A,R3
+CODE:06f6  f8           MOV R0,A
+CODE:06f7  ee           MOV A,R6
+CODE:06f8  8a f0        MOV B,R2
+CODE:06fa  a4           MUL AB
+CODE:06fb  2c           ADD A,R4
+CODE:06fc  fc           MOV R4,A
+CODE:06fd  e5 f0        MOV A,B
+CODE:06ff  38           ADDC A,R0
+CODE:0700  f8           MOV R0,A
+CODE:0701  e4           CLR A
+CODE:0702  33           RLC A
+CODE:0703  cf           XCH A,R7
+CODE:0704  89 f0        MOV B,R1
+CODE:0706  a4           MUL AB
+CODE:0707  2c           ADD A,R4
+CODE:0708  fc           MOV R4,A
+CODE:0709  e5 f0        MOV A,B
+CODE:070b  38           ADDC A,R0
+CODE:070c  cf           XCH A,R7
+CODE:070d  34 00        ADDC A,#0x0
+CODE:070f  ce           XCH A,R6
+CODE:0710  89 f0        MOV B,R1
+CODE:0712  a4           MUL AB
+CODE:0713  2f           ADD A,R7
+CODE:0714  ff           MOV R7,A
+CODE:0715  e5 f0        MOV A,B
+CODE:0717  3e           ADDC A,R6
+CODE:0718  fe           MOV R6,A
+CODE:0719  e4           CLR A
+CODE:071a  33           RLC A
+CODE:071b  c9           XCH A,R1
+CODE:071c  8d f0        MOV B,R5
+CODE:071e  a4           MUL AB
+CODE:071f  2e           ADD A,R6
+CODE:0720  fe           MOV R6,A
+CODE:0721  e5 f0        MOV A,B
+CODE:0723  39           ADDC A,R1
+CODE:0724  cd           XCH A,R5
+CODE:0725  8a f0        MOV B,R2
+CODE:0727  a4           MUL AB
+CODE:0728  2f           ADD A,R7
+CODE:0729  ff           MOV R7,A
+CODE:072a  e5 f0        MOV A,B
+CODE:072c  3e           ADDC A,R6
+CODE:072d  fe           MOV R6,A
+CODE:072e  e4           CLR A
+CODE:072f  3d           ADDC A,R5
+CODE:0730  fd           MOV R5,A
+CODE:0731  33           RLC A
+CODE:0732  d0 e0        POP A
+CODE:0734  fb           MOV R3,A
+CODE:0735  50 07        JNC 0x073e
+CODE:0737  0b           INC R3
+CODE:0738  bb 00 0f     CJNE R3,#0x0,0x074a
+CODE:073b  02 08 a1     LJMP 0x08a1
+CODE:073e  ec           MOV A,R4
+CODE:073f  2c           ADD A,R4
+CODE:0740  fc           MOV R4,A
+CODE:0741  ef           MOV A,R7
+CODE:0742  33           RLC A
+CODE:0743  ff           MOV R7,A
+CODE:0744  ee           MOV A,R6
+CODE:0745  33           RLC A
+CODE:0746  fe           MOV R6,A
+CODE:0747  ed           MOV A,R5
+CODE:0748  33           RLC A
+CODE:0749  fd           MOV R5,A
+CODE:074a  02 08 79     LJMP 0x0879
+CODE:074d  02 08 a1     LJMP 0x08a1
+CODE:0750  ec           MOV A,R4
+CODE:0751  5d           ANL A,R5
+CODE:0752  04           INC A
+CODE:0753  60 05        JZ 0x075a
+CODE:0755  e8           MOV A,R0
+CODE:0756  59           ANL A,R1
+CODE:0757  04           INC A
+CODE:0758  70 03        JNZ 0x075d
+CODE:075a  02 08 97     LJMP 0x0897
+CODE:075d  12 08 62     LCALL 0x0862
+CODE:0760  58           ANL A,R0
+CODE:0761  04           INC A
+CODE:0762  60 f6        JZ 0x075a
+CODE:0764  ec           MOV A,R4
+CODE:0765  48           ORL A,R0
+CODE:0766  60 f2        JZ 0x075a
+CODE:0768  ec           MOV A,R4
+CODE:0769  70 04        JNZ 0x076f
+CODE:076b  fd           MOV R5,A
+CODE:076c  fe           MOV R6,A
+CODE:076d  ff           MOV R7,A
+CODE:076e  22           RET
+CODE:076f  c8           XCH A,R0
+CODE:0770  60 db        JZ 0x074d
+CODE:0772  24 81        ADD A,#0x81
+CODE:0774  c8           XCH A,R0
+CODE:0775  50 09        JNC 0x0780
+CODE:0777  c3           CLR CY
+CODE:0778  98           SUBB A,R0
+CODE:0779  60 02        JZ 0x077d
+CODE:077b  50 06        JNC 0x0783
+CODE:077d  02 08 9e     LJMP 0x089e
+CODE:0780  98           SUBB A,R0
+CODE:0781  50 ca        JNC 0x074d
+CODE:0783  f5 82        MOV DPL,A
+CODE:0785  e9           MOV A,R1
+CODE:0786  29           ADD A,R1
+CODE:0787  4b           ORL A,R3
+CODE:0788  4a           ORL A,R2
+CODE:0789  70 05        JNZ 0x0790
+CODE:078b  ab 82        MOV R3,DPL
+CODE:078d  02 08 8d     LJMP 0x088d
+CODE:0790  75 f0 00     MOV B,#0x0
+CODE:0793  7c 1a        MOV R4,#0x1a
+CODE:0795  78 80        MOV R0,#0x80
+CODE:0797  c3           CLR CY
+CODE:0798  ef           MOV A,R7
+CODE:0799  9b           SUBB A,R3
+CODE:079a  ee           MOV A,R6
+CODE:079b  9a           SUBB A,R2
+CODE:079c  ed           MOV A,R5
+CODE:079d  99           SUBB A,R1
+CODE:079e  40 0d        JC 0x07ad
+CODE:07a0  c3           CLR CY
+CODE:07a1  ef           MOV A,R7
+CODE:07a2  9b           SUBB A,R3
+CODE:07a3  ff           MOV R7,A
+CODE:07a4  ee           MOV A,R6
+CODE:07a5  9a           SUBB A,R2
+CODE:07a6  fe           MOV R6,A
+CODE:07a7  ed           MOV A,R5
+CODE:07a8  99           SUBB A,R1
+CODE:07a9  fd           MOV R5,A
+CODE:07aa  e8           MOV A,R0
+CODE:07ab  42 f0        ORL B,A
+CODE:07ad  dc 23        DJNZ R4,0x07d2
+CODE:07af  ac f0        MOV R4,B
+CODE:07b1  d0 e0        POP A
+CODE:07b3  ff           MOV R7,A
+CODE:07b4  d0 e0        POP A
+CODE:07b6  fe           MOV R6,A
+CODE:07b7  d0 e0        POP A
+CODE:07b9  fd           MOV R5,A
+CODE:07ba  ab 82        MOV R3,DPL
+CODE:07bc  20 e7 10     JB 0xe7,0x07cf
+CODE:07bf  1b           DEC R3
+CODE:07c0  eb           MOV A,R3
+CODE:07c1  60 ba        JZ 0x077d
+CODE:07c3  ec           MOV A,R4
+CODE:07c4  2c           ADD A,R4
+CODE:07c5  fc           MOV R4,A
+CODE:07c6  ef           MOV A,R7
+CODE:07c7  33           RLC A
+CODE:07c8  ff           MOV R7,A
+CODE:07c9  ee           MOV A,R6
+CODE:07ca  33           RLC A
+CODE:07cb  fe           MOV R6,A
+CODE:07cc  ed           MOV A,R5
+CODE:07cd  33           RLC A
+CODE:07ce  fd           MOV R5,A
+CODE:07cf  02 08 79     LJMP 0x0879
+CODE:07d2  e8           MOV A,R0
+CODE:07d3  03           RR A
+CODE:07d4  f8           MOV R0,A
+CODE:07d5  30 e7 05     JNB 0xe7,0x07dd
+CODE:07d8  c0 f0        PUSH B
+CODE:07da  75 f0 00     MOV B,#0x0
+CODE:07dd  ef           MOV A,R7
+CODE:07de  2f           ADD A,R7
+CODE:07df  ff           MOV R7,A
+CODE:07e0  ee           MOV A,R6
+CODE:07e1  33           RLC A
+CODE:07e2  fe           MOV R6,A
+CODE:07e3  ed           MOV A,R5
+CODE:07e4  33           RLC A
+CODE:07e5  fd           MOV R5,A
+CODE:07e6  40 b8        JC 0x07a0
+CODE:07e8  30 e7 c2     JNB 0xe7,0x07ad
+CODE:07eb  80 aa        SJMP 0x0797
+CODE:07ed  75 f0 20     MOV B,#0x20
+CODE:07f0  80 0e        SJMP 0x0800
+CODE:0800  33           RLC A
+CODE:0801  92 d5        MOV 0xd5,CY
+CODE:0803  30 d5 03     JNB 0xd5,0x0809
+CODE:0806  12 09 db     LCALL 0x09db
+CODE:0809  ec           MOV A,R4
+CODE:080a  33           RLC A
+CODE:080b  40 10        JC 0x081d
+CODE:080d  ef           MOV A,R7
+CODE:080e  33           RLC A
+CODE:080f  ff           MOV R7,A
+CODE:0810  ee           MOV A,R6
+CODE:0811  33           RLC A
+CODE:0812  fe           MOV R6,A
+CODE:0813  ed           MOV A,R5
+CODE:0814  33           RLC A
+CODE:0815  fd           MOV R5,A
+CODE:0816  ec           MOV A,R4
+CODE:0817  33           RLC A
+CODE:0818  fc           MOV R4,A
+CODE:0819  d5 f0 ed     DJNZ B,0x0809
+CODE:081c  22           RET
+CODE:081d  e5 f0        MOV A,B
+CODE:081f  24 7e        ADD A,#0x7e
+CODE:0821  a2 d5        MOV CY,0xd5
+CODE:0823  13           RRC A
+CODE:0824  cc           XCH A,R4
+CODE:0825  92 e7        MOV 0xe7,CY
+CODE:0827  cd           XCH A,R5
+CODE:0828  ce           XCH A,R6
+CODE:0829  ff           MOV R7,A
+CODE:082a  22           RET
+CODE:082b  ed           MOV A,R5
+CODE:082c  d2 e7        SETB 0xe7
+CODE:082e  cd           XCH A,R5
+CODE:082f  33           RLC A
+CODE:0830  ec           MOV A,R4
+CODE:0831  33           RLC A
+CODE:0832  92 d5        MOV 0xd5,CY
+CODE:0834  24 81        ADD A,#0x81
+CODE:0836  40 06        JC 0x083e
+CODE:0838  e4           CLR A
+CODE:0839  ff           MOV R7,A
+CODE:083a  fe           MOV R6,A
+CODE:083b  fd           MOV R5,A
+CODE:083c  fc           MOV R4,A
+CODE:083d  22           RET
+CODE:083e  fc           MOV R4,A
+CODE:083f  e4           CLR A
+CODE:0840  cf           XCH A,R7
+CODE:0841  ce           XCH A,R6
+CODE:0842  cd           XCH A,R5
+CODE:0843  cc           XCH A,R4
+CODE:0844  24 e0        ADD A,#0xe0
+CODE:0846  50 11        JNC 0x0859
+CODE:0848  74 ff        MOV A,#0xff
+CODE:084a  80 ed        SJMP 0x0839
+CODE:084c  c3           CLR CY
+CODE:084d  cc           XCH A,R4
+CODE:084e  13           RRC A
+CODE:084f  cc           XCH A,R4
+CODE:0850  cd           XCH A,R5
+CODE:0851  13           RRC A
+CODE:0852  cd           XCH A,R5
+CODE:0853  ce           XCH A,R6
+CODE:0854  13           RRC A
+CODE:0855  ce           XCH A,R6
+CODE:0856  cf           XCH A,R7
+CODE:0857  13           RRC A
+CODE:0858  cf           XCH A,R7
+CODE:0859  04           INC A
+CODE:085a  70 f0        JNZ 0x084c
+CODE:085c  30 d5 de     JNB 0xd5,0x083d
+CODE:085f  02 09 db     LJMP 0x09db
+CODE:0862  e9           MOV A,R1
+CODE:0863  d2 e7        SETB 0xe7
+CODE:0865  c9           XCH A,R1
+CODE:0866  33           RLC A
+CODE:0867  e8           MOV A,R0
+CODE:0868  33           RLC A
+CODE:0869  f8           MOV R0,A
+CODE:086a  92 d5        MOV 0xd5,CY
+CODE:086c  ed           MOV A,R5
+CODE:086d  d2 e7        SETB 0xe7
+CODE:086f  cd           XCH A,R5
+CODE:0870  33           RLC A
+CODE:0871  ec           MOV A,R4
+CODE:0872  33           RLC A
+CODE:0873  fc           MOV R4,A
+CODE:0874  50 02        JNC 0x0878
+CODE:0876  b2 d5        CPL 0xd5
+CODE:0878  22           RET
+CODE:0879  ec           MOV A,R4
+CODE:087a  30 e7 10     JNB 0xe7,0x088d
+CODE:087d  0f           INC R7
+CODE:087e  bf 00 0c     CJNE R7,#0x0,0x088d
+CODE:0881  0e           INC R6
+CODE:0882  be 00 08     CJNE R6,#0x0,0x088d
+CODE:0885  0d           INC R5
+CODE:0886  bd 00 04     CJNE R5,#0x0,0x088d
+CODE:0889  0b           INC R3
+CODE:088a  eb           MOV A,R3
+CODE:088b  60 14        JZ 0x08a1
+CODE:088d  a2 d5        MOV CY,0xd5
+CODE:088f  eb           MOV A,R3
+CODE:0890  13           RRC A
+CODE:0891  fc           MOV R4,A
+CODE:0892  ed           MOV A,R5
+CODE:0893  92 e7        MOV 0xe7,CY
+CODE:0895  fd           MOV R5,A
+CODE:0896  22           RET
+CODE:0897  74 ff        MOV A,#0xff
+CODE:0899  fc           MOV R4,A
+CODE:089a  fd           MOV R5,A
+CODE:089b  fe           MOV R6,A
+CODE:089c  ff           MOV R7,A
+CODE:089d  22           RET
+CODE:089e  e4           CLR A
+CODE:089f  80 f8        SJMP 0x0899
+CODE:08a1  a2 d5        MOV CY,0xd5
+CODE:08a3  74 ff        MOV A,#0xff
+CODE:08a5  13           RRC A
+CODE:08a6  fc           MOV R4,A
+CODE:08a7  7d 80        MOV R5,#0x80
+CODE:08a9  e4           CLR A
+CODE:08aa  80 ef        SJMP 0x089b
+CODE:08ac  ef           MOV A,R7
+CODE:08ad  8d f0        MOV B,R5
+CODE:08af  a4           MUL AB
+CODE:08b0  a8 f0        MOV R0,B
+CODE:08b2  cf           XCH A,R7
+CODE:08b3  8c f0        MOV B,R4
+CODE:08b5  a4           MUL AB
+CODE:08b6  28           ADD A,R0
+CODE:08b7  ce           XCH A,R6
+CODE:08b8  8d f0        MOV B,R5
+CODE:08ba  a4           MUL AB
+CODE:08bb  2e           ADD A,R6
+CODE:08bc  fe           MOV R6,A
+CODE:08bd  22           RET
+CODE:08be  e8           MOV A,R0
+CODE:08bf  8f f0        MOV B,R7
+CODE:08c1  a4           MUL AB
+CODE:08c2  cc           XCH A,R4
+CODE:08c3  8b f0        MOV B,R3
+CODE:08c5  a4           MUL AB
+CODE:08c6  2c           ADD A,R4
+CODE:08c7  fc           MOV R4,A
+CODE:08c8  e9           MOV A,R1
+CODE:08c9  8e f0        MOV B,R6
+CODE:08cb  a4           MUL AB
+CODE:08cc  2c           ADD A,R4
+CODE:08cd  fc           MOV R4,A
+CODE:08ce  8a f0        MOV B,R2
+CODE:08d0  ed           MOV A,R5
+CODE:08d1  a4           MUL AB
+CODE:08d2  2c           ADD A,R4
+CODE:08d3  fc           MOV R4,A
+CODE:08d4  ea           MOV A,R2
+CODE:08d5  8e f0        MOV B,R6
+CODE:08d7  a4           MUL AB
+CODE:08d8  cd           XCH A,R5
+CODE:08d9  a8 f0        MOV R0,B
+CODE:08db  8b f0        MOV B,R3
+CODE:08dd  a4           MUL AB
+CODE:08de  2d           ADD A,R5
+CODE:08df  cc           XCH A,R4
+CODE:08e0  38           ADDC A,R0
+CODE:08e1  25 f0        ADD A,B
+CODE:08e3  fd           MOV R5,A
+CODE:08e4  e9           MOV A,R1
+CODE:08e5  8f f0        MOV B,R7
+CODE:08e7  a4           MUL AB
+CODE:08e8  2c           ADD A,R4
+CODE:08e9  cd           XCH A,R5
+CODE:08ea  35 f0        ADDC A,B
+CODE:08ec  fc           MOV R4,A
+CODE:08ed  eb           MOV A,R3
+CODE:08ee  8e f0        MOV B,R6
+CODE:08f0  a4           MUL AB
+CODE:08f1  fe           MOV R6,A
+CODE:08f2  a9 f0        MOV R1,B
+CODE:08f4  eb           MOV A,R3
+CODE:08f5  8f f0        MOV B,R7
+CODE:08f7  a4           MUL AB
+CODE:08f8  cf           XCH A,R7
+CODE:08f9  c5 f0        XCH A,B
+CODE:08fb  2e           ADD A,R6
+CODE:08fc  cd           XCH A,R5
+CODE:08fd  39           ADDC A,R1
+CODE:08fe  fe           MOV R6,A
+CODE:08ff  e4           CLR A
+CODE:0900  3c           ADDC A,R4
+CODE:0901  fc           MOV R4,A
+CODE:0902  ea           MOV A,R2
+CODE:0903  a4           MUL AB
+CODE:0904  2d           ADD A,R5
+CODE:0905  ce           XCH A,R6
+CODE:0906  35 f0        ADDC A,B
+CODE:0908  fd           MOV R5,A
+CODE:0909  e4           CLR A
+CODE:090a  3c           ADDC A,R4
+CODE:090b  fc           MOV R4,A
+CODE:090c  22           RET
+CODE:090d  75 f0 08     MOV B,#0x8
+CODE:0910  75 82 00     MOV DPL,#0x0
+CODE:0913  ef           MOV A,R7
+CODE:0914  2f           ADD A,R7
+CODE:0915  ff           MOV R7,A
+CODE:0916  ee           MOV A,R6
+CODE:0917  33           RLC A
+CODE:0918  fe           MOV R6,A
+CODE:0919  cd           XCH A,R5
+CODE:091a  33           RLC A
+CODE:091b  cd           XCH A,R5
+CODE:091c  cc           XCH A,R4
+CODE:091d  33           RLC A
+CODE:091e  cc           XCH A,R4
+CODE:091f  c5 82        XCH A,DPL
+CODE:0921  33           RLC A
+CODE:0922  c5 82        XCH A,DPL
+CODE:0924  9b           SUBB A,R3
+CODE:0925  ed           MOV A,R5
+CODE:0926  9a           SUBB A,R2
+CODE:0927  ec           MOV A,R4
+CODE:0928  99           SUBB A,R1
+CODE:0929  e5 82        MOV A,DPL
+CODE:092b  98           SUBB A,R0
+CODE:092c  40 0c        JC 0x093a
+CODE:092e  f5 82        MOV DPL,A
+CODE:0930  ee           MOV A,R6
+CODE:0931  9b           SUBB A,R3
+CODE:0932  fe           MOV R6,A
+CODE:0933  ed           MOV A,R5
+CODE:0934  9a           SUBB A,R2
+CODE:0935  fd           MOV R5,A
+CODE:0936  ec           MOV A,R4
+CODE:0937  99           SUBB A,R1
+CODE:0938  fc           MOV R4,A
+CODE:0939  0f           INC R7
+CODE:093a  d5 f0 d6     DJNZ B,0x0913
+CODE:093d  e4           CLR A
+CODE:093e  ce           XCH A,R6
+CODE:093f  fb           MOV R3,A
+CODE:0940  e4           CLR A
+CODE:0941  cd           XCH A,R5
+CODE:0942  fa           MOV R2,A
+CODE:0943  e4           CLR A
+CODE:0944  cc           XCH A,R4
+CODE:0945  f9           MOV R1,A
+CODE:0946  a8 82        MOV R0,DPL
+CODE:0948  22           RET
+CODE:0949  b8 00 c1     CJNE R0,#0x0,0x090d
+CODE:094c  b9 00 59     CJNE R1,#0x0,0x09a8
+CODE:094f  ba 00 2d     CJNE R2,#0x0,0x097f
+CODE:0952  ec           MOV A,R4
+CODE:0953  8b f0        MOV B,R3
+CODE:0955  84           DIV AB
+CODE:0956  cf           XCH A,R7
+CODE:0957  ce           XCH A,R6
+CODE:0958  cd           XCH A,R5
+CODE:0959  fc           MOV R4,A
+CODE:095a  e5 f0        MOV A,B
+CODE:095c  cb           XCH A,R3
+CODE:095d  f9           MOV R1,A
+CODE:095e  78 18        MOV R0,#0x18
+CODE:0960  ef           MOV A,R7
+CODE:0961  2f           ADD A,R7
+CODE:0962  ff           MOV R7,A
+CODE:0963  ee           MOV A,R6
+CODE:0964  33           RLC A
+CODE:0965  fe           MOV R6,A
+CODE:0966  ed           MOV A,R5
+CODE:0967  33           RLC A
+CODE:0968  fd           MOV R5,A
+CODE:0969  ec           MOV A,R4
+CODE:096a  33           RLC A
+CODE:096b  fc           MOV R4,A
+CODE:096c  eb           MOV A,R3
+CODE:096d  33           RLC A
+CODE:096e  fb           MOV R3,A
+CODE:096f  10 d7 03     JBC 0xd7,0x0975
+CODE:0972  99           SUBB A,R1
+CODE:0973  40 04        JC 0x0979
+CODE:0975  eb           MOV A,R3
+CODE:0976  99           SUBB A,R1
+CODE:0977  fb           MOV R3,A
+CODE:0978  0f           INC R7
+CODE:0979  d8 e5        DJNZ R0,0x0960
+CODE:097b  e4           CLR A
+CODE:097c  f9           MOV R1,A
+CODE:097d  fa           MOV R2,A
+CODE:097e  22           RET
+CODE:097f  78 18        MOV R0,#0x18
+CODE:0981  ef           MOV A,R7
+CODE:0982  2f           ADD A,R7
+CODE:0983  ff           MOV R7,A
+CODE:0984  ee           MOV A,R6
+CODE:0985  33           RLC A
+CODE:0986  fe           MOV R6,A
+CODE:0987  ed           MOV A,R5
+CODE:0988  33           RLC A
+CODE:0989  fd           MOV R5,A
+CODE:098a  ec           MOV A,R4
+CODE:098b  33           RLC A
+CODE:098c  fc           MOV R4,A
+CODE:098d  c9           XCH A,R1
+CODE:098e  33           RLC A
+CODE:098f  c9           XCH A,R1
+CODE:0990  10 d7 05     JBC 0xd7,0x0998
+CODE:0993  9b           SUBB A,R3
+CODE:0994  e9           MOV A,R1
+CODE:0995  9a           SUBB A,R2
+CODE:0996  40 07        JC 0x099f
+CODE:0998  ec           MOV A,R4
+CODE:0999  9b           SUBB A,R3
+CODE:099a  fc           MOV R4,A
+CODE:099b  e9           MOV A,R1
+CODE:099c  9a           SUBB A,R2
+CODE:099d  f9           MOV R1,A
+CODE:099e  0f           INC R7
+CODE:099f  d8 e0        DJNZ R0,0x0981
+CODE:09a1  e4           CLR A
+CODE:09a2  c9           XCH A,R1
+CODE:09a3  fa           MOV R2,A
+CODE:09a4  e4           CLR A
+CODE:09a5  cc           XCH A,R4
+CODE:09a6  fb           MOV R3,A
+CODE:09a7  22           RET
+CODE:09a8  75 f0 10     MOV B,#0x10
+CODE:09ab  ef           MOV A,R7
+CODE:09ac  2f           ADD A,R7
+CODE:09ad  ff           MOV R7,A
+CODE:09ae  ee           MOV A,R6
+CODE:09af  33           RLC A
+CODE:09b0  fe           MOV R6,A
+CODE:09b1  ed           MOV A,R5
+CODE:09b2  33           RLC A
+CODE:09b3  fd           MOV R5,A
+CODE:09b4  cc           XCH A,R4
+CODE:09b5  33           RLC A
+CODE:09b6  cc           XCH A,R4
+CODE:09b7  c8           XCH A,R0
+CODE:09b8  33           RLC A
+CODE:09b9  c8           XCH A,R0
+CODE:09ba  10 d7 07     JBC 0xd7,0x09c4
+CODE:09bd  9b           SUBB A,R3
+CODE:09be  ec           MOV A,R4
+CODE:09bf  9a           SUBB A,R2
+CODE:09c0  e8           MOV A,R0
+CODE:09c1  99           SUBB A,R1
+CODE:09c2  40 0a        JC 0x09ce
+CODE:09c4  ed           MOV A,R5
+CODE:09c5  9b           SUBB A,R3
+CODE:09c6  fd           MOV R5,A
+CODE:09c7  ec           MOV A,R4
+CODE:09c8  9a           SUBB A,R2
+CODE:09c9  fc           MOV R4,A
+CODE:09ca  e8           MOV A,R0
+CODE:09cb  99           SUBB A,R1
+CODE:09cc  f8           MOV R0,A
+CODE:09cd  0f           INC R7
+CODE:09ce  d5 f0 da     DJNZ B,0x09ab
+CODE:09d1  e4           CLR A
+CODE:09d2  cd           XCH A,R5
+CODE:09d3  fb           MOV R3,A
+CODE:09d4  e4           CLR A
+CODE:09d5  cc           XCH A,R4
+CODE:09d6  fa           MOV R2,A
+CODE:09d7  e4           CLR A
+CODE:09d8  c8           XCH A,R0
+CODE:09d9  f9           MOV R1,A
+CODE:09da  22           RET
+CODE:09db  c3           CLR CY
+CODE:09dc  e4           CLR A
+CODE:09dd  9f           SUBB A,R7
+CODE:09de  ff           MOV R7,A
+CODE:09df  e4           CLR A
+CODE:09e0  9e           SUBB A,R6
+CODE:09e1  fe           MOV R6,A
+CODE:09e2  e4           CLR A
+CODE:09e3  9d           SUBB A,R5
+CODE:09e4  fd           MOV R5,A
+CODE:09e5  e4           CLR A
+CODE:09e6  9c           SUBB A,R4
+CODE:09e7  fc           MOV R4,A
+CODE:09e8  22           RET
+CODE:09e9  eb           MOV A,R3
+CODE:09ea  9f           SUBB A,R7
+CODE:09eb  f5 f0        MOV B,A
+CODE:09ed  ea           MOV A,R2
+CODE:09ee  9e           SUBB A,R6
+CODE:09ef  42 f0        ORL B,A
+CODE:09f1  e9           MOV A,R1
+CODE:09f2  9d           SUBB A,R5
+CODE:09f3  42 f0        ORL B,A
+CODE:09f5  e8           MOV A,R0
+CODE:09f6  9c           SUBB A,R4
+CODE:09f7  45 f0        ORL A,B
+CODE:09f9  22           RET
+CODE:09fa  e8           MOV A,R0
+CODE:09fb  60 0f        JZ 0x0a0c
+CODE:09fd  ec           MOV A,R4
+CODE:09fe  c3           CLR CY
+CODE:09ff  13           RRC A
+CODE:0a00  fc           MOV R4,A
+CODE:0a01  ed           MOV A,R5
+CODE:0a02  13           RRC A
+CODE:0a03  fd           MOV R5,A
+CODE:0a04  ee           MOV A,R6
+CODE:0a05  13           RRC A
+CODE:0a06  fe           MOV R6,A
+CODE:0a07  ef           MOV A,R7
+CODE:0a08  13           RRC A
+CODE:0a09  ff           MOV R7,A
+CODE:0a0a  d8 f1        DJNZ R0,0x09fd
+CODE:0a0c  22           RET
+CODE:0a0d  e8           MOV A,R0
+CODE:0a0e  60 0f        JZ 0x0a1f
+CODE:0a10  ef           MOV A,R7
+CODE:0a11  c3           CLR CY
+CODE:0a12  33           RLC A
+CODE:0a13  ff           MOV R7,A
+CODE:0a14  ee           MOV A,R6
+CODE:0a15  33           RLC A
+CODE:0a16  fe           MOV R6,A
+CODE:0a17  ed           MOV A,R5
+CODE:0a18  33           RLC A
+CODE:0a19  fd           MOV R5,A
+CODE:0a1a  ec           MOV A,R4
+CODE:0a1b  33           RLC A
+CODE:0a1c  fc           MOV R4,A
+CODE:0a1d  d8 f1        DJNZ R0,0x0a10
+CODE:0a1f  22           RET
+CODE:0a20  8f 2b        MOV 0x2b,R7
+CODE:0a22  e4           CLR A
+CODE:0a23  f5 34        MOV 0x34,A
+CODE:0a25  f5 33        MOV 0x33,A
+CODE:0a27  f5 32        MOV 0x32,A
+CODE:0a29  f5 31        MOV 0x31,A
+CODE:0a2b  f5 30        MOV 0x30,A
+CODE:0a2d  f5 2f        MOV 0x2f,A
+CODE:0a2f  f5 2e        MOV 0x2e,A
+CODE:0a31  f5 2d        MOV 0x2d,A
+CODE:0a33  90 05 49     MOV DPTR,#0x549
+CODE:0a36  e0           MOVX A,@DPTR
+CODE:0a37  f5 2c        MOV 0x2c,A
+CODE:0a39  e5 34        MOV A,0x34
+CODE:0a3b  45 2c        ORL A,0x2c
+CODE:0a3d  f5 34        MOV 0x34,A
+CODE:0a3f  e5 33        MOV A,0x33
+CODE:0a41  f5 33        MOV 0x33,A
+CODE:0a43  e5 32        MOV A,0x32
+CODE:0a45  f5 32        MOV 0x32,A
+CODE:0a47  e5 31        MOV A,0x31
+CODE:0a49  f5 31        MOV 0x31,A
+CODE:0a4b  a3           INC DPTR
+CODE:0a4c  e0           MOVX A,@DPTR
+CODE:0a4d  f5 2c        MOV 0x2c,A
+CODE:0a4f  af 34        MOV R7,0x34
+CODE:0a51  ae 33        MOV R6,0x33
+CODE:0a53  ad 32        MOV R5,0x32
+CODE:0a55  ac 31        MOV R4,0x31
+CODE:0a57  78 08        MOV R0,#0x8
+CODE:0a59  12 0a 0d     LCALL 0x0a0d
+CODE:0a5c  a8 04        MOV R0,0x04
+CODE:0a5e  a9 05        MOV R1,0x05
+CODE:0a60  aa 06        MOV R2,0x06
+CODE:0a62  ab 07        MOV R3,0x07
+CODE:0a64  eb           MOV A,R3
+CODE:0a65  45 2c        ORL A,0x2c
+CODE:0a67  f5 34        MOV 0x34,A
+CODE:0a69  ea           MOV A,R2
+CODE:0a6a  f5 33        MOV 0x33,A
+CODE:0a6c  e9           MOV A,R1
+CODE:0a6d  f5 32        MOV 0x32,A
+CODE:0a6f  e8           MOV A,R0
+CODE:0a70  f5 31        MOV 0x31,A
+CODE:0a72  a3           INC DPTR
+CODE:0a73  e0           MOVX A,@DPTR
+CODE:0a74  f5 2c        MOV 0x2c,A
+CODE:0a76  af 34        MOV R7,0x34
+CODE:0a78  78 08        MOV R0,#0x8
+CODE:0a7a  12 0a 0d     LCALL 0x0a0d
+CODE:0a7d  a8 04        MOV R0,0x04
+CODE:0a7f  a9 05        MOV R1,0x05
+CODE:0a81  aa 06        MOV R2,0x06
+CODE:0a83  ab 07        MOV R3,0x07
+CODE:0a85  eb           MOV A,R3
+CODE:0a86  45 2c        ORL A,0x2c
+CODE:0a88  f5 34        MOV 0x34,A
+CODE:0a8a  ea           MOV A,R2
+CODE:0a8b  f5 33        MOV 0x33,A
+CODE:0a8d  e9           MOV A,R1
+CODE:0a8e  f5 32        MOV 0x32,A
+CODE:0a90  e8           MOV A,R0
+CODE:0a91  f5 31        MOV 0x31,A
+CODE:0a93  a3           INC DPTR
+CODE:0a94  e0           MOVX A,@DPTR
+CODE:0a95  f5 2c        MOV 0x2c,A
+CODE:0a97  e5 30        MOV A,0x30
+CODE:0a99  45 2c        ORL A,0x2c
+CODE:0a9b  f5 30        MOV 0x30,A
+CODE:0a9d  e5 2f        MOV A,0x2f
+CODE:0a9f  f5 2f        MOV 0x2f,A
+CODE:0aa1  e5 2e        MOV A,0x2e
+CODE:0aa3  f5 2e        MOV 0x2e,A
+CODE:0aa5  e5 2d        MOV A,0x2d
+CODE:0aa7  f5 2d        MOV 0x2d,A
+CODE:0aa9  a3           INC DPTR
+CODE:0aaa  e0           MOVX A,@DPTR
+CODE:0aab  f5 2c        MOV 0x2c,A
+CODE:0aad  af 30        MOV R7,0x30
+CODE:0aaf  ae 2f        MOV R6,0x2f
+CODE:0ab1  ad 2e        MOV R5,0x2e
+CODE:0ab3  ac 2d        MOV R4,0x2d
+CODE:0ab5  78 08        MOV R0,#0x8
+CODE:0ab7  12 0a 0d     LCALL 0x0a0d
+CODE:0aba  a8 04        MOV R0,0x04
+CODE:0abc  a9 05        MOV R1,0x05
+CODE:0abe  aa 06        MOV R2,0x06
+CODE:0ac0  ab 07        MOV R3,0x07
+CODE:0ac2  eb           MOV A,R3
+CODE:0ac3  45 2c        ORL A,0x2c
+CODE:0ac5  f5 30        MOV 0x30,A
+CODE:0ac7  ea           MOV A,R2
+CODE:0ac8  f5 2f        MOV 0x2f,A
+CODE:0aca  e9           MOV A,R1
+CODE:0acb  f5 2e        MOV 0x2e,A
+CODE:0acd  e8           MOV A,R0
+CODE:0ace  f5 2d        MOV 0x2d,A
+CODE:0ad0  a3           INC DPTR
+CODE:0ad1  e0           MOVX A,@DPTR
+CODE:0ad2  f5 2c        MOV 0x2c,A
+CODE:0ad4  af 30        MOV R7,0x30
+CODE:0ad6  78 08        MOV R0,#0x8
+CODE:0ad8  12 0a 0d     LCALL 0x0a0d
+CODE:0adb  a8 04        MOV R0,0x04
+CODE:0add  a9 05        MOV R1,0x05
+CODE:0adf  aa 06        MOV R2,0x06
+CODE:0ae1  ab 07        MOV R3,0x07
+CODE:0ae3  eb           MOV A,R3
+CODE:0ae4  45 2c        ORL A,0x2c
+CODE:0ae6  f5 30        MOV 0x30,A
+CODE:0ae8  ea           MOV A,R2
+CODE:0ae9  f5 2f        MOV 0x2f,A
+CODE:0aeb  e9           MOV A,R1
+CODE:0aec  f5 2e        MOV 0x2e,A
+CODE:0aee  e8           MOV A,R0
+CODE:0aef  f5 2d        MOV 0x2d,A
+CODE:0af1  90 06 0a     MOV DPTR,#0x60a
+CODE:0af4  e0           MOVX A,@DPTR
+CODE:0af5  f5 2c        MOV 0x2c,A
+CODE:0af7  af 2c        MOV R7,0x2c
+CODE:0af9  7e 00        MOV R6,#0x0
+CODE:0afb  7c 00        MOV R4,#0x0
+CODE:0afd  7d 1b        MOV R5,#0x1b
+CODE:0aff  12 08 ac     LCALL 0x08ac
+CODE:0b02  e4           CLR A
+CODE:0b03  fd           MOV R5,A
+CODE:0b04  ab 34        MOV R3,0x34
+CODE:0b06  aa 33        MOV R2,0x33
+CODE:0b08  a9 32        MOV R1,0x32
+CODE:0b0a  a8 31        MOV R0,0x31
+CODE:0b0c  12 08 be     LCALL 0x08be
+CODE:0b0f  ab 30        MOV R3,0x30
+CODE:0b11  aa 2f        MOV R2,0x2f
+CODE:0b13  a9 2e        MOV R1,0x2e
+CODE:0b15  a8 2d        MOV R0,0x2d
+CODE:0b17  12 09 49     LCALL 0x0949
+CODE:0b1a  8f 38        MOV 0x38,R7
+CODE:0b1c  8e 37        MOV 0x37,R6
+CODE:0b1e  8d 36        MOV 0x36,R5
+CODE:0b20  8c 35        MOV 0x35,R4
+CODE:0b22  af 2c        MOV R7,0x2c
+CODE:0b24  e4           CLR A
+CODE:0b25  fc           MOV R4,A
+CODE:0b26  fd           MOV R5,A
+CODE:0b27  fe           MOV R6,A
+CODE:0b28  ab 34        MOV R3,0x34
+CODE:0b2a  aa 33        MOV R2,0x33
+CODE:0b2c  a9 32        MOV R1,0x32
+CODE:0b2e  a8 31        MOV R0,0x31
+CODE:0b30  12 08 be     LCALL 0x08be
+CODE:0b33  e4           CLR A
+CODE:0b34  12 07 ed     LCALL 0x07ed
+CODE:0b37  e4           CLR A
+CODE:0b38  fb           MOV R3,A
+CODE:0b39  fa           MOV R2,A
+CODE:0b3a  79 e0        MOV R1,#0xe0
+CODE:0b3c  78 48        MOV R0,#0x48
+CODE:0b3e  12 06 47     LCALL 0x0647
+CODE:0b41  c0 04        PUSH 0x04
+CODE:0b43  c0 05        PUSH 0x05
+CODE:0b45  c0 06        PUSH 0x06
+CODE:0b47  c0 07        PUSH 0x07
+CODE:0b49  af 30        MOV R7,0x30
+CODE:0b4b  ae 2f        MOV R6,0x2f
+CODE:0b4d  ad 2e        MOV R5,0x2e
+CODE:0b4f  ac 2d        MOV R4,0x2d
+CODE:0b51  e4           CLR A
+CODE:0b52  12 07 ed     LCALL 0x07ed
+CODE:0b55  a8 04        MOV R0,0x04
+CODE:0b57  a9 05        MOV R1,0x05
+CODE:0b59  aa 06        MOV R2,0x06
+CODE:0b5b  ab 07        MOV R3,0x07
+CODE:0b5d  d0 07        POP 0x07
+CODE:0b5f  d0 06        POP 0x06
+CODE:0b61  d0 05        POP 0x05
+CODE:0b63  d0 04        POP 0x04
+CODE:0b65  12 07 50     LCALL 0x0750
+CODE:0b68  12 08 2b     LCALL 0x082b
+CODE:0b6b  8f 34        MOV 0x34,R7
+CODE:0b6d  8e 33        MOV 0x33,R6
+CODE:0b6f  8d 32        MOV 0x32,R5
+CODE:0b71  8c 31        MOV 0x31,R4
+CODE:0b73  e4           CLR A
+CODE:0b74  7f 64        MOV R7,#0x64
+CODE:0b76  fe           MOV R6,A
+CODE:0b77  fd           MOV R5,A
+CODE:0b78  fc           MOV R4,A
+CODE:0b79  ab 38        MOV R3,0x38
+CODE:0b7b  aa 37        MOV R2,0x37
+CODE:0b7d  a9 36        MOV R1,0x36
+CODE:0b7f  a8 35        MOV R0,0x35
+CODE:0b81  c3           CLR CY
+CODE:0b82  12 09 e9     LCALL 0x09e9
+CODE:0b85  40 0b        JC 0x0b92
+CODE:0b87  e4           CLR A
+CODE:0b88  f5 39        MOV 0x39,A
+CODE:0b8a  e5 2b        MOV A,0x2b
+CODE:0b8c  70 1f        JNZ 0x0bad
+CODE:0b8e  f5 3a        MOV 0x3a,A
+CODE:0b90  80 48        SJMP 0x0bda
+CODE:0b92  e4           CLR A
+CODE:0b93  7f 32        MOV R7,#0x32
+CODE:0b95  fe           MOV R6,A
+CODE:0b96  fd           MOV R5,A
+CODE:0b97  fc           MOV R4,A
+CODE:0b98  ab 38        MOV R3,0x38
+CODE:0b9a  aa 37        MOV R2,0x37
+CODE:0b9c  a9 36        MOV R1,0x36
+CODE:0b9e  a8 35        MOV R0,0x35
+CODE:0ba0  c3           CLR CY
+CODE:0ba1  12 09 e9     LCALL 0x09e9
+CODE:0ba4  40 0c        JC 0x0bb2
+CODE:0ba6  75 39 02     MOV 0x39,#0x2
+CODE:0ba9  e5 2b        MOV A,0x2b
+CODE:0bab  70 20        JNZ 0x0bcd
+CODE:0bad  75 3a 01     MOV 0x3a,#0x1
+CODE:0bb0  80 28        SJMP 0x0bda
+CODE:0bb2  e4           CLR A
+CODE:0bb3  7f 19        MOV R7,#0x19
+CODE:0bb5  fe           MOV R6,A
+CODE:0bb6  fd           MOV R5,A
+CODE:0bb7  fc           MOV R4,A
+CODE:0bb8  ab 38        MOV R3,0x38
+CODE:0bba  aa 37        MOV R2,0x37
+CODE:0bbc  a9 36        MOV R1,0x36
+CODE:0bbe  a8 35        MOV R0,0x35
+CODE:0bc0  c3           CLR CY
+CODE:0bc1  12 09 e9     LCALL 0x09e9
+CODE:0bc4  40 0c        JC 0x0bd2
+CODE:0bc6  75 39 04     MOV 0x39,#0x4
+CODE:0bc9  e5 2b        MOV A,0x2b
+CODE:0bcb  70 0a        JNZ 0x0bd7
+CODE:0bcd  75 3a 02     MOV 0x3a,#0x2
+CODE:0bd0  80 08        SJMP 0x0bda
+CODE:0bd2  75 39 08     MOV 0x39,#0x8
+CODE:0bd5  e5 2b        MOV A,0x2b
+CODE:0bd7  75 3a 03     MOV 0x3a,#0x3
+CODE:0bda  90 00 e7     MOV DPTR,#0xe7
+CODE:0bdd  e5 39        MOV A,0x39
+CODE:0bdf  f0           MOVX @DPTR,A
+CODE:0be0  90 00 e1     MOV DPTR,#0xe1
+CODE:0be3  e0           MOVX A,@DPTR
+CODE:0be4  f5 2c        MOV 0x2c,A
+CODE:0be6  53 2c bf     ANL 0x2c,#0xbf
+CODE:0be9  e5 3a        MOV A,0x3a
+CODE:0beb  c4           SWAP A
+CODE:0bec  54 30        ANL A,#0x30
+CODE:0bee  ff           MOV R7,A
+CODE:0bef  e5 2c        MOV A,0x2c
+CODE:0bf1  54 cf        ANL A,#0xcf
+CODE:0bf3  4f           ORL A,R7
+CODE:0bf4  f0           MOVX @DPTR,A
+CODE:0bf5  af 34        MOV R7,0x34
+CODE:0bf7  ae 33        MOV R6,0x33
+CODE:0bf9  ad 32        MOV R5,0x32
+CODE:0bfb  ac 31        MOV R4,0x31
+CODE:0bfd  78 10        MOV R0,#0x10
+CODE:0bff  12 09 fa     LCALL 0x09fa
+CODE:0c02  90 05 64     MOV DPTR,#0x564
+CODE:0c05  ef           MOV A,R7
+CODE:0c06  f0           MOVX @DPTR,A
+CODE:0c07  af 34        MOV R7,0x34
+CODE:0c09  ae 33        MOV R6,0x33
+CODE:0c0b  ad 32        MOV R5,0x32
+CODE:0c0d  ac 31        MOV R4,0x31
+CODE:0c0f  78 08        MOV R0,#0x8
+CODE:0c11  12 09 fa     LCALL 0x09fa
+CODE:0c14  a3           INC DPTR
+CODE:0c15  ef           MOV A,R7
+CODE:0c16  f0           MOVX @DPTR,A
+CODE:0c17  a3           INC DPTR
+CODE:0c18  e5 34        MOV A,0x34
+CODE:0c1a  f0           MOVX @DPTR,A
+CODE:0c1b  90 05 54     MOV DPTR,#0x554
+CODE:0c1e  e0           MOVX A,@DPTR
+CODE:0c1f  f5 2c        MOV 0x2c,A
+CODE:0c21  43 2c c0     ORL 0x2c,#0xc0
+CODE:0c24  e5 2c        MOV A,0x2c
+CODE:0c26  f0           MOVX @DPTR,A
+CODE:0c27  90 00 06     MOV DPTR,#0x6
+CODE:0c2a  e0           MOVX A,@DPTR
+CODE:0c2b  f5 2c        MOV 0x2c,A
+CODE:0c2d  e5 2c        MOV A,0x2c
+CODE:0c2f  44 08        ORL A,#0x8
+CODE:0c31  f0           MOVX @DPTR,A
+CODE:0c32  e5 2c        MOV A,0x2c
+CODE:0c34  54 f7        ANL A,#0xf7
+CODE:0c36  f0           MOVX @DPTR,A
+CODE:0c37  7f 02        MOV R7,#0x2
+CODE:0c39  7e 00        MOV R6,#0x0
+CODE:0c3b  12 0d fc     LCALL 0x0dfc
+CODE:0c3e  90 00 d0     MOV DPTR,#0xd0
+CODE:0c41  74 ff        MOV A,#0xff
+CODE:0c43  f0           MOVX @DPTR,A
+CODE:0c44  0f           INC R7
+CODE:0c45  02 0d fc     LJMP 0x0dfc
+CODE:0cbc  90 01 b4     MOV DPTR,#0x1b4
+CODE:0cbf  e0           MOVX A,@DPTR
+CODE:0cc0  64 5c        XRL A,#0x5c
+CODE:0cc2  60 69        JZ 0x0d2d
+CODE:0cc4  90 00 05     MOV DPTR,#0x5
+CODE:0cc7  74 fd        MOV A,#0xfd
+CODE:0cc9  f0           MOVX @DPTR,A
+CODE:0cca  90 00 1f     MOV DPTR,#0x1f
+CODE:0ccd  74 19        MOV A,#0x19
+CODE:0ccf  f0           MOVX @DPTR,A
+CODE:0cd0  90 00 ba     MOV DPTR,#0xba
+CODE:0cd3  74 fe        MOV A,#0xfe
+CODE:0cd5  f0           MOVX @DPTR,A
+CODE:0cd6  a3           INC DPTR
+CODE:0cd7  04           INC A
+CODE:0cd8  f0           MOVX @DPTR,A
+CODE:0cd9  90 00 b1     MOV DPTR,#0xb1
+CODE:0cdc  74 27        MOV A,#0x27
+CODE:0cde  f0           MOVX @DPTR,A
+CODE:0cdf  90 01 b1     MOV DPTR,#0x1b1
+CODE:0ce2  74 a2        MOV A,#0xa2
+CODE:0ce4  f0           MOVX @DPTR,A
+CODE:0ce5  90 01 b5     MOV DPTR,#0x1b5
+CODE:0ce8  74 b9        MOV A,#0xb9
+CODE:0cea  f0           MOVX @DPTR,A
+CODE:0ceb  90 01 b3     MOV DPTR,#0x1b3
+CODE:0cee  74 88        MOV A,#0x88
+CODE:0cf0  f0           MOVX @DPTR,A
+CODE:0cf1  90 01 b2     MOV DPTR,#0x1b2
+CODE:0cf4  74 a2        MOV A,#0xa2
+CODE:0cf6  f0           MOVX @DPTR,A
+CODE:0cf7  90 00 9f     MOV DPTR,#0x9f
+CODE:0cfa  74 01        MOV A,#0x1
+CODE:0cfc  f0           MOVX @DPTR,A
+CODE:0cfd  90 00 a7     MOV DPTR,#0xa7
+CODE:0d00  74 23        MOV A,#0x23
+CODE:0d02  f0           MOVX @DPTR,A
+CODE:0d03  90 00 8a     MOV DPTR,#0x8a
+CODE:0d06  74 e9        MOV A,#0xe9
+CODE:0d08  f0           MOVX @DPTR,A
+CODE:0d09  90 00 0a     MOV DPTR,#0xa
+CODE:0d0c  74 01        MOV A,#0x1
+CODE:0d0e  f0           MOVX @DPTR,A
+CODE:0d0f  90 01 b4     MOV DPTR,#0x1b4
+CODE:0d12  74 5c        MOV A,#0x5c
+CODE:0d14  f0           MOVX @DPTR,A
+CODE:0d15  90 00 dc     MOV DPTR,#0xdc
+CODE:0d18  74 ff        MOV A,#0xff
+CODE:0d1a  f0           MOVX @DPTR,A
+CODE:0d1b  a3           INC DPTR
+CODE:0d1c  f0           MOVX @DPTR,A
+CODE:0d1d  e4           CLR A
+CODE:0d1e  90 00 b8     MOV DPTR,#0xb8
+CODE:0d21  f0           MOVX @DPTR,A
+CODE:0d22  90 00 c4     MOV DPTR,#0xc4
+CODE:0d25  e0           MOVX A,@DPTR
+CODE:0d26  ff           MOV R7,A
+CODE:0d27  0f           INC R7
+CODE:0d28  ef           MOV A,R7
+CODE:0d29  f0           MOVX @DPTR,A
+CODE:0d2a  7f 01        MOV R7,#0x1
+CODE:0d2c  22           RET
+CODE:0d2d  7f 00        MOV R7,#0x0
+CODE:0d2f  22           RET
+CODE:0d30  90 00 b0     MOV DPTR,#0xb0
+CODE:0d33  e0           MOVX A,@DPTR
+CODE:0d34  f9           MOV R1,A
+CODE:0d35  90 01 12     MOV DPTR,#0x112
+CODE:0d38  e4           CLR A
+CODE:0d39  93           MOVC A,@A+DPTR
+CODE:0d3a  54 20        ANL A,#0x20
+CODE:0d3c  64 20        XRL A,#0x20
+CODE:0d3e  70 0d        JNZ 0x0d4d
+CODE:0d40  e9           MOV A,R1
+CODE:0d41  54 40        ANL A,#0x40
+CODE:0d43  c3           CLR CY
+CODE:0d44  13           RRC A
+CODE:0d45  ff           MOV R7,A
+CODE:0d46  e9           MOV A,R1
+CODE:0d47  54 20        ANL A,#0x20
+CODE:0d49  25 e0        ADD A,A
+CODE:0d4b  4f           ORL A,R7
+CODE:0d4c  f9           MOV R1,A
+CODE:0d4d  e9           MOV A,R1
+CODE:0d4e  54 40        ANL A,#0x40
+CODE:0d50  70 16        JNZ 0x0d68
+CODE:0d52  e5 13        MOV A,0x13
+CODE:0d54  c3           CLR CY
+CODE:0d55  95 10        SUBB A,0x10
+CODE:0d57  50 02        JNC 0x0d5b
+CODE:0d59  05 13        INC 0x13
+CODE:0d5b  7f 96        MOV R7,#0x96
+CODE:0d5d  7e 00        MOV R6,#0x0
+CODE:0d5f  12 0d fc     LCALL 0x0dfc
+CODE:0d62  43 c2 02     ORL 0xc2,#0x2
+CODE:0d65  12 0d fc     LCALL 0x0dfc
+CODE:0d68  e9           MOV A,R1
+CODE:0d69  54 20        ANL A,#0x20
+CODE:0d6b  70 16        JNZ 0x0d83
+CODE:0d6d  e5 13        MOV A,0x13
+CODE:0d6f  d3           SETB CY
+CODE:0d70  95 0f        SUBB A,0x0f
+CODE:0d72  40 02        JC 0x0d76
+CODE:0d74  15 13        DEC 0x13
+CODE:0d76  7f 96        MOV R7,#0x96
+CODE:0d78  7e 00        MOV R6,#0x0
+CODE:0d7a  12 0d fc     LCALL 0x0dfc
+CODE:0d7d  43 c2 02     ORL 0xc2,#0x2
+CODE:0d80  12 0d fc     LCALL 0x0dfc
+CODE:0d83  90 00 c8     MOV DPTR,#0xc8
+CODE:0d86  e5 13        MOV A,0x13
+CODE:0d88  f0           MOVX @DPTR,A
+CODE:0d89  43 c2 02     ORL 0xc2,#0x2
+CODE:0d8c  22           RET
+CODE:0d8d  90 00 b1     MOV DPTR,#0xb1
+CODE:0d90  e0           MOVX A,@DPTR
+CODE:0d91  54 20        ANL A,#0x20
+CODE:0d93  f9           MOV R1,A
+CODE:0d94  7f 64        MOV R7,#0x64
+CODE:0d96  7e 00        MOV R6,#0x0
+CODE:0d98  12 0d fc     LCALL 0x0dfc
+CODE:0d9b  e0           MOVX A,@DPTR
+CODE:0d9c  54 20        ANL A,#0x20
+CODE:0d9e  42 01        ORL 0x01,A
+CODE:0da0  e9           MOV A,R1
+CODE:0da1  70 26        JNZ 0x0dc9
+CODE:0da3  e5 24        MOV A,0x24
+CODE:0da5  64 20        XRL A,#0x20
+CODE:0da7  45 23        ORL A,0x23
+CODE:0da9  70 1e        JNZ 0x0dc9
+CODE:0dab  e5 12        MOV A,0x12
+CODE:0dad  45 11        ORL A,0x11
+CODE:0daf  70 0d        JNZ 0x0dbe
+CODE:0db1  f5 11        MOV 0x11,A
+CODE:0db3  75 12 01     MOV 0x12,#0x1
+CODE:0db6  90 01 d8     MOV DPTR,#0x1d8
+CODE:0db9  74 80        MOV A,#0x80
+CODE:0dbb  f0           MOVX @DPTR,A
+CODE:0dbc  80 0b        SJMP 0x0dc9
+CODE:0dbe  e4           CLR A
+CODE:0dbf  f5 11        MOV 0x11,A
+CODE:0dc1  f5 12        MOV 0x12,A
+CODE:0dc3  90 01 d8     MOV DPTR,#0x1d8
+CODE:0dc6  74 bc        MOV A,#0xbc
+CODE:0dc8  f0           MOVX @DPTR,A
+CODE:0dc9  af 01        MOV R7,0x01
+CODE:0dcb  75 23 00     MOV 0x23,#0x0
+CODE:0dce  8f 24        MOV 0x24,R7
+CODE:0dd0  43 c2 02     ORL 0xc2,#0x2
+CODE:0dd3  7f c8        MOV R7,#0xc8
+CODE:0dd5  7e 00        MOV R6,#0x0
+CODE:0dd7  02 0d fc     LJMP 0x0dfc
+CODE:0dda  7e 00        MOV R6,#0x0
+CODE:0ddc  25 2a        ADD A,0x2a
+CODE:0dde  ff           MOV R7,A
+CODE:0ddf  ee           MOV A,R6
+CODE:0de0  35 29        ADDC A,0x29
+CODE:0de2  fe           MOV R6,A
+CODE:0de3  e4           CLR A
+CODE:0de4  93           MOVC A,@A+DPTR
+CODE:0de5  7c 00        MOV R4,#0x0
+CODE:0de7  2f           ADD A,R7
+CODE:0de8  f5 2a        MOV 0x2a,A
+CODE:0dea  ec           MOV A,R4
+CODE:0deb  3e           ADDC A,R6
+CODE:0dec  f5 29        MOV 0x29,A
+CODE:0dee  e5 2a        MOV A,0x2a
+CODE:0df0  25 e0        ADD A,A
+CODE:0df2  f5 2a        MOV 0x2a,A
+CODE:0df4  e5 29        MOV A,0x29
+CODE:0df6  33           RLC A
+CODE:0df7  f5 29        MOV 0x29,A
+CODE:0df9  af 2a        MOV R7,0x2a
+CODE:0dfb  fe           MOV R6,A
+CODE:0dfc  e4           CLR A
+CODE:0dfd  fd           MOV R5,A
+CODE:0dfe  fc           MOV R4,A
+CODE:0dff  c3           CLR CY
+CODE:0e00  ed           MOV A,R5
+CODE:0e01  9f           SUBB A,R7
+CODE:0e02  ec           MOV A,R4
+CODE:0e03  9e           SUBB A,R6
+CODE:0e04  50 18        JNC 0x0e1e
+CODE:0e06  e4           CLR A
+CODE:0e07  fb           MOV R3,A
+CODE:0e08  fa           MOV R2,A
+CODE:0e09  43 c2 02     ORL 0xc2,#0x2
+CODE:0e0c  0b           INC R3
+CODE:0e0d  bb 00 01     CJNE R3,#0x0,0x0e11
+CODE:0e10  0a           INC R2
+CODE:0e11  ba 02 f5     CJNE R2,#0x2,0x0e09
+CODE:0e14  bb 08 f2     CJNE R3,#0x8,0x0e09
+CODE:0e17  0d           INC R5
+CODE:0e18  bd 00 01     CJNE R5,#0x0,0x0e1c
+CODE:0e1b  0c           INC R4
+CODE:0e1c  80 e1        SJMP 0x0dff
+CODE:0e1e  22           RET
+CODE:0e5c  7f 0a        MOV R7,#0xa
+CODE:0e5e  7e 00        MOV R6,#0x0
+CODE:0e60  12 0d fc     LCALL 0x0dfc
+CODE:0e63  05 0e        INC 0x0e
+CODE:0e65  e5 0e        MOV A,0x0e
+CODE:0e67  70 02        JNZ 0x0e6b
+CODE:0e69  05 0d        INC 0x0d
+CODE:0e6b  d3           SETB CY
+CODE:0e6c  94 c8        SUBB A,#0xc8
+CODE:0e6e  e5 0d        MOV A,0x0d
+CODE:0e70  94 00        SUBB A,#0x0
+CODE:0e72  40 03        JC 0x0e77
+CODE:0e74  7f 01        MOV R7,#0x1
+CODE:0e76  22           RET
+CODE:0e77  7f 00        MOV R7,#0x0
+CODE:0e79  22           RET
+CODE:0e7a  75 89 01     MOV 0x89,#0x1
+CODE:0e7d  85 0b 8c     MOV 0x8c,0x0b
+CODE:0e80  85 0c 8a     MOV 0x8a,0x0c
+CODE:0e83  22           RET

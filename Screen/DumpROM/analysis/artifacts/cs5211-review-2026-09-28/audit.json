@@ -1,0 +1,262 @@
+{
+  "sha256": "a7a5b681eb62026afcb11232635fb68251f40ca0348f6b513913bc51bb4a2451",
+  "profile_writes": [
+    {
+      "pc": "0x04a8",
+      "xdata": "0x009f",
+      "value": "0x01"
+    },
+    {
+      "pc": "0x04b2",
+      "xdata": "0x01dc",
+      "value": "0x00"
+    },
+    {
+      "pc": "0x04bc",
+      "xdata": "0x01de",
+      "value": "0x00"
+    },
+    {
+      "pc": "0x04c8",
+      "xdata": "0x01e1",
+      "value": "0x01"
+    },
+    {
+      "pc": "0x04d4",
+      "xdata": "0x01e2",
+      "value": "0x08"
+    },
+    {
+      "pc": "0x04de",
+      "xdata": "0x01e3",
+      "value": "0x00"
+    },
+    {
+      "pc": "0x04e8",
+      "xdata": "0x01e4",
+      "value": "0x00"
+    },
+    {
+      "pc": "0x04f2",
+      "xdata": "0x01e7",
+      "value": "0x08"
+    },
+    {
+      "pc": "0x04fc",
+      "xdata": "0x01ed",
+      "value": "0x03"
+    },
+    {
+      "pc": "0x0506",
+      "xdata": "0x01f2",
+      "value": "0x03"
+    },
+    {
+      "pc": "0x0510",
+      "xdata": "0x01f3",
+      "value": "0x44"
+    },
+    {
+      "pc": "0x0524",
+      "xdata": "0x01f4",
+      "value": "0x04"
+    }
+  ],
+  "profile_byte_11_formula": "profile[11] | ((ROM[0x1122] & 0x0f) << 4)",
+  "no_effect_in_profile_copy_slice": [
+    "+03.bit3",
+    "+04.bit3",
+    "+0c.bit0",
+    "+0c.bit1",
+    "+0c.bit2",
+    "+0c.bit3",
+    "+0c.bit4",
+    "+0c.bit5",
+    "+0c.bit6",
+    "+0c.bit7",
+    "+0d.bit0",
+    "+0d.bit1",
+    "+0d.bit2",
+    "+0d.bit3",
+    "+0d.bit4",
+    "+0d.bit5",
+    "+0d.bit6",
+    "+0d.bit7",
+    "+0e.bit0",
+    "+0e.bit1",
+    "+0e.bit2",
+    "+0e.bit3",
+    "+0e.bit4",
+    "+0e.bit5",
+    "+0e.bit6",
+    "+0e.bit7",
+    "+0f.bit0",
+    "+0f.bit1",
+    "+0f.bit2",
+    "+0f.bit3",
+    "+0f.bit4",
+    "+0f.bit5",
+    "+0f.bit6",
+    "+0f.bit7"
+  ],
+  "global_111e_bit0_paths": {
+    "0": {
+      "0x01bb": "0x94",
+      "0x00e3": "0x50",
+      "0x00e4": "0x00",
+      "0x00e5": "0x00",
+      "0x00e6": "0x00"
+    },
+    "1": {
+      "0x01bb": "0x14",
+      "0x00e3": "0x10"
+    }
+  },
+  "timer_reload_table": [
+    {
+      "level": 0,
+      "phases": [
+        {
+          "TH0": 255,
+          "XDATA_00b3": null
+        },
+        {
+          "TH0": 0,
+          "XDATA_00b3": 32
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "phases": [
+        {
+          "TH0": 251,
+          "XDATA_00b3": 44
+        },
+        {
+          "TH0": 211,
+          "XDATA_00b3": 32
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "phases": [
+        {
+          "TH0": 246,
+          "XDATA_00b3": 44
+        },
+        {
+          "TH0": 216,
+          "XDATA_00b3": 32
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "phases": [
+        {
+          "TH0": 241,
+          "XDATA_00b3": 44
+        },
+        {
+          "TH0": 221,
+          "XDATA_00b3": 32
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "phases": [
+        {
+          "TH0": 236,
+          "XDATA_00b3": 44
+        },
+        {
+          "TH0": 226,
+          "XDATA_00b3": 32
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "phases": [
+        {
+          "TH0": 230,
+          "XDATA_00b3": 44
+        },
+        {
+          "TH0": 230,
+          "XDATA_00b3": 32
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "phases": [
+        {
+          "TH0": 226,
+          "XDATA_00b3": 44
+        },
+        {
+          "TH0": 236,
+          "XDATA_00b3": 32
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "phases": [
+        {
+          "TH0": 221,
+          "XDATA_00b3": 44
+        },
+        {
+          "TH0": 241,
+          "XDATA_00b3": 32
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "phases": [
+        {
+          "TH0": 216,
+          "XDATA_00b3": 44
+        },
+        {
+          "TH0": 246,
+          "XDATA_00b3": 32
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "phases": [
+        {
+          "TH0": 211,
+          "XDATA_00b3": 44
+        },
+        {
+          "TH0": 251,
+          "XDATA_00b3": 32
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "phases": [
+        {
+          "TH0": 0,
+          "XDATA_00b3": 44
+        },
+        {
+          "TH0": 0,
+          "XDATA_00b3": 44
+        }
+      ]
+    }
+  ],
+  "opaque_region": "4 bytes at 0x0800, then three identical 128-byte blocks at 0x0804, 0x0884, 0x0904; role unknown",
+  "scope": "Isolated instruction slices; not full firmware or CS5211 hardware emulation"
+}

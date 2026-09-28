@@ -1,0 +1,30 @@
+{
+  "application_definition": "Vectors/reset through 013e; main 01c0..0646; application helpers a20..e1e and e5c..e83. Generic C startup parser and arithmetic libraries counted separately.",
+  "application_instructions": 1191,
+  "application_executed": 1190,
+  "application_branch_edges": 128,
+  "application_executed_edges": 125,
+  "excluded_edges": [
+    {
+      "pc": "03e6",
+      "edge": "fallthrough",
+      "reason": "Every possible byte OR 1 is nonzero; JNZ always taken."
+    },
+    {
+      "pc": "0c9d",
+      "edge": "taken",
+      "reason": "Level 10 already returned at 0c60/0c68; firmware cannot change the level while this ISR is running."
+    },
+    {
+      "pc": "0e67",
+      "edge": "fallthrough",
+      "reason": "Wait counter starts at zero and exits after 201; its low byte never wraps to zero. Consequently 0e69 is unreachable in these application calls."
+    }
+  ],
+  "caveats": [
+    "Synthetic inputs exercise branches, not silicon behaviour.",
+    "External interrupt 0 is deliberately injected; ordinary ROM initialization enables Timer0 only.",
+    "No claim of whole-library coverage: unused startup record formats, signed/exceptional float paths and generic helper inputs remain outside the application proof.",
+    "A global mutable peripheral model, asynchronous DMA into IRAM, executable-code patches, or corrupt CPU state would change the assumptions."
+  ]
+}

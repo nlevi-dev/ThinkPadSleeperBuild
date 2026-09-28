@@ -1,0 +1,197 @@
+{
+  "solution_commit": "93c5c9f2e0772ec6089b54aa51863dafe25a8505",
+  "hashes": {
+    "original": "a7a5b681eb62026afcb11232635fb68251f40ca0348f6b513913bc51bb4a2451",
+    "edid_only": "0bc171d52bf83b89698ba3d899d6e993790ffe528d2bf871efa61d6130a9c4b2",
+    "candidate": "fd7c6cb7b74ce71f966342d627a9092d17627b3d335e06601948d1145c9b49b2",
+    "solution": "6ed6777839ac1a158ed1382f5c55f7abf7f9a2f0cfe82d582c493484ea39ea1e"
+  },
+  "changed_offsets": [
+    "0ffa",
+    "0ffb",
+    "0ffc",
+    "0ffd",
+    "1013",
+    "1023",
+    "1033",
+    "1043",
+    "1053",
+    "1063",
+    "1073",
+    "1083",
+    "1093",
+    "10a3",
+    "10b3",
+    "10c3",
+    "10d3",
+    "10e3",
+    "10f3",
+    "1103"
+  ],
+  "profiles": [
+    {
+      "profile": 0,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 1,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 2,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 3,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 4,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 5,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 6,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 7,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 8,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 9,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 10,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 11,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 12,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 13,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 14,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    },
+    {
+      "profile": 15,
+      "only_changed_register": "01e1",
+      "before": 1,
+      "after": 5,
+      "checksum_stale_candidate_and_solution_identical_CPU_trace": true
+    }
+  ],
+  "modes": [
+    {
+      "predicted_checksum": "5da247c5",
+      "crc_difference_matches": true,
+      "bits_per_component": 6,
+      "mapping": "JEIDA",
+      "mode": "07",
+      "reported_checksum": "5da247c5",
+      "provenance": "Levi patcher table; not independent hardware measurement"
+    },
+    {
+      "predicted_checksum": "9c58e855",
+      "crc_difference_matches": true,
+      "bits_per_component": 6,
+      "mapping": "VESA",
+      "mode": "03",
+      "reported_checksum": "9c58e855",
+      "provenance": "Levi patcher table; not independent hardware measurement"
+    },
+    {
+      "predicted_checksum": "da960552",
+      "crc_difference_matches": true,
+      "bits_per_component": 8,
+      "mapping": "JEIDA",
+      "mode": "05",
+      "reported_checksum": "da960552",
+      "provenance": "Levi patcher table; not independent hardware measurement"
+    },
+    {
+      "predicted_checksum": "1b6caac2",
+      "crc_difference_matches": true,
+      "bits_per_component": 8,
+      "mapping": "VESA",
+      "mode": "01",
+      "reported_checksum": "1b6caac2",
+      "provenance": "Levi patcher table; not independent hardware measurement"
+    }
+  ],
+  "patcher_reproduces_solution_exactly": true,
+  "checksum_hypothesis": "stored_old XOR reverse32(crc32(old[1000:1e84]) XOR crc32(new[1000:1e84])); fits all 4 table entries, not an identified general loader algorithm",
+  "crc32_checks": {
+    "original": {
+      "stored": "1b6caac2",
+      "full_tail": "537877fe",
+      "length_0e86": "587ab573"
+    },
+    "solution": {
+      "stored": "da960552",
+      "full_tail": "43c9b435",
+      "length_0e86": "b3003b6b"
+    }
+  }
+}

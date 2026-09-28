@@ -1,0 +1,4976 @@
+{
+  "base_sha256": "0bc171d52bf83b89698ba3d899d6e993790ffe528d2bf871efa61d6130a9c4b2",
+  "boundary": "Actual CPU execution with synthetic peripheral readiness; no serializer, reserved-bit, or hardware validity inference.",
+  "candidates": [
+    {
+      "file": "pair-p3-p4-bit0-v0.bin",
+      "family": "paired-profile",
+      "sha256": "3a4de76f6c91b31181c6976afce6c5885b6e7a436147d9b46e18d4229dc8ec19",
+      "patches": [
+        {
+          "offset": "1013",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "1023",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "1033",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "1043",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "1053",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "1063",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "1073",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "1083",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "1093",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "10a3",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "10b3",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "10c3",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "10d3",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "10e3",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "10f3",
+          "before": 1,
+          "after": 0
+        },
+        {
+          "offset": "1103",
+          "before": 1,
+          "after": 0
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 0
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 0
+        }
+      ],
+      "retained_after_recovery": {
+        "01e1": 0
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p3-p4-bit0-v1.bin",
+      "family": "paired-profile",
+      "sha256": "ec3c12cd7944af7b3828de3451f5d7557701ced24a41e7dda6510d2906e07cdd",
+      "patches": [
+        {
+          "offset": "1014",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "1024",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "1034",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "1044",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "1054",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "1064",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "1074",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "1084",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "1094",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "10a4",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "10b4",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "10c4",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "10d4",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "10e4",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "10f4",
+          "before": 8,
+          "after": 9
+        },
+        {
+          "offset": "1104",
+          "before": 8,
+          "after": 9
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 9
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 9
+        }
+      ],
+      "retained_after_recovery": {
+        "01e2": 9
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p3-p4-bit1-v1.bin",
+      "family": "paired-profile",
+      "sha256": "d1dba8212b2f620a4c3d50c378f3201700b73d4453aa9c9392a63ba5a0676dbb",
+      "patches": [
+        {
+          "offset": "1013",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "1014",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "1023",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "1024",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "1033",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "1034",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "1043",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "1044",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "1053",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "1054",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "1063",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "1064",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "1073",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "1074",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "1083",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "1084",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "1093",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "1094",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "10a3",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "10a4",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "10b3",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "10b4",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "10c3",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "10c4",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "10d3",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "10d4",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "10e3",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "10e4",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "10f3",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "10f4",
+          "before": 8,
+          "after": 10
+        },
+        {
+          "offset": "1103",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "offset": "1104",
+          "before": 8,
+          "after": 10
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 10
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 3
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 10
+        }
+      ],
+      "retained_after_recovery": {
+        "01e1": 3,
+        "01e2": 10
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p3-p4-bit2-v1.bin",
+      "family": "paired-profile",
+      "sha256": "edfae86c0ca32fea8ac3c27c316dfe1317140e2b3a880946bf90aa5bbd8592a6",
+      "patches": [
+        {
+          "offset": "1013",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "1014",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "1023",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "1024",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "1033",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "1034",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "1043",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "1044",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "1053",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "1054",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "1063",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "1064",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "1073",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "1074",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "1083",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "1084",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "1093",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "1094",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "10a3",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "10a4",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "10b3",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "10b4",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "10c3",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "10c4",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "10d3",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "10d4",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "10e3",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "10e4",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "10f3",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "10f4",
+          "before": 8,
+          "after": 12
+        },
+        {
+          "offset": "1103",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "offset": "1104",
+          "before": 8,
+          "after": 12
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 12
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 5
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 12
+        }
+      ],
+      "retained_after_recovery": {
+        "01e1": 5,
+        "01e2": 12
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p3-p4-bit4-v1.bin",
+      "family": "paired-profile",
+      "sha256": "23d181e88f20e5209b4583a770e7f3e93013923c03bffee1b96b3a07ccddd2e6",
+      "patches": [
+        {
+          "offset": "1013",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "1014",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "1023",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "1024",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "1033",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "1034",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "1043",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "1044",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "1053",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "1054",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "1063",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "1064",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "1073",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "1074",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "1083",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "1084",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "1093",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "1094",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "10a3",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "10a4",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "10b3",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "10b4",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "10c3",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "10c4",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "10d3",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "10d4",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "10e3",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "10e4",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "10f3",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "10f4",
+          "before": 8,
+          "after": 24
+        },
+        {
+          "offset": "1103",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "offset": "1104",
+          "before": 8,
+          "after": 24
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 24
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 17
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 24
+        }
+      ],
+      "retained_after_recovery": {
+        "01e1": 17,
+        "01e2": 24
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p3-p4-bit5-v1.bin",
+      "family": "paired-profile",
+      "sha256": "ca72af444312f0ed107f90d37f009d7ef60271a870c87441af266e9708c339ec",
+      "patches": [
+        {
+          "offset": "1013",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "1014",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "1023",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "1024",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "1033",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "1034",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "1043",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "1044",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "1053",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "1054",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "1063",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "1064",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "1073",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "1074",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "1083",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "1084",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "1093",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "1094",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "10a3",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "10a4",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "10b3",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "10b4",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "10c3",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "10c4",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "10d3",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "10d4",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "10e3",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "10e4",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "10f3",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "10f4",
+          "before": 8,
+          "after": 40
+        },
+        {
+          "offset": "1103",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "offset": "1104",
+          "before": 8,
+          "after": 40
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 40
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 33
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 40
+        }
+      ],
+      "retained_after_recovery": {
+        "01e1": 33,
+        "01e2": 40
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p3-p4-bit6-v1.bin",
+      "family": "paired-profile",
+      "sha256": "b66e7d213da37485933a8327d740c18f7e3c384832e996d8ab0dab73d64c7697",
+      "patches": [
+        {
+          "offset": "1013",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "1014",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "1023",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "1024",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "1033",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "1034",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "1043",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "1044",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "1053",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "1054",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "1063",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "1064",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "1073",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "1074",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "1083",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "1084",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "1093",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "1094",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "10a3",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "10a4",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "10b3",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "10b4",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "10c3",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "10c4",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "10d3",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "10d4",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "10e3",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "10e4",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "10f3",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "10f4",
+          "before": 8,
+          "after": 72
+        },
+        {
+          "offset": "1103",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "offset": "1104",
+          "before": 8,
+          "after": 72
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 72
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 65
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 72
+        }
+      ],
+      "retained_after_recovery": {
+        "01e1": 65,
+        "01e2": 72
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p3-p4-bit7-v1.bin",
+      "family": "paired-profile",
+      "sha256": "4c3a4ce4f9b8862426977e483282d4896129a3fd08a8648b30eba13300ef74a3",
+      "patches": [
+        {
+          "offset": "1013",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "1014",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "1023",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "1024",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "1033",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "1034",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "1043",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "1044",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "1053",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "1054",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "1063",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "1064",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "1073",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "1074",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "1083",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "1084",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "1093",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "1094",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "10a3",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "10a4",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "10b3",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "10b4",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "10c3",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "10c4",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "10d3",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "10d4",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "10e3",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "10e4",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "10f3",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "10f4",
+          "before": 8,
+          "after": 136
+        },
+        {
+          "offset": "1103",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "offset": "1104",
+          "before": 8,
+          "after": 136
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 136
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04c8",
+          "register": "01e1",
+          "before": 1,
+          "after": 129
+        },
+        {
+          "pc": "04d4",
+          "register": "01e2",
+          "before": 8,
+          "after": 136
+        }
+      ],
+      "retained_after_recovery": {
+        "01e1": 129,
+        "01e2": 136
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p8-p9-bit0-v0.bin",
+      "family": "paired-profile",
+      "sha256": "e9b749a13ce924e111a9dda2b760a4ad2f59df331be2d68745852ef2b05d5a65",
+      "patches": [
+        {
+          "offset": "1018",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1019",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1028",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1029",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1038",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1039",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1048",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1049",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1058",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1059",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1068",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1069",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1078",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1079",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1088",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1089",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1098",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1099",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10a8",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10a9",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10b8",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10b9",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10c8",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10c9",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10d8",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10d9",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10e8",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10e9",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10f8",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "10f9",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1108",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "offset": "1109",
+          "before": 3,
+          "after": 2
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 2
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 2
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 2
+        }
+      ],
+      "retained_after_recovery": {
+        "01ed": 2,
+        "01f2": 2
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p8-p9-bit1-v0.bin",
+      "family": "paired-profile",
+      "sha256": "b1363267e9168012a5b7d6ed38b62ff312abaa74d62807dc83a9963aed2c52b3",
+      "patches": [
+        {
+          "offset": "1018",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1019",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1028",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1029",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1038",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1039",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1048",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1049",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1058",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1059",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1068",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1069",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1078",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1079",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1088",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1089",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1098",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1099",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10a8",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10a9",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10b8",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10b9",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10c8",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10c9",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10d8",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10d9",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10e8",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10e9",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10f8",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "10f9",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1108",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "offset": "1109",
+          "before": 3,
+          "after": 1
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 1
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 1
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 1
+        }
+      ],
+      "retained_after_recovery": {
+        "01ed": 1,
+        "01f2": 1
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p8-p9-bit2-v1.bin",
+      "family": "paired-profile",
+      "sha256": "d765bd88511a0e9d4644ec7307098a6bd5ebcf0f239e30cd2ea297f98676d1bc",
+      "patches": [
+        {
+          "offset": "1018",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1019",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1028",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1029",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1038",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1039",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1048",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1049",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1058",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1059",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1068",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1069",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1078",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1079",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1088",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1089",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1098",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1099",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10a8",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10a9",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10b8",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10b9",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10c8",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10c9",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10d8",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10d9",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10e8",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10e9",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10f8",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "10f9",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1108",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "offset": "1109",
+          "before": 3,
+          "after": 7
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 7
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 7
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 7
+        }
+      ],
+      "retained_after_recovery": {
+        "01ed": 7,
+        "01f2": 7
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p8-p9-bit3-v1.bin",
+      "family": "paired-profile",
+      "sha256": "86531e0321cfe4f7fc0ced5e56b96525952964db1ea181e8c3100285c2dff5aa",
+      "patches": [
+        {
+          "offset": "1018",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1019",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1028",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1029",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1038",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1039",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1048",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1049",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1058",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1059",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1068",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1069",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1078",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1079",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1088",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1089",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1098",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1099",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10a8",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10a9",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10b8",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10b9",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10c8",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10c9",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10d8",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10d9",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10e8",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10e9",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10f8",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "10f9",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1108",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "offset": "1109",
+          "before": 3,
+          "after": 11
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 11
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 11
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 11
+        }
+      ],
+      "retained_after_recovery": {
+        "01ed": 11,
+        "01f2": 11
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p8-p9-bit4-v1.bin",
+      "family": "paired-profile",
+      "sha256": "f3865a9ba868bec4627cb62946316aa8a956b18486d2494b6439af706194c68c",
+      "patches": [
+        {
+          "offset": "1018",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1019",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1028",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1029",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1038",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1039",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1048",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1049",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1058",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1059",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1068",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1069",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1078",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1079",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1088",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1089",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1098",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1099",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10a8",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10a9",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10b8",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10b9",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10c8",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10c9",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10d8",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10d9",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10e8",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10e9",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10f8",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "10f9",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1108",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "offset": "1109",
+          "before": 3,
+          "after": 19
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 19
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 19
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 19
+        }
+      ],
+      "retained_after_recovery": {
+        "01ed": 19,
+        "01f2": 19
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p8-p9-bit5-v1.bin",
+      "family": "paired-profile",
+      "sha256": "994fa8e9b42cd4ada44da8efd670863f0bbeac224174426d3f83ed3c28e81c41",
+      "patches": [
+        {
+          "offset": "1018",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1019",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1028",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1029",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1038",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1039",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1048",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1049",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1058",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1059",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1068",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1069",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1078",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1079",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1088",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1089",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1098",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1099",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10a8",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10a9",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10b8",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10b9",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10c8",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10c9",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10d8",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10d9",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10e8",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10e9",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10f8",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "10f9",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1108",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "offset": "1109",
+          "before": 3,
+          "after": 35
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 35
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 35
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 35
+        }
+      ],
+      "retained_after_recovery": {
+        "01ed": 35,
+        "01f2": 35
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p8-p9-bit6-v1.bin",
+      "family": "paired-profile",
+      "sha256": "5610db2a1d2095ad9abecf86b0b1ca4596312298a230eb0313f1aa9574e349a7",
+      "patches": [
+        {
+          "offset": "1018",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1019",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1028",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1029",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1038",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1039",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1048",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1049",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1058",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1059",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1068",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1069",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1078",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1079",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1088",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1089",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1098",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1099",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10a8",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10a9",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10b8",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10b9",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10c8",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10c9",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10d8",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10d9",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10e8",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10e9",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10f8",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "10f9",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1108",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "offset": "1109",
+          "before": 3,
+          "after": 67
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 67
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 67
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 67
+        }
+      ],
+      "retained_after_recovery": {
+        "01ed": 67,
+        "01f2": 67
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "pair-p8-p9-bit7-v1.bin",
+      "family": "paired-profile",
+      "sha256": "d6204d58336a569e5eccf83e9ad3c36fce33ba5585d3be9dfd856cb0ad2cd2a7",
+      "patches": [
+        {
+          "offset": "1018",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1019",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1028",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1029",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1038",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1039",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1048",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1049",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1058",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1059",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1068",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1069",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1078",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1079",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1088",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1089",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1098",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1099",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10a8",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10a9",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10b8",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10b9",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10c8",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10c9",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10d8",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10d9",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10e8",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10e9",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10f8",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "10f9",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1108",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "offset": "1109",
+          "before": 3,
+          "after": 131
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 131
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "04fc",
+          "register": "01ed",
+          "before": 3,
+          "after": 131
+        },
+        {
+          "pc": "0506",
+          "register": "01f2",
+          "before": 3,
+          "after": 131
+        }
+      ],
+      "retained_after_recovery": {
+        "01ed": 131,
+        "01f2": 131
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "p10-matched-nibbles-bit0.bin",
+      "family": "matched-nibbles",
+      "sha256": "14d2cae2fdbecf70a35782308841a635aa7a2945036b66c40614ece1b54a9b9e",
+      "patches": [
+        {
+          "offset": "101a",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "102a",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "103a",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "104a",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "105a",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "106a",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "107a",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "108a",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "109a",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "10aa",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "10ba",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "10ca",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "10da",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "10ea",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "10fa",
+          "before": 68,
+          "after": 85
+        },
+        {
+          "offset": "110a",
+          "before": 68,
+          "after": 85
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0510",
+          "register": "01f3",
+          "before": 68,
+          "after": 85
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "0510",
+          "register": "01f3",
+          "before": 68,
+          "after": 85
+        }
+      ],
+      "retained_after_recovery": {
+        "01f3": 85
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "p10-matched-nibbles-bit1.bin",
+      "family": "matched-nibbles",
+      "sha256": "259efd8ca28f39ecabba9db2080e74954832ecea80edcfe9576bffbc6d7bc3f1",
+      "patches": [
+        {
+          "offset": "101a",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "102a",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "103a",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "104a",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "105a",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "106a",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "107a",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "108a",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "109a",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "10aa",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "10ba",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "10ca",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "10da",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "10ea",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "10fa",
+          "before": 68,
+          "after": 102
+        },
+        {
+          "offset": "110a",
+          "before": 68,
+          "after": 102
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0510",
+          "register": "01f3",
+          "before": 68,
+          "after": 102
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "0510",
+          "register": "01f3",
+          "before": 68,
+          "after": 102
+        }
+      ],
+      "retained_after_recovery": {
+        "01f3": 102
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "p10-matched-nibbles-bit2.bin",
+      "family": "matched-nibbles",
+      "sha256": "c4b5e01b1b7ca6f4551e0aa8687c810e7e1e1a291b6377ff4a2e21bd51d06d89",
+      "patches": [
+        {
+          "offset": "101a",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "102a",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "103a",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "104a",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "105a",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "106a",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "107a",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "108a",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "109a",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "10aa",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "10ba",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "10ca",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "10da",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "10ea",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "10fa",
+          "before": 68,
+          "after": 0
+        },
+        {
+          "offset": "110a",
+          "before": 68,
+          "after": 0
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0510",
+          "register": "01f3",
+          "before": 68,
+          "after": 0
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "0510",
+          "register": "01f3",
+          "before": 68,
+          "after": 0
+        }
+      ],
+      "retained_after_recovery": {
+        "01f3": 0
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "p10-matched-nibbles-bit3.bin",
+      "family": "matched-nibbles",
+      "sha256": "060bc76e36b7d592a57f14839c27dca01c0b2e6002a2161c9866f96fd8a5297e",
+      "patches": [
+        {
+          "offset": "101a",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "102a",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "103a",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "104a",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "105a",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "106a",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "107a",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "108a",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "109a",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "10aa",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "10ba",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "10ca",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "10da",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "10ea",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "10fa",
+          "before": 68,
+          "after": 204
+        },
+        {
+          "offset": "110a",
+          "before": 68,
+          "after": 204
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0510",
+          "register": "01f3",
+          "before": 68,
+          "after": 204
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "0510",
+          "register": "01f3",
+          "before": 68,
+          "after": 204
+        }
+      ],
+      "retained_after_recovery": {
+        "01f3": 204
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "p11-global-matched-bit0-v1.bin",
+      "family": "overlapping-or-sources",
+      "sha256": "45626f6f55c84be24c6e40f5b6d64de1ed58162bcebf7b30b3f48e928bf774d1",
+      "patches": [
+        {
+          "offset": "101b",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "102b",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "103b",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "104b",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "105b",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "106b",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "107b",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "108b",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "109b",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "10ab",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "10bb",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "10cb",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "10db",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "10eb",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "10fb",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "110b",
+          "before": 4,
+          "after": 20
+        },
+        {
+          "offset": "1122",
+          "before": 0,
+          "after": 1
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0524",
+          "register": "01f4",
+          "before": 4,
+          "after": 20
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "0524",
+          "register": "01f4",
+          "before": 4,
+          "after": 20
+        }
+      ],
+      "retained_after_recovery": {
+        "01f4": 20
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "p11-global-matched-bit1-v1.bin",
+      "family": "overlapping-or-sources",
+      "sha256": "018a657264e9c6af59782c11e7204013cf8b689427572ff0717a0de96f8f8eb1",
+      "patches": [
+        {
+          "offset": "101b",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "102b",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "103b",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "104b",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "105b",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "106b",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "107b",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "108b",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "109b",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "10ab",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "10bb",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "10cb",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "10db",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "10eb",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "10fb",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "110b",
+          "before": 4,
+          "after": 36
+        },
+        {
+          "offset": "1122",
+          "before": 0,
+          "after": 2
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0524",
+          "register": "01f4",
+          "before": 4,
+          "after": 36
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "0524",
+          "register": "01f4",
+          "before": 4,
+          "after": 36
+        }
+      ],
+      "retained_after_recovery": {
+        "01f4": 36
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "p11-global-matched-bit2-v1.bin",
+      "family": "overlapping-or-sources",
+      "sha256": "fda5c44315de76ca28746682a53d622083c6642f2875ead5b2236725a7ded84a",
+      "patches": [
+        {
+          "offset": "101b",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "102b",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "103b",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "104b",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "105b",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "106b",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "107b",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "108b",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "109b",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "10ab",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "10bb",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "10cb",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "10db",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "10eb",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "10fb",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "110b",
+          "before": 4,
+          "after": 68
+        },
+        {
+          "offset": "1122",
+          "before": 0,
+          "after": 4
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0524",
+          "register": "01f4",
+          "before": 4,
+          "after": 68
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "0524",
+          "register": "01f4",
+          "before": 4,
+          "after": 68
+        }
+      ],
+      "retained_after_recovery": {
+        "01f4": 68
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "p11-global-matched-bit3-v1.bin",
+      "family": "overlapping-or-sources",
+      "sha256": "b9069df824a2cde045930f73f626e19f2dfb4468b61d0f669749778d5201a94f",
+      "patches": [
+        {
+          "offset": "101b",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "102b",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "103b",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "104b",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "105b",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "106b",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "107b",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "108b",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "109b",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "10ab",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "10bb",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "10cb",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "10db",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "10eb",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "10fb",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "110b",
+          "before": 4,
+          "after": 132
+        },
+        {
+          "offset": "1122",
+          "before": 0,
+          "after": 8
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0524",
+          "register": "01f4",
+          "before": 4,
+          "after": 132
+        }
+      ],
+      "recovery_delta": [
+        {
+          "pc": "0524",
+          "register": "01f4",
+          "before": 4,
+          "after": 132
+        }
+      ],
+      "retained_after_recovery": {
+        "01f4": 132
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1210-bit0.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "e6fe784d3d17b39b3ab9a3bae3b0faaa912f4a660727f4b016b3115af858b7d1",
+      "patches": [
+        {
+          "offset": "1210",
+          "before": 31,
+          "after": 30
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0211",
+          "register": "01ec",
+          "before": 31,
+          "after": 30
+        },
+        {
+          "pc": "0215",
+          "register": "01f1",
+          "before": 31,
+          "after": 30
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01ec": 30,
+        "01f1": 30
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1210-bit1.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "7e75f7b0916f7bfe013efa2e2914b78752dddacb7de46d953c6fddd17e0b7712",
+      "patches": [
+        {
+          "offset": "1210",
+          "before": 31,
+          "after": 29
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0211",
+          "register": "01ec",
+          "before": 31,
+          "after": 29
+        },
+        {
+          "pc": "0215",
+          "register": "01f1",
+          "before": 31,
+          "after": 29
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01ec": 29,
+        "01f1": 29
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1210-bit2.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "1659ec97c5375de718f0ea36f115406437d8dedc9b5e2cec122c48323cd2070a",
+      "patches": [
+        {
+          "offset": "1210",
+          "before": 31,
+          "after": 27
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0211",
+          "register": "01ec",
+          "before": 31,
+          "after": 27
+        },
+        {
+          "pc": "0215",
+          "register": "01f1",
+          "before": 31,
+          "after": 27
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01ec": 27,
+        "01f1": 27
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1210-bit3.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "8f7ec84ce16b21d0e96df28e49ef3b4c7cf81c223c87f97c899ae5dfdcce93af",
+      "patches": [
+        {
+          "offset": "1210",
+          "before": 31,
+          "after": 23
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0211",
+          "register": "01ec",
+          "before": 31,
+          "after": 23
+        },
+        {
+          "pc": "0215",
+          "register": "01f1",
+          "before": 31,
+          "after": 23
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01ec": 23,
+        "01f1": 23
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1210-bit4.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "4f11644be98e9324a311304ac383e8947dcf67a0d277ff8d8beced20047dcdcc",
+      "patches": [
+        {
+          "offset": "1210",
+          "before": 31,
+          "after": 15
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0211",
+          "register": "01ec",
+          "before": 31,
+          "after": 15
+        },
+        {
+          "pc": "0215",
+          "register": "01f1",
+          "before": 31,
+          "after": 15
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01ec": 15,
+        "01f1": 15
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1210-bit5.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "6104a951571d4e21e879f2fa9dc2807a60dcf1c08c31481142bb3abf1b30df4a",
+      "patches": [
+        {
+          "offset": "1210",
+          "before": 31,
+          "after": 63
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0211",
+          "register": "01ec",
+          "before": 31,
+          "after": 63
+        },
+        {
+          "pc": "0215",
+          "register": "01f1",
+          "before": 31,
+          "after": 63
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01ec": 63,
+        "01f1": 63
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1210-bit6.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "141462b45e50eb2625484b6a735ac98285c25cc8ca8d0c2d673555a0816e5296",
+      "patches": [
+        {
+          "offset": "1210",
+          "before": 31,
+          "after": 95
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0211",
+          "register": "01ec",
+          "before": 31,
+          "after": 95
+        },
+        {
+          "pc": "0215",
+          "register": "01f1",
+          "before": 31,
+          "after": 95
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01ec": 95,
+        "01f1": 95
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1210-bit7.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "fce0d5ba3cd05368e0ce7fc76a7dd5cf87dca574effa2c92d2a62dc5b10e3ae4",
+      "patches": [
+        {
+          "offset": "1210",
+          "before": 31,
+          "after": 159
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0211",
+          "register": "01ec",
+          "before": 31,
+          "after": 159
+        },
+        {
+          "pc": "0215",
+          "register": "01f1",
+          "before": 31,
+          "after": 159
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01ec": 159,
+        "01f1": 159
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-121a-bit0.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "cd05f387f1ddf3bd02d9e1a2d2a16254772c591a183f5b505c4dbf1654ba53d2",
+      "patches": [
+        {
+          "offset": "121a",
+          "before": 255,
+          "after": 254
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "021b",
+          "register": "01f5",
+          "before": 255,
+          "after": 254
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01f5": 254
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-121a-bit1.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "b3502bc315ffe4823e1f7ba697d9de535b9eab006ce96f072a14039b5618790b",
+      "patches": [
+        {
+          "offset": "121a",
+          "before": 255,
+          "after": 253
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "021b",
+          "register": "01f5",
+          "before": 255,
+          "after": 253
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01f5": 253
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-121a-bit2.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "398b536a6e632341cdc4cdd847ad91d45db5c2842111d3a78d6f822e4b6c9ab5",
+      "patches": [
+        {
+          "offset": "121a",
+          "before": 255,
+          "after": 251
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "021b",
+          "register": "01f5",
+          "before": 255,
+          "after": 251
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01f5": 251
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-121a-bit3.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "93270ac973f576ab8dac81fec407cd6ddef0fd925a8d3f91632c9c5b85c06d6a",
+      "patches": [
+        {
+          "offset": "121a",
+          "before": 255,
+          "after": 247
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "021b",
+          "register": "01f5",
+          "before": 255,
+          "after": 247
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01f5": 247
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-121a-bit4.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "6ea691296e36bdce39eac80bee3dd68e10dc07eb83d913dd42e72a7c5caa094b",
+      "patches": [
+        {
+          "offset": "121a",
+          "before": 255,
+          "after": 239
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "021b",
+          "register": "01f5",
+          "before": 255,
+          "after": 239
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01f5": 239
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-121a-bit5.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "3f9ac0248b834fd18cda8a01c37cf963ed50078ec872aafaa9943e2f8928ba3c",
+      "patches": [
+        {
+          "offset": "121a",
+          "before": 255,
+          "after": 223
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "021b",
+          "register": "01f5",
+          "before": 255,
+          "after": 223
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01f5": 223
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-121a-bit6.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "0f14cfce7e9946c823c0e77b1d1a52975da7e17146c18c582b9022d338994683",
+      "patches": [
+        {
+          "offset": "121a",
+          "before": 255,
+          "after": 191
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "021b",
+          "register": "01f5",
+          "before": 255,
+          "after": 191
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01f5": 191
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-121a-bit7.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "4f48aa38cabf1ad03874a3b0f3de730a33854cf2c1b9a184a7ffabd725ad1add",
+      "patches": [
+        {
+          "offset": "121a",
+          "before": 255,
+          "after": 127
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "021b",
+          "register": "01f5",
+          "before": 255,
+          "after": 127
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01f5": 127
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1286-bit0.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "38ffd95748f687851c50659a4ad20bb2bc3eefd317bdde541413f37fba4a863e",
+      "patches": [
+        {
+          "offset": "1286",
+          "before": 48,
+          "after": 49
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0287",
+          "register": "01bc",
+          "before": 48,
+          "after": 49
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01bc": 49
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1286-bit1.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "2b2a88c27a140a88dae8eaa8f963a217a55124663bb6e6b921f521e0c418ef51",
+      "patches": [
+        {
+          "offset": "1286",
+          "before": 48,
+          "after": 50
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0287",
+          "register": "01bc",
+          "before": 48,
+          "after": 50
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01bc": 50
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1286-bit2.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "28d6fef1fca5acd86e6baf096087587680cd976ebd3abf9e3e0140c118fec0e7",
+      "patches": [
+        {
+          "offset": "1286",
+          "before": 48,
+          "after": 52
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0287",
+          "register": "01bc",
+          "before": 48,
+          "after": 52
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01bc": 52
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1286-bit3.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "8ea70ce1845f49f2a8474e6a73952d10d1c09876028fc70c38b0b7e6c7d66f50",
+      "patches": [
+        {
+          "offset": "1286",
+          "before": 48,
+          "after": 56
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0287",
+          "register": "01bc",
+          "before": 48,
+          "after": 56
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01bc": 56
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1286-bit4.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "b2c0ffee2951e86fc5e540126c8e927248b627f58bbbc38c1b9c37f69fdabba9",
+      "patches": [
+        {
+          "offset": "1286",
+          "before": 48,
+          "after": 32
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0287",
+          "register": "01bc",
+          "before": 48,
+          "after": 32
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01bc": 32
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1286-bit5.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "96ac4b84cc7d57b9ef91daa2c6970b0f758f72a81d251ee350499ebf602b9a4b",
+      "patches": [
+        {
+          "offset": "1286",
+          "before": 48,
+          "after": 16
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0287",
+          "register": "01bc",
+          "before": 48,
+          "after": 16
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01bc": 16
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1286-bit6.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "3a68b2f23eed60539dc8c00c0746f443aef3bc86994c1688b3d44a93652fb50f",
+      "patches": [
+        {
+          "offset": "1286",
+          "before": 48,
+          "after": 112
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0287",
+          "register": "01bc",
+          "before": 48,
+          "after": 112
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01bc": 112
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-1286-bit7.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "c607260bbf454f5b5d5940258994c8db1b03473383eb3d2fe5aa0ebcbffe6411",
+      "patches": [
+        {
+          "offset": "1286",
+          "before": 48,
+          "after": 176
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "0287",
+          "register": "01bc",
+          "before": 48,
+          "after": 176
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01bc": 176
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-12bb-bit0.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "5048019e8780fc53ca1d6dac21886bb56516ab93f189829f747b7e0dfd8a16dd",
+      "patches": [
+        {
+          "offset": "12bb",
+          "before": 88,
+          "after": 89
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "02bc",
+          "register": "01da",
+          "before": 88,
+          "after": 89
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01da": 89
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-12bb-bit1.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "935fe6550ddb559bff714ae33bf3101af1700909e43f92b5afeee5b12f207b25",
+      "patches": [
+        {
+          "offset": "12bb",
+          "before": 88,
+          "after": 90
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "02bc",
+          "register": "01da",
+          "before": 88,
+          "after": 90
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01da": 90
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-12bb-bit2.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "c1f20b53fb186c128654d442fa6fa8d3e2b61fdc89326e084ea02adbf0b6370f",
+      "patches": [
+        {
+          "offset": "12bb",
+          "before": 88,
+          "after": 92
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "02bc",
+          "register": "01da",
+          "before": 88,
+          "after": 92
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01da": 92
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-12bb-bit3.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "29f1ad0a331b3bf18aafd7036b16cdfe695225112df070b4409eaacffedc463a",
+      "patches": [
+        {
+          "offset": "12bb",
+          "before": 88,
+          "after": 80
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "02bc",
+          "register": "01da",
+          "before": 88,
+          "after": 80
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01da": 80
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-12bb-bit4.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "1d3b187b63964e398f206dc329bc6abb12cb4dca982492ad017db8ca363b6323",
+      "patches": [
+        {
+          "offset": "12bb",
+          "before": 88,
+          "after": 72
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "02bc",
+          "register": "01da",
+          "before": 88,
+          "after": 72
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01da": 72
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-12bb-bit5.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "11b666aff88a2e745108fc4e1cde1dd5955f0ef6a65d66f00a56eed13adf3498",
+      "patches": [
+        {
+          "offset": "12bb",
+          "before": 88,
+          "after": 120
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "02bc",
+          "register": "01da",
+          "before": 88,
+          "after": 120
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01da": 120
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-12bb-bit6.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "659458b423defbdeaab532fe0dffaf34bf17fd72dd9c5301ad450eead090a4ce",
+      "patches": [
+        {
+          "offset": "12bb",
+          "before": 88,
+          "after": 24
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "02bc",
+          "register": "01da",
+          "before": 88,
+          "after": 24
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01da": 24
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    },
+    {
+      "file": "literal-12bb-bit7.bin",
+      "family": "fixed-instruction-literal",
+      "sha256": "2da4c56aecad7c3984caf2a7aadb8eccc58ef028ebffba78115813466f1311ed",
+      "patches": [
+        {
+          "offset": "12bb",
+          "before": 88,
+          "after": 216
+        }
+      ],
+      "boot_delta": [
+        {
+          "pc": "02bc",
+          "register": "01da",
+          "before": 88,
+          "after": 216
+        }
+      ],
+      "recovery_delta": [],
+      "retained_after_recovery": {
+        "01da": 216
+      },
+      "same_coverage": true,
+      "profiles_checked": [
+        0,
+        15
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "patches": {
+    "1112": 1,
+    "111d": 11
+  },
+  "input": {
+    "00b0": 32
+  },
+  "level": 11,
+  "isr_index": "21",
+  "intended_table": "16..20",
+  "pc": "0c76",
+  "conclusion": "Button limits can drive the timer lookup outside its 11-byte table; not a colour-mapping discovery."
+}

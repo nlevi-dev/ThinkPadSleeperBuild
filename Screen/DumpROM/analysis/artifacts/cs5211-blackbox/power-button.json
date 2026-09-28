@@ -1,0 +1,40 @@
+{
+  "states": [
+    {
+      "button": 32,
+      "power_register": 188
+    },
+    {
+      "button": 0,
+      "power_register": 128
+    },
+    {
+      "button": 0,
+      "power_register": 128
+    },
+    {
+      "button": 32,
+      "power_register": 128
+    },
+    {
+      "button": 0,
+      "power_register": 188
+    }
+  ],
+  "writes": [
+    [
+      1474863,
+      3515,
+      472,
+      128,
+      1
+    ],
+    [
+      3430980,
+      3528,
+      472,
+      188,
+      1
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "file": "pair-p3-p4-bit0-v0.bin",
+    "all_2048_xdata_bytes_match": true
+  },
+  {
+    "file": "pair-p8-p9-bit0-v0.bin",
+    "all_2048_xdata_bytes_match": true
+  },
+  {
+    "file": "p10-matched-nibbles-bit0.bin",
+    "all_2048_xdata_bytes_match": true
+  },
+  {
+    "file": "p11-global-matched-bit0-v1.bin",
+    "all_2048_xdata_bytes_match": true
+  },
+  {
+    "file": "literal-1210-bit0.bin",
+    "all_2048_xdata_bytes_match": true
+  },
+  {
+    "file": "literal-121a-bit0.bin",
+    "all_2048_xdata_bytes_match": true
+  },
+  {
+    "file": "literal-1286-bit0.bin",
+    "all_2048_xdata_bytes_match": true
+  },
+  {
+    "file": "literal-12bb-bit0.bin",
+    "all_2048_xdata_bytes_match": true
+  }
+]

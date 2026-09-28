@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.dylib
+*.so
+artifacts/**/candidates/
+artifacts/**/candidate-images.zip

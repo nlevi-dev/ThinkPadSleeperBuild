@@ -1,0 +1,27 @@
+{
+  "description": "Counterexample to unique selector inference, not a hardware simulation or claim about either candidate.",
+  "assumptions": "Both hypothetical chips retain identical register readback/CPU behaviour and differ only in which undocumented bit selects serializer mapping.",
+  "model_A": "01dc bit0 selects compatible mapping",
+  "model_B": "01de bit0 selects compatible mapping",
+  "conclusion": "Existing firmware traces and baseline symptom cannot choose between these assignments.",
+  "scenarios": [
+    {
+      "scenario": "baseline",
+      "model_A_matches_ideal": false,
+      "model_B_matches_ideal": false,
+      "models_agree": true
+    },
+    {
+      "scenario": "candidate-p01-bit0",
+      "model_A_matches_ideal": true,
+      "model_B_matches_ideal": false,
+      "models_agree": false
+    },
+    {
+      "scenario": "candidate-p02-bit0",
+      "model_A_matches_ideal": false,
+      "model_B_matches_ideal": true,
+      "models_agree": false
+    }
+  ]
+}

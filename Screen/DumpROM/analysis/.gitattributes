@@ -1,0 +1,4 @@
+# Keep generated evidence and unchanged third-party code collapsed in PR reviews.
+artifacts/** linguist-generated=true
+binaries/** linguist-generated=true
+tools/emu8051/** linguist-vendored=true

@@ -1,0 +1,266 @@
+[
+  {
+    "level": 0,
+    "phase": 0,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 0,
+    "phase": 0,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 0,
+    "phase": 1,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 0,
+    "phase": 1,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 1,
+    "phase": 0,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 1,
+    "phase": 0,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 1,
+    "phase": 1,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 1,
+    "phase": 1,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 2,
+    "phase": 0,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 2,
+    "phase": 0,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 2,
+    "phase": 1,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 2,
+    "phase": 1,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 3,
+    "phase": 0,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 3,
+    "phase": 0,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 3,
+    "phase": 1,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 3,
+    "phase": 1,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 4,
+    "phase": 0,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 4,
+    "phase": 0,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 4,
+    "phase": 1,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 4,
+    "phase": 1,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 5,
+    "phase": 0,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 5,
+    "phase": 0,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 5,
+    "phase": 1,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 5,
+    "phase": 1,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 6,
+    "phase": 0,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 6,
+    "phase": 0,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 6,
+    "phase": 1,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 6,
+    "phase": 1,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 7,
+    "phase": 0,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 7,
+    "phase": 0,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 7,
+    "phase": 1,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 7,
+    "phase": 1,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 8,
+    "phase": 0,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 8,
+    "phase": 0,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 8,
+    "phase": 1,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 8,
+    "phase": 1,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 9,
+    "phase": 0,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 9,
+    "phase": 0,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 9,
+    "phase": 1,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 9,
+    "phase": 1,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 10,
+    "phase": 0,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 10,
+    "phase": 0,
+    "counter": 255,
+    "matched": true
+  },
+  {
+    "level": 10,
+    "phase": 1,
+    "counter": 0,
+    "matched": true
+  },
+  {
+    "level": 10,
+    "phase": 1,
+    "counter": 255,
+    "matched": true
+  }
+]

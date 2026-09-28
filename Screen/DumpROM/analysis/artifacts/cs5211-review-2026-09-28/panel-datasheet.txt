@@ -1,0 +1,1478 @@
+                                                                            APPROVAL
+
+
+
+
+          TO        : Hikari
+          DATE : May. 13. 2005
+
+
+
+           SAMSUNG TFT-LCD
+
+            MODEL NO.:LTN141P4-L03
+
+
+
+
+          Any Modification of Spec is not allowed without SEC’ permission
+
+
+
+
+           APPROVED BY :
+
+           PREPARED BY : LCD Application Engineering Group 1, TCS Team
+
+
+               SAMSUNG ELECTRONICS CO., LTD.
+
+Doc.No.        LTN141P4-L03        Rev.No         05-A00-G-050513             Page   1 / 31
+                                                                                        APPROVAL
+          CONTENTS
+
+     Revision History                                           -------------------( 3 )
+
+     General Description                                        -------------------( 4 )
+
+     1. Absolute Maximum Ratings                                -------------------( 5 )
+        1.1 Absolute Ratings of environment
+        1.2 Electrical Absolute Ratings
+
+     2. Optical Characteristics                                 -------------------(7)
+
+     3. Electrical Characteristics                              - - - - - - - - - - - - - - - - - - - ( 10 )
+        3.1 TFT LCD Module
+        3.2 Backlight Unit
+
+     4. Block Diagram                                           - - - - - - - - - - - - - - - - - - - ( 13 )
+        4.1 TFT LCD Module
+        4.2 Backlight Unit
+
+     5. Input Terminal Pin Assignment                    - - - - - - - - - - - - - - - - - - - ( 14 )
+        5.1 Input Signal & Power
+        5.2 LVDS Interface
+        5.3 Backlight Unit
+        5.4 Timing Diagrams of LVDS For Transmitting
+        5.5 Input Signals, Basic Display Colors and Gray Scale of Each Color.
+        5.6 Pixel format
+
+     6. Interface Timing                               - - - - - - - - - - - - - - - - - - - ( 20 )
+        6.1 Timing Parameters(DE Mode)
+        6.2 Timing Diagrams of interface Signal (DE Mode)
+        6.3 Power ON/OFF Sequence
+
+     7. Mechanical Outline Dimension                            - - - - - - - - - - - - - - - - - - - ( 22 )
+
+     8. Packing                                                 - - - - - - - - - - - - - - - - - - - ( 24 )
+
+     9. Marking & others                                        - - - - - - - - - - - - - - - - - - - ( 25 )
+
+     10. General Precaution                                     - - - - - - - - - - - - - - - - - - - ( 27 )
+
+     11. EDID                                                   - - - - - - - - - - - - - - - - - - - ( 29 )
+
+
+
+
+Doc.No.     LTN141P4-L03            Rev.No            05-A00-G-050513                          Page       2 / 31
+                                    REVISION HISTORY                                    APPROVAL
+
+    Date          Revision No.   Page                                 Summary
+
+May. 13, 2005         A00         All     - LTN141P4-L03 Model spec was issued first.
+
+
+
+
+Doc.No.         LTN141P4-L03            Rev.No         05-A00-G-050513                    Page   3 / 31
+                                                                             APPROVAL
+GENERAL DESCRIPTION
+  DESCRIPTION
+   LTN141P4-L03 is a color active matrix TFT (Thin Film Transistor) liquid crystal display
+   (LCD) that uses amorphous silicon TFT as a switching devices. This model is composed of
+   a TFT LCD panel, a driver circuit and a backlight system. The resolution of a 14.1" contains
+   1400 x 1050 pixels and can display up to 262,144 colors. 6 O'clock direction is the Optimum
+    viewing angle.
+
+
+  FEATURES
+    • Thin and light weight
+    • High contrast ratio, High aperture structure
+    • SXGA-Plus (1400x1050 pixels) resolution
+    • Low power consumption
+    • Single CCFL
+    • DE (Data enable) only mode.
+    • LVDS Interface(2 channel)
+    • EDID,SPWG-B style
+
+
+  APPLICATIONS
+    • Note PC
+    • If the usage of this product is not for PC application, but for others, please contact SEC
+
+
+ GENERAL INFORMATION
+
+          ITEM                            SPECIFICATION                       UNIT     NOTE
+
+     Display area              285.6(H) X 214.2(V) (14.1”diagonal)             mm
+     Driver element            a-si TFT active matrix
+     Display colors            262,144
+
+     Number of pixel                         z
+                               1400 x 1050 (SXGA-Plus)                        pixel
+
+     Pixel arrangement         RGB vertical stripe
+     Pixel pitch               0.204(H) x 0.204(V)                            mm       124dpi
+
+     Display Mode              Normally white
+     Surface treatment         HAZE 25, HARD-COATING 3H
+
+
+
+
+Doc.No.     LTN141P4-L03         Rev.No              05-A00-G-050513               Page    4 / 31
+                                                                                                        APPROVAL
+   Mechanical Information
+
+                 ITEM                              MIN.                TYP.                 MAX.              NOTE
+
+                   Horizontal (H)                  298.5              299.0                 299.5
+                                                                                                                -
+      Module       Vertical (V)                    227.4              228.0                 228.6
+       Size
+                   Depth (D)                         -                 5.2                      5.5            (1)
+
+                Weight                                                                                          -
+                                                                       420g                    440g
+
+    Note (1) Measurement condition of outline dimension
+                    . Equipment : Vernier Calipers
+                    . Push Force : 500g f (minimum)
+
+1. ABSOLUTE MAXIMUM RATINGS
+  1.1 ENVIRONMENTAL ABSOLUTE RATINGS
+                      Item                          Symbol            Min.               Max.          Unit     Note
+             Storage temperate                           TSTG          -20                60           qC           (1)
+         Operating temperate
+                                                         TOPR          0                  50           qC           (1)
+     (Temperature of glass surface)
+          Shock ( non-operating )                        Snop          -                 240            G       (2),(4)
+          Vibration (non-operating)                      Vnop          -                 2.41           G       (3),(4)
+
+  Note (1) Temperature and relative humidity range are shown in the figure below.
+           95 % RH Max. (40 qC t Ta)
+           Maximum wet - bulb temperature at 39 OC or less. (Ta ! 40 qC ) No condensation
+
+
+                                               Relative Humidity ( %RH)
+                                    100 90
+                                                                        ( 40,90 )
+
+                                      80
+
+
+                                      60
+                                                   Operating Range
+                                                                              ( 50,50.4 )
+                                      40
+                                                                                     ( 60,27.7 )
+                                      20
+
+                                           5
+                                                   Storage Range
+                                       0
+                -40          -20               0                20    40            60            80
+
+                                               Temperature (OC)
+       (2) 2ms, half sine wave, one time for rX, rY, r Z.
+       (3) 5 - 500 Hz, random vibration, 30min for X, Y, Z.
+       (4) At testing Vibration and Shock, the fixture in holding the Module to be tested have to be
+           hard and rigid enough so that the Module would not be twisted or bent by the fixture.
+
+
+
+
+Doc.No.        LTN141P4-L03                    Rev.No                05-A00-G-050513                          Page        5 / 31
+                                                                                        APPROVAL
+ 1.2 ELECTRICAL ABSOLUTE RATINGS
+                                                                                 VDD =3.3V, VSS = GND = 0V
+
+                  Item                    Symbol            Min.          Max.          Unit        Note
+
+          Power Supply Voltage             VDD            VDD - 0.3    VDD + 0.3         V            (1)
+
+           Logic Input Voltage             VIN            VDD - 0.3    VDD + 0.3         V            (1)
+
+    Note (1) Within Ta (25 r 2 qC )
+
+
+
+   (2) BACK-LIGHT UNIT
+                                                                                             Ta = 25 r 2 qC
+
+              Item               Symbol            Min.                Max.             Unit         Note
+
+          Lamp Current             IL              3.0                  7.0            mArms          (1)
+
+        Lamp frequency             FL              50                    80             kHz           (1)
+
+   Note 1) Permanent damage to the device may occur if maximum values are exceeded
+          Functional operation should be restricted to the conditions described under normal operating conditions.
+
+
+
+
+Doc.No.       LTN141P4-L03              Rev.No             05-A00-G-050513                     Page         6 / 31
+                                                                                      APPROVAL
+2. OPTICAL CHARACTERISTICS
+
+   The following items are measured under stable conditions. The optical characteristics should be
+   measured in a dark room or equivalent state with the methods shown in Note (5).
+   Measuring equipment : TOPCON BM-5A
+
+                                         * Ta = 25 r 2qC , VDD=3.3V, fv= 60Hz, fDCLK=54MHz, IL = 6.0 mA
+
+          ITEM              SYMBOL CONDITION            MIN.       TYP.    MAX.    UNIT        NOTE
+     Contrast Ratio
+                              CR                         200        -        -
+      (5 Points)
+
+   Response       Rising      TR
+  Time at 25ఁ                                             -         25      35     msec        (1), (3)
+                  Falling     TF
+
+       Luminance                                         150       175       -                 (1), (4)
+                              YL                                                    cd/m2
+        of White
+                                        I = 0,
+                              RX        T= 0            0.565     0.595    0.625
+                   Red
+                              RY       Normal           0.299     0.329    0.359
+                                       Viewing
+                              GX        Angle           0.290     0.320    0.350
+                  Green
+     Color                    GY                        0.513     0.543    0.573              (1), (5)
+  Chromaticity
+    ( CIE )                   BX
+                                                        0.123     0.153    0.183
+                   Blue
+                              BY                        0.100     0.130    0.160
+                              WX
+                                                        0.283     0.313    0.343
+                  White
+                              WY
+                                                        0. 299    0.329    0.359
+
+                              TL                         40         45       -
+                   Hor.
+    Viewing                   TR                         40         45       -
+                                       CR ؅ 10
+    Angle                           (at center point)                              Degrees
+                              I H                                            -
+                                                         10         20
+                   Ver.
+                              I L                        30         40       -
+
+       13 Points
+                                                                    -      1.65                  (6)
+     White Variation
+
+
+
+
+Doc.No.          LTN141P4-L03          Rev.No                  05-A00-G-050513               Page      7 / 31
+       Note 1) Definition of Viewing Angle :
+                                                                                                                 APPROVAL
+                                                                             Normal Line
+                                                                             I = 0o, T = 0o
+
+                                                           TL
+                                                                                              TR
+                                                                 I L             I H                             12 O’clock
+                     T L =90o       x                                                                  y         direction
+                                                                                                                 I H = 90o
+
+
+
+
+                6 O’ clock     y’                                                                           x’
+                direction                                                                                        TR =90o
+                 I L= 90o
+
+
+
+       Note 2) Definition of Contrast Ratio (CR) :
+
+                                                CR1 + CR2 + CR3 + CR4 + CR5
+                        CR      =
+                                                                     5
+
+      POINTS :         1 ,      2 ,             3 ,       4 ,        5       at FIGURE OF NOTE 6)
+
+
+    Note 3) Definition of Response time :
+
+           Display data             White(TFT OFF)                           Black(TFT ON)             White(TFT OFF)
+
+                                                                TR                                     TF
+                             100%
+           Optical
+                              90%
+           Response
+
+
+                             10%
+                              0%
+                                                                                                                           Time
+
+
+ Note 4) Definition of Average Luminance of White : measure the luminance of white at 5 points.
+
+   Average Luminance of White ( Y L,AVE )
+
+
+                    YL1 + YL2 + YL3 + YL4 + YL5
+    Y L,AVE =
+                                        5
+
+
+                POINTS :      1 ,           2    ,    3    ,    4        ,   5         at FIGURE OF NOTE 6)
+
+
+
+
+Doc.No.         LTN141P4-L03                         Rev.No                      05-A00-G-050513                       Page       8 / 31
+                                                                                                       APPROVAL
+  Note 5) After stabilizing and leaving the panel alone at a given temperature for 30 minutes, the measurement
+          should be executed. Measurement should be executed in a stable, windless,and dark room.
+          30 minutes after lighting the back-light. This should be measured in the center of screen.
+          Lamp current : 6.0 mA
+          Environment condition : Ta = 25 r 2 qC
+
+
+
+                          Photo detector
+                         ( TOPCON BM-5A)
+
+
+
+
+                                                   o
+                                       Field = 2
+                                                                        50 cm
+
+           TFT-LCD module                                                              LCD panel
+
+
+
+
+                                                       Center of the screen
+
+                                   Optical characteristics measurement setup
+
+
+    Note 6) Definition of 13 points white variation ( GW ), CR variation( CVER ) [          1      ~   13    ]
+                    Maximum luminance of 13 points                                      Maximum CR of 13 points
+    GL       =                                                     G CR       =
+                    Minimum luminance of 13 points                                      Minimum CR of 13 points
+
+
+
+                                    350                  700          1050
+                                                                                           VIEW AREA
+                            6                             7                       8
+             10mm
+                                        1                               2                 265
+
+
+                            9                             5                       10      525               : test point
+
+
+                                       3                               4                  785
+             10mm
+                           11                             12                      13
+
+                                10mm                                                      10mm
+
+
+
+
+Doc.No.       LTN141P4-L03               Rev.No                 05-A00-G-050513                                  Page      9 / 31
+3. ELECTRICAL CHARACTERISTICS                                                                       APPROVAL
+  3.1 TFT LCD MODULE
+                                                                                                     Ta = 25 r 2• •qC
+
+                 ITEM                  SYMBOL          MIN           TYP           MAX       UNIT          NOTE
+
+      Voltage of Power Supply           VDD             3.0           3.3          3.6         V
+
+     Differential Input        High      VIH             -             -           +100       mV
+     Voltage for LVDS                                                                                        (1)
+    Receiver Threshold         Low       VIL           -100            -             -        mV
+
+               RxIN Skew                               -200            -           200         ps
+
+            Vsync Frequency              fv              -            60             -        Hz
+
+            Hsync Frequency              fH              -          63.98            -        KHz
+
+             Main Frequency             fDCLK            -            54             -        MHz
+
+              Rush Current              IRUSH            -             -           1.5         A             (4)
+
+                               White                     -           405             -        mA          (2),(3)*a
+           Current of
+          Power Supply       Mosaic      IDD             -           455             -        mA          (2),(3)*b
+                           Maximum
+                                                         -           555           595        mA          (2),(3)*c
+                            current
+
+
+
+    Note (1) Condition : VCM=+1.2V(Common mode Voltage)
+            (2) fV=60Hz, fDCLK =54MHZ, Vdd = 3.3V , DC Current.
+            (3) Power dissipation check pattern
+
+
+           *a) White Pattern                                                   *b)Mosaic Pattern
+
+
+              VIEW AREA
+
+
+                                                Display Brightest Gray Level
+
+
+                                                Display Darkest Gray Level
+
+
+
+
+Doc.No.       LTN141P4-L03             Rev.No                 05-A00-G-050513                         Page         10 / 31
+                                                                                              APPROVAL
+
+
+        *c) Maximum Power pattern : 1dot inversion
+
+
+
+
+     4) Rush current measurement condition
+
+
+                               3.3V                             M1
+                                                                2SK1059
+                                                                                             VDD ( LCD INPUT)
+                                                                            FUSE
+                                      R1                                               C1
+                                      47K                                              1uF
+
+
+                                                  R2
+    CONTROL SIGNAL                                                M2
+    (HIGH to LOW)                                                 2SK1399
+                                                  1K
+
+
+                         12V
+                                        R3                C2
+
+
+                               C3           47K
+                                                          10000pF
+                               1uF
+
+
+
+
+                           VDD rising time is 470us
+                                                                                      3.3V
+                                                               0.9VDD
+
+
+                                                       0.1VDD
+                          GND
+                                                                            470us
+
+
+
+
+Doc.No.       LTN141P4-L03                   Rev.No                 05-A00-G-050513                Page         11 / 31
+  3.2 BACK-LIGHT UNIT                                                                      APPROVAL
+   The backlight system is an edge - lighting type with a single CCFT ( Cold Cathode Fluorescent Tube ).
+   The characteristics of a single lamp are shown in the following tables.
+     INVERTER : SEM SIC130T
+                                                                                             Ta=25 r 2 oC
+
+             ITEM              SYMB             MIN          TYP            MAX         UNIT        NOTE
+
+        Lamp Current             IL             3.0           6.0           6.5         mArms         (1)
+
+        Lamp Voltage             VL                           700                        Vrms      IL=6.0mA
+
+          Frequency              fL             50            60              65         kHz          (2)
+
+      Power Consumption          PL              -            4.2             -           W           (3)
+
+      Operating Life Time        Hr            10,000          -              -          Hour         (4)
+                                                                      1100 (25qC )
+        Startup Voltage          VS              -             -                         Vrms         (5)
+                                                                      1350 (0 qC )
+
+                Lamp start up time
+                                                     -         -            1.0          sec
+
+
+
+   Note) The waveform of the inverter output voltage must be area symmetric and the design of the
+  inverter must have specifications for the modularized lamp.
+  The performance of the backlight, for example life time or brightness, is much influenced by the
+  characteristics of the DC-AC inverter for the lamp. So all the parameters of an inverter should be carefully
+  designed so as not to produce too much leakage current from high-voltage output of the inverter.
+  When you design or order the inverter, please make sure that a poor lighting caused by the mismatch of
+  the backlight and the inverter(miss lighting, flicker, etc.) never occur. When you confirm it, the module
+  should be operated in the same condition as it is installed in your instrument.
+
+
+  Note (1) Lamp current is measured with a high frequency current meter as shown below.
+                                                             HOT : (Pink)
+                                                         1
+                        LCD                                  COLD : (WHITE)
+                       MODULE                            2                         INVERTER
+                                                               A
+
+                                                                                   SEM SIC130T
+                                Switching Frequency : 50 ~ 65KHz
+        (2) Lamp frequency may produce interference with horizontal synchronous frequency and this
+            may cause line flow on the display. Therefore lamp frequency should be detached from the
+            horizontal synchronous frequency and its harmonics as far as possible in order to avoid interference.
+
+        (3) refer to IL X VL to calculate.
+
+        (4) Life time (Hr) of a lamp can be defined as the time in which it continues to operate under the
+            condition Ta = 25 r2 oC and IL = 6.0 mArms until one of the following event occurs.
+            1. When the brightness becomes 50% or lower than the original.
+
+        (5) The voltage above this value should be applied to the lamp for more than 1 second to startup
+            Otherwise the lamp may not be turned on.
+
+
+
+
+Doc.No.        LTN141P4-L03                  Rev.No          05-A00-G-050513                     Page       12 / 31
+                                                                                         APPROVAL
+4. BLOCK DIAGRAM
+  4.1 TFT LCD Module
+
+                          I2 C bus         EDID
+                                          EEPROM
+                              LVDS
+             Input-                                             RSDS
+             Connector               LVDS Input/RSDS Output
+      FI-XB30S-HF10                     Timing Controller
+          or Compatible
+                                                                              Source
+                                                                              Driver
+                                                                                IC               14.1” SXGA+
+                                                                                           TFT-LCD Panel
+                            DC-DC               Gamma
+                           Converter
+                                                Generator
+
+
+
+                                                VCOM
+             Video Signal                      Generator
+             Control Signal
+             VCOM
+             Gamma
+             DVDD                           SOURCE PCB
+                                                                                                Gate Driver IC
+             AVDD
+             Von/Voff
+
+
+
+
+  4.2 BACK-LIGHT UNIT
+
+
+             Reflector
+                                                                                                 1   HOT (Pink)
+                                           LAMP
+
+
+
+                                                                                                 2 COLD(White)
+
+
+
+      Note) The output of the inverter may change according to the material of the reflector.
+
+
+
+
+Doc.No.       LTN141P4-L03               Rev.No             05-A00-G-050513                     Page      13 / 31
+                                                                                APPROVAL
+5. INPUT TERMINAL PIN ASSIGNMENT
+  5.1. Input Signal & Power LVDS, Connector : (JAE, FI-XB30S-HF10)
+                            Mating Connector :(JAE FI-X30M)
+
+ PIN NO   SYMBOL                          FUNCTION                       POLARITY     REMARK
+
+    1       Vss      Ground
+    2       VDD      POWER SUPPLY +3.3V
+    3       VDD      POWER SUPPLY +3.3V
+    4      VEEDID    N/A (DDC 3.3V Power)
+    5       NC       Reserved for supplier test point
+    6     CLKEDID    N/A (DDC Clock)
+
+    7     DATAEDID   N/A (DDC data)
+
+    8     O_RxIN0-   LVDS Differential Data INPUT (Odd R0-R5,G0)         Negative
+    9     O_RxIN0+   LVDS Differential Data INPUT (Odd R0-R5,G0)          Positive
+   10       GND      Ground
+   11     O_RxIN1-   LVDS Differential Data INPUT (Odd G1-G5,B0-B1)      Negative
+   12     O_RxIN1+   LVDS Differential Data INPUT (Odd G1-G5,B0-B1)       Positive
+   13       GND      Ground
+   14     O_RxIN2-   LVDS Differential Data INPUT (Odd B2-B5,Sync,DE)    Negative
+
+   15     O_RxIN2+   LVDS Differential Data INPUT (Odd B2-B5,Sync,DE)     Positive
+   16       GND      Ground
+   17     O_RxCLK-   LVDS Differential Data INPUT (Odd Clock)            Negative
+   18     O_RxCLK+   LVDS Differential Data INPUT (Odd Clock)             Positive
+   19       GND      Ground
+   20     E_RxIN0-   LVDS Differential Data INPUT (Even R0-R5,G0)        Negative
+   21     E_RxIN0+   LVDS Differential Data INPUT (Even R0-R5,G0)         Positive
+   22       GND      Ground
+   23     E_RxIN1-   LVDS Differential Data INPUT (Even G1-G5,B0-B1)     Negative
+   24     E_RxIN1+   LVDS Differential Data INPUT (Even G1-G5,B0-B1)      Positive
+   25       GND      Ground
+   26     E_RxIN2-   LVDS Differential Data INPUT (Even B2-B5,Sync,DE)   Negative
+
+   27     E_RxIN2+   LVDS Differential Data INPUT (Even B2-B5,Sync,DE)    Positive
+   28       GND      Ground
+   29     E_RxCLK-   LVDS Differential Data INPUT (Even Clock)           Negative
+   30     E_RxCLK+   LVDS Differential Data INPUT (Even Clock)            Positive
+
+
+
+Doc.No.     LTN141P4-L03          Rev.No            05-A00-G-050513                  Page   14 / 31
+                                                                        APPROVAL
+   5.2 LVDS Interface : Transmitter DS90CF363 or Compatible
+
+   LVDS for Odd pixel
+
+          Pin No.       Name      RGB Signal      Pin No.        Name    RGB Signal
+
+            44          TxIN0        RO0            12        TxIN11       GO5
+
+            45          TxIN1        RO1            13        TxIN12        BO0
+
+            47          TxIN2        RO2            15        TxIN13        BO1
+
+            48          TxIN3        RO3            16        TxIN14        BO2
+
+            1           TxIN4        RO4            18        TxIN15        BO3
+
+            3           TxIN5        RO5            19        TxIN16        BO4
+
+            4           TxIN6       GO0             20        TxIN17        BO5
+
+            6           TxIN7       GO1             22        TxIN18       Hsync
+
+            7           TxIN8       GO2             23        TxIN19       Vsync
+
+            9           TxIN9       GO3             25        TxIN20        DE
+
+            10          TxIN10      GO4             26       TxCLK IN      Clock
+
+
+   LVDS for Even pixel
+
+          Pin No.       Name      RGB Signal      Pin No.        Name    RGB Signal
+
+            44          TxIN0        RE0            12        TxIN11        GE5
+
+            45          TxIN1        RE1            13        TxIN12        BE0
+
+            47          TxIN2        RE2            15        TxIN13        BE1
+
+            48          TxIN3        RE3            16        TxIN14        BE2
+
+            1           TxIN4        RE4            18        TxIN15        BE3
+
+            3           TxIN5        RE5            19        TxIN16        BE4
+
+            4           TxIN6        GE0            20        TxIN17        BE5
+
+            6           TxIN7        GE1            22        TxIN18       Hsync
+
+            7           TxIN8        GE2            23        TxIN19       Vsync
+
+            9           TxIN9        GE3            25        TxIN20        DE
+
+            10          TxIN10       GE4            26       TxCLK IN      Clock
+
+
+
+
+Doc.No.          LTN141P4-L03    Rev.No        05-A00-G-050513            Page     15 / 31
+                                                                                    APPROVAL
+  Flat Link Interface
+
+  Graphics controller            DS90CF363            JAE,FI-XB30S-HF10               Integrated IC
+        36-bit                  or compatible                                         or Compatible
+            ODD RED0            44           41
+            ODD RED1            45   TxOUT0-                     8                   O_RxIN0-
+            ODD RED2            47           40                        100 :
+            ODD RED3            48   TxOUT0+                     9                   O_RxIN0+
+            ODD RED4            1
+            ODD RED5            3            39
+          ODD GREEN0            4    TxOUT1-                    11                   O_RxIN1-
+          ODD GREEN1            6                                      100 :
+                                             38
+          ODD GREEN2            7    TxOUT1+                    12                   O_RxIN1+
+          ODD GREEN3            9
+          ODD GREEN4            10
+                                12           35
+          ODD GREEN5                 TxOUT2-                    14                   RxIN2-
+           ODD BLUE0            13                                     100 :
+                                             34
+           ODD BLUE1            15   TxOUT2+                    15                   RxIN2+
+           ODD BLUE2            16
+           ODD BLUE3            18           33
+           ODD BLUE4            19 TxCLKOUT-                    17                   RxCLK-
+           ODD BLUE5            20                                     100 :
+                                             32
+                 Hsync          22 TxCLKOUT+                    18                   RxCLK+
+                 Vsync          23
+                Enable          25
+               CLOCK            26
+
+
+                                 DS90CF363
+                                or compatible
+         EVEN RED0              44           41
+                                45   TxOUT0-                    20                   E_RxIN0-
+         EVEN RED1                                                     100 :
+         EVEN RED2              47           40
+                                48   TxOUT0+                    21                   E_RxIN0+
+         EVEN RED3
+         EVEN RED4              1
+         EVEN RED5              3            39
+                                4    TxOUT1-                    23                   E_RxIN1-
+      EVEN GREEN0
+                                6                                      100 :
+      EVEN GREEN1                            38
+                                7    TxOUT1+                    24                   E_RxIN1+
+      EVEN GREEN2
+                                9
+      EVEN GREEN3
+                                10
+      EVEN GREEN4                            35
+                                12   TxOUT2-                    26                   E_RxIN2-
+      EVEN GREEN5                                                      100 :
+        EVEN BLUE0              13           34
+                                15   TxOUT2+                    27                   E_RxIN2+
+        EVEN BLUE1
+        EVEN BLUE2              16
+        EVEN BLUE3              18           33
+        EVEN BLUE4              19 TxCLKOUT-                    29                   E_RxCLK-
+                                20                                     100 :
+        EVEN BLUE5                           32
+              Hsync             22 TxCLKOUT+                    30                   E_RxCLK+
+              Vsync             23
+             Enable             25
+            CLOCK               26
+
+
+       Note : The LCD Module uses a 100ohm resistor between positive and negative lines of each
+       receiver input.
+
+
+
+
+Doc.No.      LTN141P4-L03           Rev.No           05-A00-G-050513                     Page     16 / 31
+                                                                                        APPROVAL
+  5.3 BACK LIGHT UNIT
+                                                            Connector : JST BHSR - 02VS -1
+
+             Pin NO.         Symbol           Color                   Function
+                1             HOT              Pink                  High Voltage
+                2             COLD            White                    Ground
+
+  5.4 Timing Diagrams of LVDS For Transmission
+
+        LVDS Receiver : Integrated T-CON
+                                                              T
+O_TxCLK OUT
+0_RxCLK IN
+
+
+                      T/7
+
+
+  O_Rx IN2          TxOUT20     TxOUT19         TxOUT18    TxOUT17    TxOUT16       TxOUT15    TxOUT14
+
+
+                      DE             Vsync       Hsync       B5          B4            B3        B2
+
+
+
+
+  O_Rx IN1          TxOUT13     TxOUT12         TxOUT11    TxOUT10    TxOUT9        TxOUT8     TxOUT7
+
+
+                       B1              B0             G5      G4        G3             G2         G1
+
+
+
+
+  O_RxIN0           TxOUT6      TxOUT5          TxOUT4     TxOUT3     TxOUT2        TxOUT1     TxOUT0
+
+
+                       G0            R5           R4         R3          R2            R1         R0
+
+E_TxCLK OUT
+E_RxCLK IN
+
+                      T/7
+
+
+  E_Rx IN2          TxOUT20     TxOUT19         TxOUT18    TxOUT17    TxOUT16       TxOUT15    TxOUT14
+
+
+                      DE            Vsync        Hsync       B5          B4            B3        B2
+
+
+
+
+  E_Rx IN1          TxOUT13     TxOUT12         TxOUT11    TxOUT10    TxOUT9        TxOUT8     TxOUT7
+
+
+                       B1              B0             G5      G4        G3             G2         G1
+
+
+
+
+  E_RxIN0           TxOUT6      TxOUT5          TxOUT4     TxOUT3     TxOUT2        TxOUT1     TxOUT0
+
+
+                       G0            R5           R4         R3          R2            R1         R0
+
+
+
+
+Doc.No.         LTN141P4-L03                 Rev.No        05-A00-G-050513                    Page     17 / 31
+ 5.5 Input Signals, Basic Display Colors and Gray Scale of Each Color                       APPROVAL
+                                                       DATA SIGNAL                                  GRAY
+COLOR      DISPLAY              RED                        GREEN                    BLUE            SCALE
+                       R0 R1 R2 R3 R4 R5 G0 G1 G2 G3 G4 G5 B0 B1 B2 B3 B4 B5                        LEVEL
+
+            BLACK      0    0   0   0      0   0   0   0    0   0   0   0 0     0   0   0   0   0        -
+             BLUE      0    0   0   0      0   0   0   0    0   0   0   0 1     1   1   1   1   1        -
+           GREEN       0    0   0   0      0   0   1   1    1   1   1   1 0     0   0   0   0   0        -
+            CYAN       0    0   0   0      0   0   1   1    1   1   1   1 1     1   1   1   1   1        -
+COLOR
+             RED       1    1   1   1      1   1   0   0    0   0   0   0 0     0   0   0   0   0        -
+          MAGENTA      1    1   1   1      1   1   0   0    0   0   0   0 1     1   1   1   1   1        -
+          YELLOW       1    1   1   1      1   1   1   1    1   1   1   1 0     0   0   0   0   0        -
+            WHITE      1    1   1   1      1   1   1   1    1   1   1   1 1     1   1   1   1   1        -
+           BLACK       0    0   0   0      0   0   0   0    0   0   0   0 0     0   0   0   0   0       R0
+                       1    0   0   0      0   0   0   0    0   0   0   0 0     0   0   0   0   0       R1
+            DARK
+ GRAY                  0    1   0   0      0   0   0   0    0   0   0   0 0     0   0   0   0   0       R2
+
+ SCALE                  :   :   :     :    :   :   :   :    :   :   :   :   :   :   :   :   :   :
+                                                                                                    R3~R60
+  OF                    :   :   :     :    :   :   :   :    :   :   :   :   :   :   :   :   :   :
+
+  RED                  1    0   1   1      1   1   0   0   0    0   0   0 0     0   0   0   0   0       R61
+            LIGHT      0    1   1   1      1   1   0   0   0    0   0   0 0     0   0   0   0   0       R62
+             RED       1    1   1   1      1   1   0   0   0    0   0   0 0     0   0   0   0   0       R63
+           BLACK       0    0   0   0      0   0   0   0   0    0   0   0 0     0   0   0   0   0       G0
+            DARK       0    0   0   0      0   0   1   0   0    0   0   0 0     0   0   0   0   0       G1
+                       0    0   0   0      0   0   0   1   0    0   0   0 0     0   0   0   0   0       G2
+ GRAY
+                        :   :   :     :    :   :   :   :    :   :   :   :   :   :   :   :   :   :
+ SCALE                                                                                                 G3~G60
+                        :   :   :     :    :   :   :   :    :   :   :   :   :   :   :   :   :   :
+  OF
+                       0    0   0   0      0   0   1   0   1    1   1   1 0     0   0   0   0   0       G61
+GREEN
+            LIGHT
+                       0    0   0   0      0   0   0   1   1    1   1   1 0     0   0   0   0   0       G62
+           GREEN       0    0   0   0      0   0   1   1   1    1   1   1 0     0   0   0   0   0       G63
+            BLACK      0    0   0   0      0   0   0   0   0    0   0   0 0     0   0   0   0   0        B0
+                       0    0   0   0      0   0   0   0   0    0   0   0 1     0   0   0   0   0        B1
+ GRAY
+            DARK
+                       0    0   0   0      0   0   0   0   0    0   0   0 0     1   0   0   0   0        B2
+ SCALE
+                        :   :   :     :    :   :   :   :    :   :   :   :   :   :   :   :   :   :
+  OF                                                                                                B3~B60
+                        :   :   :     :    :   :   :   :    :   :   :   :   :   :   :   :   :   :
+ BLUE
+                       0    0   0   0      0   0   0   0   0    0   0   0 1     0   1   1   1   1        B61
+            LIGHT
+                       0    0   0   0      0   0   0   0   0    0   0   0 0     1   1   1   1   1        B62
+           GREEN       0    0   0   0      0   0   0   0   0    0   0   0 1     1   1   1   1   1        B63
+    Note 1) Definition of gray :
+            Rn: Red gray, Gn: Green gray, Bn: Blue gray (n=gray level)
+    Note 2)Input signal: 0 =Low level voltage, 1=High level voltage
+
+
+
+Doc.No.      LTN141P4-L03                 Rev.No           05-A00-G-050513                      Page     18 / 31
+                                                                   APPROVAL
+  5.6 Pixel Format in the display
+
+          Pixel 1                                                      Pixel 1400
+
+Line 1    RGB       RGB                                              RGB    RGB
+
+
+
+
+                                             LTN141P4-L03 Panel
+
+
+
+
+Line 1050 R G B     RGB                                              RGB    RGB
+
+
+
+
+Doc.No.      LTN141P4-L03           Rev.No       05-A00-G-050513     Page   19 / 31
+                                                                                              APPROVAL
+    6. INTERFACE TIMING
+    6.1 Timing Parameters
+
+               Signal                   Item         Symbol        MIN        TYP    MAX       Unit    Note
+
+
+          Frame Frequency               Cycle          TV           -         1066     -       lines
+
+
+            Vertical Active
+                                    Display Period    TVD           -         1050     -       lines
+            Display Term
+
+
+              One Line
+                                        Cycle          TH           -         844      -      clocks     (1 )
+            Scanning Time
+
+
+          Horizontal Active
+                                    Display Period    THD           -         700      -      clocks
+            Display Term
+
+
+    6.2 Timing diagrams of interface signal
+
+                                                     TV
+
+
+                              TVD
+
+
+  DE
+
+
+
+
+                                                              TH
+
+
+       DCLK
+                               TC
+                                                                        THD
+
+       DE
+
+
+       DATA                                                 Valid display data ( 700 pixel)
+       SIGNALS
+
+
+  Note : All input condition(level&timing) for SN75LVDS88 are the same with those of LPD11826 or compatible.
+
+
+
+
+Doc.No.        LTN141P4-L03               Rev.No            05-A00-G-050513                       Page          20 / 31
+  6.3 Power ON/OFF Sequence
+                                                                                       APPROVAL
+
+   : To prevent a latch-up or DC operation of the LCD module, the power on/off sequence
+     shall be as shown below.
+          Power Supply    0.9 VDD                                                    0.9 VDD
+                 VDD 0.1 VDD                                                               0.1 VDD
+                    0V
+
+      0 T1 d 10 msec                   T1
+      0 T2 d 50 msec                                                           T3
+      0 T3 d 50 msec                        T2                                               T4
+      400ms d T4
+                         Signals                           VALID
+                   0V
+
+                                   Power On                                    Power Off
+
+
+             Back-light
+           200 msec d T5                               50%       50%
+           200 msec T6
+
+
+                                                 T5                      T6
+
+                                  Power ON/OFF Sequence
+
+                    T1 : Vdd rising time from 10% to 90%
+                    T2 : The time from Vdd to valid data at power ON.
+                    T3 : The time from valid data off to Vdd off at power Off.
+                    T4 : Vdd off time for Windows restart
+                    T5 : The time from valid data to B/L enable at power ON.
+                    T6 : The time from valid data off to B/L disable at power Off.
+
+  NOTE.
+    (1) The supply voltage of the external system for the module input should be the same
+        as the definition of VDD.
+
+    (2) Apply the lamp voltage within the LCD operation range. When the backlight turns on
+        before the LCD operation or the LCD turns off before the backlight turns off, the
+       display may momentarily become white.
+
+    (3) In case of VDD = off level, please keep the level of input signals on the low or keep
+        a high impedance.
+
+    (4) T4 should be measured after the module has been fully discharged between power
+        off and on period.
+
+    (5) Interface signal shall not be kept at high impedance when the power is on.
+
+
+Doc.No.     LTN141P4-L03            Rev.No             05-A00-G-050513                         Page   21 / 31
+7. Mechanical Outline Dimension                          APPROVAL
+      [ Refer to the next page ]
+
+
+
+
+Doc.No.   LTN141P4-L03        Rev.No   05-A00-G-050513     Page   22 / 31
+                                                                        APPROVAL
+  8. Packing
+
+    8.1 Packing
+          CARTON(Internal Package)
+          (1)Packing Form
+            Corrugated fiberoard box and corrugated cardboard as shock absorber
+          (2)Packing Method
+
+
+
+
+                                       CUSHION CAP
+
+
+
+                                                                      PANEL
+
+
+
+
+                                                                   CUSHION PAD
+
+
+
+
+                  Note 1) Total Weight : Approximately 12.0 kg
+                       2) Acceptance number of piling : 20 sets
+                       3) Carton size : 504(W)u370(D)u316(H)
+                       4) MAX accumulation quantity : 6 cartons
+
+
+
+
+Doc.No.      LTN141P4-L03       Rev.No         05-A00-G-050513                Page   24 / 31
+                                                                              APPROVAL
+   (3)Packing Material
+
+           NO.                           Parts name                           Quantity
+
+            1.                  Static eletric protective sack                   20
+
+                                  Cushion pad( inner box )
+            2.                                                                  1 set
+                                  included shock absorber
+
+            3.                        Pictorial marking                         2 pics
+
+            4.                              Carton                              1 set
+
+
+   9. MARKINGS & OTHERS
+
+     A nameplate bearing followed by is affixed to a shipped product at the
+     specified location on each product.
+
+     (1)Parts number : LTN141P4-L03
+     (2)Revision code : 3 letters
+     (3)Control code : One letter
+     (4)Lot number     : 3 Z 3 H XX XX XX            XXX
+                                                     SEC Revision Code
+                                                     Panel number
+                                                     Cell ID
+                                                     Lot ID
+                                                     Month
+                                                     Year
+                                                     Product Code
+                                                     Line
+
+     (5) Nameplate Indication
+
+
+
+                                   LTN141P4-L03
+                 0320                                                    40 mm
+
+                                  3Z3XXXXXXX                 000
+
+
+
+                                       80 mm
+
+                  Parts name           : LTN141P4-L03
+                  Lot number            : 3Z3XXXXXXX
+                  Inspected work week : 0320(2003 year 20th week)
+                  Product Revision Code : 000
+
+
+
+Doc.No.     LTN141P4-L03         Rev.No              05-A00-G-050513              Page   25 / 31
+                                                                           APPROVAL
+
+       High voltage caution label
+                  HIGH VOLTAGE              THIS COVER CONTAINS
+                     CAUTION                FLUORESCENT LAMP.
+                RISK OF ELECTRIC SHOCK
+                                            PLEASE FOLLOW LOCAL            10mm High voltage
+                DISCONNECT THE ELECTRIC
+                                            ORDINANCES OR                       caution
+                                            REGULATIONS FOR ITS DISPOSAL
+                POWER BEFORE SERVICE
+
+
+
+                                       70mm
+
+
+   (6) Packing small box attach
+
+
+
+
+                    DEVICE          : LTN141P4-L03
+                    TYPE            : 000
+                    QUANTITY        : 10 PCS
+
+
+
+                           CO6040001
+
+
+
+   (7) Packing box Marking : Samsung TFT-LCD Brand Name
+
+
+
+
+Doc.No.    LTN141P4-L03           Rev.No             05-A00-G-050513           Page   26 / 31
+10. GENERAL PRECAUTIONS                                                        APPROVAL
+
+1. Handling
+
+ (a) When the module is assembled, It should be attached to the system firmly
+    using every mounting holes. Be careful not to twist and bend the modules.
+
+ (b) Refrain from strong mechanical shock and / or any force to the module. In addition to
+     damage, this may cause improper operation or damage to the module and CCFT backlight.
+
+ (c) Note that polarizers are very fragile and could be easily damaged. Do not press or scratch
+     the surface harder than a HB pencil lead.
+
+ (d) Wipe off water droplets or oil immediately. If you leave the droplets for a long time,
+     Staining and discoloration may occur.
+
+ (e) If the surface of the polarizer is dirty, clean it using some absorbent cotton or soft cloth.
+
+ (f) The desirable cleaners are water, IPA(Isoprophyl Alcohol) or Hexane.
+     Do not use Keptone type materials(ex. Acetone), Ethyl alcohol, Toluene, Ethyl acid or Methyl
+     chloride. It might permanent damage to the polarizer due to chemical reaction.
+
+ (g) If the liquid crystal material leaks from the panel, it should be kept away from the eyes or
+      mouth . In case of contact with hands, legs or clothes, it must be washed away thoroughly
+      with soap.
+
+ (h) Protect the module from static , it may cause damage to the C-MOS Gate Array IC.
+
+ (i) Use fingerstalls with soft gloves in order to keep display clean during the incoming
+      inspection and assembly process.
+
+ (j) Do not disassemble the module.
+
+ (k) Do not pull or fold the lamp wire.
+
+ (l) Do not adjust the variable resistor which is located on the back side.
+
+ (m) Protection film for polarizer on the module shall be slowly peeled off just before use so
+    that the electrostatic charge can be minimized.
+
+ (n) Pins of I/F connector shall not be touched directly with bare hands.
+
+
+
+
+Doc.No.       LTN141P4-L03         Rev.No          05-A00-G-050513                  Page    27 / 31
+2. STORAGE                                                                     APPROVAL
+ (a) Do not leave the module in high temperature, and high humidity for a long time.
+     It is highly recommended to store the module with temperature from 0 to 35qC and
+     relative humidity of less than 70%.
+
+ (b) Do not store the TFT-LCD module in direct sunlight.
+
+ (c) The module shall be stored in a dark place. It is prohibited to apply sunlight or fluorescent
+     light during the store.
+
+3. OPERATION
+
+ (a) Do not connect,disconnect the module in the “ Power On” condition.
+
+ (b) Power supply should always be turned on/off by following item 6.3
+     “ Power on/off sequence “.
+
+ (c) Module has high frequency circuits. Sufficient suppression to the electromagnetic
+     interference shall be done by system manufacturers. Grounding and shielding methods
+     may be important to minimize the interference.
+
+ (d) The cable between the back-light connector and its inverter power supply shall be a
+     minimized length and be connected directly . The longer cable between the back-light
+     and the inverter may cause lower luminance of lamp(CCFT) and may require higher
+     startup voltage (Vs).
+
+ (e) The standard limited warranty is only applicable when the module is used for general
+     notebook applications. If used for purposes other than as specified, SEC is not to be
+     held reliable for the defective operations. It is strongly recommended to contact SEC
+     to find out fitness for a particular purpose.
+
+4. OTHERS
+
+ (a) Ultra-violet ray filter is necessary for outdoor operation.
+
+ (b) Avoid condensation of water. It may result in improper operation or disconnection
+    of electrode.
+
+ (c) Do not exceed the absolute maximum rating value. ( the supply voltage variation, input
+     voltage variation, variation in part contents and environmental temperature, so on)
+     Otherwise the module may be damaged.
+
+ (d) If the module displays the same pattern continuously for a long period of time,it can be
+     the situation when the image “sticks” to the screen.
+
+ (e) This module has its circuitry PCB’s on the rear side and should be handled carefully in
+     order not to be stressed.
+
+
+
+Doc.No.      LTN141P4-L03          Rev.No           05-A00-G-050513                Page     28 / 31
+11. EDID                                                                        APPROVAL
+ Address                             Value                    ASCII
+                    FUNCTION                   BIN      DEC    or                 Notes
+  (HEX)                              HEX                      Data
+   00                                 00     00000000    0
+   01                                 FF     11111111   255
+   02                                 FF     11111111   255
+   03                                 FF     11111111   255
+           Header                                                      EDID Header
+   04                                 FF     11111111   255
+   05                                 FF     11111111   255
+   06                                 FF     11111111   255
+   07                                 00     00000000    0
+   08                                 4C     01001100    76    S       3 character ID
+           ID Manufacturer Name                                E
+   09                                 A3     10100011   163    C       "SEC"
+   0A                                 00     00000000    0
+           ID Product Code
+   0B                                 00     00000000    0
+   0C                                 00     00000000    0
+   0D                                 00     00000000    0
+           32-bit serial no.
+   0E                                 00     00000000    0
+   0F                                 00     00000000    0
+   10      Week of manufacture        00     00000000    0
+   11      Year of manufacture        0D     00001101    13   2003     2003
+   12      EDID Structure Ver.        01     00000001    1     1       EDID Ver. 1.0
+   13      EDID revision #            03     00000011    3     3       EDID Rev. 3
+   14      Video input definition     80     10000000   128
+   15      Max H image size           1D     00011101    29   29       29 cm(approx)
+   16      Max V image size           15     00010101    21   21       21 cm(approx)
+   17      Display Gamma              78     01111000   120   2.2      Gamma 2.2
+   18      Feature support            0A     00001010    10
+   19      Red/green low bits         43     01000011    67            10000111
+   1A      Blue/white low bits        DE     11011110   222            11111110
+   1B      Red x/ high bits                                   0.595    Red x 0.580=
+                                      98     10011000   152
+                                                                       1001010010
+   1C      Red y                                              0.340    Red y 0.340=
+                                      57     01010111    87
+                                                                       0101011100
+   1D      Green x                                            0.320    Green x 0.310=
+                                      52     01010010    82
+                                                                       0100111101
+   1E      Green y                                            0.550    Green y 0.550=
+                                      8C     10001100   140
+                                                                       1000110011
+   1F      Blue x                                             0.155    Blue x 0.155=
+                                      27     00100111    39
+                                                                       0010011111
+   20      Blue y                                             0.130    Blue y 0.155=
+                                      21     00100001    33
+                                                                       0010011111
+                                                              0.315    White x 0.315=
+   21      White x                    50     01010000    80
+                                                                       0101000011
+                                                              0.330    White y 0.330=
+   22      White y                    54     01010100    84
+                                                                       0101010010
+   23      Established timing 1       00     00000000    0
+   24      Established timing 2       00     00000000    0
+   25      Established timing 3       00     00000000    0
+
+
+
+
+Doc.No.     LTN141P4-L03            Rev.No           05-A00-G-050513                    Page   29 / 31
+                                                                                 APPROVAL
+   26                                01      00000001    1
+          Standard timing #1                                         not used
+   27                                01      00000001    1
+   28                                01      00000001    1
+          Standard timing #2                                         not used
+   29                                01      00000001    1
+   2A                                01      00000001    1
+          Standard timing #3                                         not used
+   2B                                01      00000001    1
+   2C                                01      00000001    1
+          Standard timing #4                                         not used
+   2D                                01      00000001    1
+   2E                                01      00000001    1
+          Standard timing #5                                         not used
+   2F                                01      00000001    1
+   30                                01      00000001    1
+          Standard timing #6                                         not used
+   31                                01      00000001    1
+   32                                01      00000001    1
+          Standard timing #7                                         not used
+   33                                01      00000001    1
+   34                                01      00000001    1
+          Standard timing #8                                         not used
+   35                                01      00000001    1
+   36                                30      00110000    48   108
+                                                                     Main clock= 108 MHz
+   37                                2A      00101010    42
+   38                                78      01111000   120   1400   Hor active=700*2 pixels
+   39                                20      00100000    32   288    Hor blanking=288 pixels
+   3A                                51      01010001    81          4bit : 4bit
+   3B                                1A      00011010    26   1050   Vertcal active=1050 lines
+   3C                                10      00010000    16    16    Vertical blanking=16 lines
+   3D                                40      01000000    64          4bit : 4bit
+   3E                                30      00110000    48    48    Hor sync. Offset=24 pixels
+   3F     Detailed timing/monitor    70      01110000   112   112    H sync. Width=56 pixels
+          descriptor #1                                        1     V sync. Offset=1 lines
+   40                                14      00010100   20
+                                                               4     V sync. Width=4 lines
+
+
+   41                                00      00000000    0           2bit : 2bit :2bit :2bit
+
+
+   42                                1E      00011110    30   286    H image size= 286 mm(approx)
+   43                                D6      11010110   214   214    V image size = 214 mm(approx)
+   44                                10      00010000    16
+   45                                00      00000000    0           No Horizontal Border
+   46                                00      00000000    0           No Vertical Border
+   47                                19      00011001    25
+   48                                00      00000000    0
+   49                                00      00000000    0
+   4A                                00      00000000    0           Manufacturer Specified (Timing)
+   4B                                0F      00001111    15
+   4C                                00      00000000    0
+   4D                                00      00000000    0           Value=HSPWmin / 2
+   4E                                00      00000000    0           Value=HSPWmax / 2
+   4F     Detailed timing/monitor    00      00000000    0           Value=Thbpmin /2
+   50     descriptor #2              00      00000000    0           Value=Thbpmax /2
+   51                                00      00000000    0           Value=VSPWmin /2
+   52                                00      00000000    0           Value=VSPWmax /2
+   53                                00      00000000    0           Value=Tvbpmin / 2
+   54                                00      00000000    0           Value=Tvbpmax / 2
+   55                                0F      00001111    15          Thpmin=value*2 + HA pixelclks
+   56                                F2      11110010   242          Thpmax=value*2 + HA pixelclks
+   57                                02      00000010    2           Tvpmin=value*2 + VA lines
+   58                                4B      01001011    75          Tvpmax=value*2 + VA lines
+   59                                00      00000000    0           Module revision
+
+
+
+
+Doc.No.    LTN141P4-L03             Rev.No         05-A00-G-050513                       Page     30 / 31
+                                                                             APPROVAL
+   5A                                00      00000000   0
+   5B                                00      00000000    0
+   5C                                00      00000000    0           ASCII Data String Tag
+   5D                                FE      11111110   254
+   5E                                00      00000000    0
+   5F                                53      01010011    83   [S]
+   60                                41      01000001    65   [A]
+   61     Detailed timing/monitor    4D      01001101    77   [M]
+   62     descriptor #3              53      01010011    83   [S]
+   63                                55      01010101    85   [U]
+   64                                4E      01001110    78   [N]
+   65                                47      01000111    71   [G]
+   66                                0A      00001010    10    [^]
+   67                                20      00100000    32    []
+   68                                20      00100000    32    []
+   69                                20      00100000    32    []
+   6A                                20      00100000    32    []
+   6B                                20      00100000    32    []
+   6C                                00      00000000   0
+   6D                                00      00000000   0
+   6E                                00      00000000   0            Monitor Name Tag (ASCII)
+   6F                                FE      11111110   254
+   70                                00      00000000    0
+   71                                4C      01001100    76   [L]
+   72                                54      01010100    84   [T]
+   73     Detailed timing/monitor    4E      01001110    78   [N]
+   74     descriptor #4              31      00110001    49   [1]
+   75                                34      00110100    52   [4]
+   76                                31      00110001    49   [1]
+   77                                50      01010000    80   [P]
+   78                                34      00110100    52   [4]
+   79                                2D      00101101    45    [-]
+   7A                                4C      01001100    76   [L]
+   7B                                30      00110000    48   [0]
+   7C                                33      00110011    51   [3]
+   7D                                0A      00001010    10    [^]
+   7E     Extension Flag             00      00000000    0
+   7F     Checksum                   5B      01011011   91
+
+
+
+
+Doc.No.    LTN141P4-L03             Rev.No         05-A00-G-050513                 Page      31 / 31
+

@@ -1,0 +1,673 @@
+CS5211 Datasheet
+DisplayPort to LVDS Convertor
+
+
+
+
+                       CapStone Semiconductor Corp.
+                                                                                                                                                  CS5211
+                                                                                                                                                 Datasheet
+
+Contents
+
+1   Introduction ............................................................................................................... 5
+2   Features ..................................................................................................................... 6
+3   Pin Definition ............................................................................................................. 7
+    3.1 Pin Assignments ................................................................................................................................ 7
+    3.2 Pin Description .................................................................................................................................. 8
+4   Function Description .................................................................................................11
+    4.1 Overview ......................................................................................................................................... 11
+    4.2 Main Link Receiver .......................................................................................................................... 11
+    4.3 AUX Channel ................................................................................................................................... 11
+    4.4 LVDS Panel Selection ....................................................................................................................... 11
+    4.5 LVDS-Output Data Mapping ............................................................................................................ 12
+    4.6 PWM Duty Cycle Modes .................................................................................................................. 15
+    4.7 LVDS Power Sequencing .................................................................................................................. 15
+    4.8 LVDS Transmitter ............................................................................................................................ 16
+5   Electrical Specifications .............................................................................................17
+    5.1 Absolute Maximum Conditions ....................................................................................................... 17
+    5.2 Operating Conditions ...................................................................................................................... 17
+    5.3 Electrical Specification ..................................................................................................................... 17
+6   Package Specification ................................................................................................19
+7   Ordering Information ................................................................................................20
+8   Revision History ........................................................................................................21
+
+
+
+
+                                                                                                                                               Page 2 of 21
+                                                                                                                                              CS5211
+                                                                                                                                             Datasheet
+
+List of Figures
+Figure 1-1 CS5211 Block Diagram ...................................................................................................................... 5
+Figure 3-1 CS5211 Pin Layout............................................................................................................................ 7
+Figure 4-1 Power Supply Sequence .................................................................................................................. 15
+Figure 6-1 CS5211 Package Outline (QFN68 Leads 8x8mm 2) ............................................................................ 19
+
+
+
+
+                                                                                                                                            Page 3 of 21
+                                                                                                                                             CS5211
+                                                                                                                                            Datasheet
+
+List of Tables
+Table 3-1 CS5211 Pin Definitions ...................................................................................................................... 8
+Table 4-1 Signal Mapping for Dual LVDS Channel ............................................................................................ 12
+Table 4-2 Power Sequencing ........................................................................................................................... 15
+Table 5-1 Absolute Maximum Conditions ....................................................................................................... 17
+Table 5-2 Normal Operating Conditions .......................................................................................................... 17
+Table 5-3 DC Electrical Specification ............................................................................................................... 17
+Table 5-4 AC Electrical Specification ............................................................................................................... 18
+Table 6-1 Package Dimension ......................................................................................................................... 19
+Table 7-1 CS5211 Ordering Information .......................................................................................................... 20
+Table 8-1 Document Revision History ............................................................................................................. 21
+
+
+
+
+                                                                                                                                           Page 4 of 21
+                                                                                                      CS5211
+                                                                                                     Datasheet
+
+1 Introduction
+The CS5211 is an eDP to LVDS converter with flexible configuration for the low-cost display system. CS5211 is
+compliant with eDP 1.2 and supports 1 lane and 2 lanes mode at 1.62Gbps and 2.7Gbps per lane speed. With
+powerful SerDes technology, CS5211 can recover high-speed serial data with a low bit error rate.
+CS5211 LVDS transmitter supports single port and two ports mode. The maximum resolution supported by
+CS5211 is WUXGA (1920x1200). With 4 configuration pins, CS5211 can support 16 combinations for different
+panel resolution and LVDS working mode with one EEPROM image. A convenient tool is also provided to edit,
+generate and update EEPROM image for customized configuration.
+With optimized design, the usage of CS5211 is apt to save the BoM cost. The clock source is integrated into this
+chip, so the external crystal can be saved; with wide range power supporting (1.8 ~ 1.2V for core power), power
+device on board could be saved; the total power of CS5211 is less than 300mW, so the power supply network
+design could be simplified. It is easy to integrate the CS5211 to a popular low-cost display system.
+
+
+
+
+                                 DisplayPort
+                                                      MCU             LVDS TX
+                                     Rx
+
+
+     DisplayPort                    AUX                                                            LVDS
+                                                   EDID Buffer       PWM Gen
+       Source                      Channel                                                         Panel
+
+
+                                                    OSC and           EEPROM
+                                  HPD Gen
+                                                     LDO               Loader
+
+
+
+
+                                                                      EEPROM
+
+
+                                        Figure 1-1 CS5211 Block Diagram
+
+
+
+
+                                                                                                    Page 5 of 21
+                                                                                                         CS5211
+                                                                                                        Datasheet
+
+2 Features
+General
+   2-lane DisplayPort v1.1 compliant receiver
+   Support 18-bit Single Port, 18-bit Dual Port, 24-bit Single Port and 24-bit Dual Port LVDS output
+   Support both OpenLDI and SPWG bit mapping for LVDS application
+   Embedded oscillator and there’s no need for the external crystal
+   Embedded linear dropout regulator (LDO)
+   On chip MCU
+   Support panel select by GPIO pins control
+   Loads Boot ROM automatically upon power up
+   Serial Boot ROM data updated through I2C bus or AUX Channel
+   Automatically chip power mode control.
+   EMI reduction for both eDP and LVDS
+   Wide core power ranges from 1.8V to 1.2V.
+   68-pin QFN package.
+   HBM 4KV
+
+DP Receiver
+   Compliant with Embedded DisplayPort (eDP) specification 1.2
+   Support 1 or 2 main link lane at either 1.62Gbps or 2.7Gbps link rate.
+   Input color depth 18/24 bit per pixel in RGB format.
+   Support enhanced framing mode.
+   Support VESA and CEA timing standards up to 1920x1200 resolution with 60Hz in 24 bit per pixel mode.
+   Support dynamic refresh rate switching.
+   Support Fast Link Training and Full Link Training.
+   Support eDP Authentication: Alternative Scramble Seed Reset and Alternative Framing.
+   Support HPD Interrupt.
+
+LVDS Output
+   Support 18-bit Single Port, 18-bit Dual Port, 24-bit Single Port and 24-bit Dual Port LVDS output interface.
+   Support both OpenLDI and SPWG bit mapping for LVDS application.
+   Hold LVDS output when input video is not ready.
+   Flexible LVDS output pins swapping.
+   Programmable swing/common mode voltage.
+   Output slew rate control to reduce EMI.
+
+Video Processing
+   Support Gamma Correction.
+   Support Dithering and 6 bits + FRC.
+   Support Dynamic Backlight Control.
+
+Panel and backlight control
+   Programmable LCD panel power sequence
+   Supports 2 PWM modes, including backlight luminance level control PWM pin and BLUP/BLDN pin
+
+
+                                                                                                        Page 6 of 21
+                                CS5211
+                               Datasheet
+
+3 Pin Definition
+
+3.1 Pin Assignments
+Figure 3-1 CS5211 Pin Layout
+
+
+
+
+                               Page 7 of 21
+                                                                                                            CS5211
+                                                                                                           Datasheet
+
+3.2 Pin Description
+
+Table 3-1 CS5211 Pin Definitions
+ Pin #     Description             Type    Note
+ 1         RESET_N                 IN      Reset pin, active low. Internal pull down. When this pin is low,
+                                           chip is in power down and rest state
+ 2         TEST_EN                 IN      Reserved in application. Must left open.
+ 3         AVDD                    POWER   Analog Power Supply (1.2 ~1.8V)
+ 4         AVDD                    POWER   Analog Power Supply (1.2 ~1.8V)
+ 5         XTAL_O                  OUT     Crystal output. Just for backup. By default, integrated clock
+                                           source will be used.
+ 6         XTAL_I                  IN      Crystal input. Just for backup. By default, integrated clock
+                                           source will be used.
+ 7         DVDD                    POWER   Digital Power Supply (1.2 ~1.8V)
+ 8         VSS                     GROUND Power ground
+ 9         REF_CLK                 IN      Reference clock input. For debug. By default, integrated clock
+                                           source will be used.
+ 10        LVDS_CLKU_P             OUT     Positive signal of differential pair for LVDS Up port clock.
+ 11        LVDS_CLKU_N             OUT     Negative signal of differential pair for LVDS Up port clock.
+ 12        LVDS_U3_P               OUT     Positive signal of differential pair for LVDS Up port data lane
+                                           3.
+ 13        LVDS_U3_N               OUT     Negative signal of differential pair for LVDS Up port data lane
+                                           3.
+ 14        LVDS_U2_P               OUT     Positive signal of differential pair for LVDS Up port data lane
+                                           2.
+ 15        LVDS_U2_N               OUT     Negative signal of differential pair for LVDS Up port data lane
+                                           2.
+ 16        LVDS_U1_P               OUT     Positive signal of differential pair for LVDS Up port data lane
+                                           1.
+ 17        LVDS_U1_N               OUT     Negative signal of differential pair for LVDS Up port data lane
+                                           1.
+ 18        VDD_IO                  POWER   LVDS driver power supply and IO power supply (3.3V)
+ 19        LVDS_U0_P               OUT     Positive signal of differential pair for LVDS Up port data lane
+                                           0.
+ 20        LVDS_U0_N               OUT     Negative signal of differential pair for LVDS Up port data lane
+                                           0.
+ 21        VSS                     GROUND Power ground
+ 22        LVDS_L3_P               OUT     Positive signal of differential pair for LVDS Low port data lane
+                                           3.
+ 23        LVDS_L3_N               OUT     Negative signal of differential pair for LVDS Low port data
+                                           lane 3.
+ 24        LVDS_CLKL_P             OUT     Positive signal of differential pair for LVDS Low port clock.
+
+
+                                                                                                           Page 8 of 21
+                                                                                              CS5211
+                                                                                             Datasheet
+25   LVDS_CLKL_N   OUT      Negative signal of differential pair for LVDS Low port clock.
+26   LVDS_L2_P     OUT      Positive signal of differential pair for LVDS Low port data lane
+                            2.
+27   LVDS_L2_N     OUT      Negative signal of differential pair for LVDS Low port data
+                            lane 2.
+28   LVDS_L1_P     OUT      Positive signal of differential pair for LVDS Low port data lane
+                            1.
+29   LVDS_L1_N     OUT      Negative signal of differential pair for LVDS Low port data
+                            lane 1.
+30   LVDS_L0_P     OUT      Positive signal of differential pair for LVDS Low port data lane
+                            0.
+31   LVDS_L0_N     OUT      Negative signal of differential pair for LVDS Low port data
+                            lane 0.
+32   VDD_IO        POWER    LVDS driver power supply and IO power supply (3.3V)
+33   GPIO_0        IN       Panel select control signal bit 0.
+34   GPIO_1        IN       Panel select control signal bit 1.
+35   VSS           GROUND Power ground
+36   INTR          OUT      Programmable interrupt output.
+37   GPIO_2        IN       Panel select control signal bit 2.
+38   GPIO_3        IN       Panel select control signal bit 3. 4-bits panel select control
+                            signal can be combined together to select panel type.
+39   PWM_OUT1      OUT      PWM output for backlight brightness control.
+40   VSS           GROUND Power ground
+41   PWRDN         IN       Power down control signal. Enter/Exit power down mode
+                            when an active low pulse is detected on this pin.
+42   DVDD          POWER    Digital Power Supply (1.2 ~1.8V)
+43   AUX_N         IN/OUT   Negative signal of differential pair for eDP AUX CH.
+44   AUX_P         IN/OUT   Positive signal of differential pair for eDP AUX CH.
+45   VSS           GROUND Power ground
+46   ENABKL        OUT      LCD panel back light enable signal.
+47   ENAVDD        OUT      LCD panel VCC enable signal.
+48   PWM_OUT0      OUT      PWM output for backlight brightness control.
+49   PWM_IN        IN       PWM input signal for video source.
+50   M_SDA         IN/OUT   I2C data signal for chip boot up and EDID.
+51   M_SCL         OUT      I2C clock signal for chip boot up and EDID.
+52   VDD_IO        POWER    LVDS driver power supply and IO power supply (3.3V)
+53   S_SDA         IN/OUT   I2C data signal for internal register access.
+54   S_SCL         IN       I2C clock signal for internal register access.
+55   BL_DN         IN       Decrement backlight brightness input.
+56   BL_UP         IN       Increment backlight brightness input
+
+
+                                                                                             Page 9 of 21
+                                                                                        CS5211
+                                                                                       Datasheet
+57   GLED        OUT     Green LED control signal.
+58   OLED        OUT     Orange LED control signal.
+59   HPD         OUT     Hot Plug Detect for eDP port.
+60   AVDD        POWER   Analog Power Supply (1.2 ~1.8V)
+61   DPRX_L0_P   IN      Positive signal of differential for eDP main link lane 0.
+62   DPRX_L0_N   IN      Negative signal of differential for eDP main link lane 0.
+63   VSS         GROUND Power ground
+64   DPRX_L1_P   IN      Positive signal of differential for eDP main link lane 1.
+65   DPRX_L1_N   IN      Negative signal of differential for eDP main link lane 1.
+66   AVDD        POWER   Analog Power Supply (1.2 ~1.8V)
+67   AVDD        POWER   Analog Power Supply (1.2 ~1.8V)
+68   R_BIAS      IN      Band-gap Bias input. Just for backup. By default, left this pin
+                         floating.
+
+
+
+
+                                                                                     Page 10 of 21
+                                                                                                      CS5211
+                                                                                                     Datasheet
+
+4 Function Description
+
+4.1 Overview
+The CS5211 is a bridge chip that converts the eDP input to LVDS signal. The CS5211’s advanced receiver supports
+Embedded DisplayPort (eDP) 1.1 Specifications. This device will decode high-speed eDP’s AC-coupled differential
+signals in RGB format and drive a TFT panel incorporated with the LVDS interface. A built-in LVDS transmitter,
+equipped with a flexible OpenLDI/SPWG bit mapping, is capable of driving a single port or a dual port (18/24-bit)
+LVDS panel. The CS5211’s LVDS output can be configured for supporting up to 1920x1200 resolutions at 60 Hz
+refresh rate. In addition, the CS5211 has display enhancement features including the backlight inverter control,
+the brightness adjustment, the image dithering algorithm and the EMI reduction mechanism to benefit the
+system manufactures.
+CS5211 is configured as eDP to LVDS converter; The LVDS transmitter supports single port 18-bit, single port 24-
+bit , dual port 18-bit and dual port 24-bit transmission and supports both OpenLDI and SPWG bit mapping.
+
+
+4.2 Main Link Receiver
+The CS5211’s Main link Receiver Functional block is equipped with two eDP Main Link lanes to support high
+speed, high bandwidth and uni-directional data stream for driving TFT-LCD display up to 1920x1200 resolution.
+Two types of link rates, 2.7Gbps and 1.62Gbps received through the AC-coupled differential pairs (DP0P/DP0N
+and DP1P/DP1N pins), is de-serialized into three components (RGB) streams by the CS5211’s decoder block.
+The CS5211 synchronizes the link rate by using its advanced Clock-Date-Recovery technology, and de-serializes
+the input stream into parallel data that will be decoded into special symbols based on ANSI8B/10B coding
+scheme (the channel coding is specified in ANSI X3.230-1994). The decoded symbols are unpacked by CS5211’s
+Main Stream Un-Packer block to restore RGB component video stream and the original video timing information,
+which will be used by CS5211’s LVDS encoding circuits for driving the LCD display.
+CS5211 supports eDP authentication through ASSR.
+
+
+4.3 AUX Channel
+The CS5211’s AUXP/AUXN pin pair serves as the eDP AUX Channel and supports half-duplex bi-directional AC-
+coupled differential signal with a 1Mbps data rate for link communication. Upon detection of changing
+connection status of Hot-Plug pin during system power on, the CS5211 will put its AUX Channel into idle state
+and wait for a request transaction from the Source Device. When the Source Device needs to initiate a
+transaction for the Link Service or the Device Service by beginning with the Sync Pattern, which is the
+Manchester II coding required for AUX Channel communication, will be automatically locked and responded by
+CS5211’s receiver block.
+Furthermore, the differential pair allows a Source system to update CS5211’s DPCD and retrieve EDID data
+during the Link Training/Link Maintenance. The Source Device can utilize CS5211’s AUXP/AUXN pins for adjusting
+the panel’s luminance level during the normal operation.
+
+
+4.4 LVDS Panel Selection
+Different LVDS Panels may have different EDID and need specific configurations such as power sequence timing.
+CS5211 supports 16 different LVDS Panel configurations that is selected by GPIO [3:0] pins. CS5211 reads
+
+
+                                                                                                   Page 11 of 21
+                                                                                                    CS5211
+                                                                                                   Datasheet
+GPIO[3:0] status after loading its firmware upon power ON and then CS5211 loads LVDS specific configurations.
+GPIO[3:0] can be controlled by resistors or by other chip’s GPIO in real applications.
+Method 1 (control by resistors)
+GPIO [3:0] can be connected to high/low level by pull-up/pull-down resistors in CS5211 PCB board; CS5211 can
+get correct LVDS Panel selection value upon power ON or get the reset signal.
+Method 2(control by other chip’s GPIO)
+GPIO[3:0] can be controlled by other chip’s GPIO pins in CS5211 application system. The GPIO pins must keep
+stable values in 100ms after the reset signal is given to CS5211 resetb pin. Otherwise, a reset signal must be
+given again. It is recommended to reset CS5211 by the controlling chip each time LVDS Panel selection value is
+changed.
+
+
+
+
+4.5 LVDS-Output Data Mapping
+The SPWG and the OpenLDI are two LVDS encoding schemes supported by CS5211 and the selection can be
+made through programming CS5211 registers. These OpenLDI/SPWG configuration parameters can be stored in
+the BOOT ROM and loaded into the CS5211 registers during system power-up.
+
+Table 4-1 Signal Mapping for Dual LVDS Channel
+                                  18-bit SPWG / 18-bit OpenLDI         24-BIT SPWG / 24-BIT OPENLDI
+ LDC[0](1)                        R0 / R0                              R0 / R2
+ LDC[0](2)                        R1 / R1                              R1 / R3
+ LDC[0](3)                        R2 / R2                              R2 / R4
+ LDC[0](4)                        R3 / R3                              R3 / R5
+ LDC[0](5)                        R4 / R4                              R4 / R6
+ LDC[0](6)                        R5 / R5                              R5 / R7
+ LDC[0](7)                        G0 / G0                              G0 / G2
+ LDC[1](1)                        G1 / G1                              G1 / G3
+ LDC[1](2)                        G2 / G2                              G2 / G4
+ LDC[1](3)                        G3 / G3                              G3 / G5
+ LDC[1](4)                        G4 / G4                              G4 / G6
+ LDC[1](5)                        G5 / G5                              G5 / G7
+ LDC[1](6)                        B0 / B0                              B0 / B2
+ LDC[1](7)                        B1 / B1                              B1 / B3
+ LDC[2](1)                        B2 / B2                              B2 / B4
+ LDC[2](2)                        B3 / B3                              B3 / B5
+ LDC[2](3)                        B4 / B4                              B4 / B6
+ LDC[2](4)                        B5 / B5                              B5 / B7
+ LDC[2](5)                        HSYNC / HSYNC                        HSYNC / HSYNC
+ LDC[2](6)                        VSYNC / VSYNC                        VSYNC / VSYNC
+
+
+
+                                                                                                  Page 12 of 21
+                                               CS5211
+                                              Datasheet
+LDC[2](7)   DE / DE         DE / DE
+LDC[3](1)                   R6 / R0
+LDC[3](2)                   R7 / R1
+LDC[3](3)                   G6 / G0
+LDC[3](4)                   G7 / G1
+LDC[3](5)                   B6 / B0
+LDC[3](6)                   B7 / B1
+LDC[3](7)                   RES / RES
+LDC[0](1)   Ro0 / Ro0       Ro0 / Ro2
+LDC[0](2)   Ro1 / Ro1       Ro1 / Ro3
+LDC[0](3)   Ro2 / Ro2       Ro2 / Ro4
+LDC[0](4)   Ro3 / Ro3       Ro3 / Ro5
+LDC[0](5)   Ro4 / Ro4       Ro4 / Ro6
+LDC[0](6)   Ro5 / Ro5       Ro5 / Ro7
+LDC[0](7)   Go0 / Go0       Go0 / Ro2
+LDC[1](1)   Go1 / Go1       Go1 / Ro3
+LDC[1](2)   Go2 / Go2       Go2 / Go4
+LDC[1](3)   Go3 / Go3       Go3 / Go5
+LDC[1](4)   Go4 / Go4       Go4 / Go6
+LDC[1](5)   Go5 / Go5       Go5 / Go7
+LDC[1](6)   Bo0 / Bo0       Bo0 / Bo2
+LDC[1](7)   Bo1 / Bo1       Bo1 / Bo3
+LDC[2](1)   Bo2 / Bo2       Bo2 / Bo4
+LDC[2](2)   Bo3 / Bo3       Bo3 / Bo5
+DC[2](3)    Bo4 / Bo4       Bo4 / Bo6
+LDC[2](4)   Bo5 / Bo5       Bo5 / Bo7
+LDC[2](5)   HSYNC / HSYNC   HSYNC / HSYNC
+LDC[2](6)   VSYNC / VSYNC   VSYNC / VSYNC
+LDC[2](7)   DE / DE         DE / DE
+LDC[3](1)                   Ro6 / Ro0
+LDC[3](2)                   Ro7 / Ro1
+LDC[3](3)                   Go6 / Ro0
+LDC[3](4)                   Go7 / Go1
+LDC[3](5)                   Bo6 / Bo0
+LDC[3](6)                   Bo7 / Bo1
+LDC[3](7)                   RES / RES
+LDC[4](1)   Re0 / Re0       Re0 / Re2
+
+
+                                            Page 13 of 21
+                                               CS5211
+                                              Datasheet
+LDC[4](2)   Re1 / Re1       Re1 / Re3
+LDC[4](3)   Re2 / Re2       Re2 / Re4
+LDC[4](4)   Re3 / Re3       Re3 / Re5
+LDC[4](5)   Re4 / Re4       Re4 / Re6
+LDC[4](6)   Re5 / Re5       Re5 / Re7
+LDC[4](7)   Ge0 / Ge0       Ge0 / Ge2
+LDC[5](1)   Ge1 / Ge1       Ge1 / Ge3
+LDC[5](2)   Ge2 / Ge2       Ge2 / Ge4
+LDC[5](3)   Ge3 / Ge3       Ge3 / Ge5
+LDC[5](4)   Ge4 / Ge4       Ge4 / Ge6
+LDC[5](5)   Ge5 / Ge5       Ge5 / Ge7
+LDC[5](6)   Be0 / Be0       Be0 / Be2
+LDC[5](7)   Be1 / Be1       Be1 / Be3
+LDC[6](1)   Be2 / Be2       Be2 / Be4
+LDC[6](2)   Be3 / Be3       Be3 / Be5
+LDC[6](3)   Be4 / Be4       Be4 / Be6
+LDC[6](4)   Be5 / Be5       Be5 / Be7
+LDC[6](5)   HSYNC / LCTLE   HSYNC / LCTLE
+LDC[6](6)   VSYNC / LCTLF   VSYNC / LCTLF
+LDC[6](7)   DE / LA6RL      DE / LA6RL
+LDC[7](1)                   Re6 / Re0
+LDC[7](2)                   Re7 / Re1
+LDC[7](3)                   Ge6 / Re0
+LDC[7](4)                   Ge7 / Re1
+LDC[7](5)                   Be6 / Be0
+LDC[7](6)                   Be7 / Be1
+LDC[7](7)                   RES
+
+
+
+
+                                            Page 14 of 21
+                                                                                                       CS5211
+                                                                                                      Datasheet
+
+4.6 PWM Duty Cycle Modes
+The CS5211’ has two PWM output pins for panel Backlight Brightness Dimming control, both pins can support
+duty cycle range from 0% to 100%.
+The CS5211 support two PWM control mode: Pass-through mode and TCON PWM output mode. TCON switch
+two mode according the setting of register DPCD: 0x00721 bit [1:0], this register can be set by DP source.
+    Method 1 (Pass-through mode)
+In this mode, CS5211 bypass PWM input to PWM output.
+    Method 2 (TCON PWM output mode)
+In this mode, CS5211 can generate PWM output by itself, the default frequency is 400kHz. In this mode,
+backlight brightness can be increased or decreased by imposing pulse to BLUP or BLDN pin of CS5211.
+CS5211 can dynamically adjust backlight brightness by analyzing brightness level of video data if
+DYNAMIC_BACKLIGHT_ENABLE is set to 1 by DP Source.
+If don’t use PWM control, CS5211 can set PWM_OUT pin fixed to high or low by software.
+
+
+
+
+4.7 LVDS Power Sequencing
+The CS5211 conforms to the SPWG LVDS panel power sequence requirements. The timing specification shown
+in Figure 6 is a superset of the requirements in the VESA TV Panels Standard. The control timing parameters of
+the panel can be set to E2PROM ROM by software and will be programmed into CS5211’s Power Control
+registers when device is powered up.
+
+
+
+
+                                       Figure 4-1 Power Supply Sequence
+
+Table 4-2 Power Sequencing
+                  Timing Parameter                         Range
+                  T2                                       0-510 ms
+                  T3                                       0-32766 ms
+                  T4                                       0-510 ms
+                  T5                                       0-32766 ms
+                  T7                                       0-32766 ms
+
+
+                                                                                                    Page 15 of 21
+                                                                                                          CS5211
+                                                                                                         Datasheet
+
+4.8 LVDS Transmitter
+In addition to supporting OpenLDI and SPWG specifications, the CS5211’s LVDS transmitter is capable of driving
+four types of panel electrical interfaces – the 18-bit single channel, the 24-bit single port, the 18-bit dual channel
+and the 24-bit dual channel. The LVDS output block also supports:
+    Flexible Synchronization Control
+The HSYNC/VSYNC recovered from DisplayPort Main Link can be inverted separately to satisfy the input
+requirement of a specific LCD Panel. Both Sync signals can also be forced to 0 to support Smart Panels.
+    Flexible LVDS Data Output Mapping
+The CS5211 has a flexible LVDS output pins mapping for the data and clock to support PCB top/bottom
+mounting. Please refer to the Register Programming Section how to change the LVDS pin-out mapping.
+
+
+
+
+                                                                                                       Page 16 of 21
+                                                                                                                             CS5211
+                                                                                                                            Datasheet
+
+5 Electrical Specifications
+
+5.1 Absolute Maximum Conditions
+Permanent damage may occur if absolute maximum conditions are violated. Refer to Section 5.2 for functional
+operating limits.
+
+Table 5-1 Absolute Maximum Conditions
+  Symbol                 Parameter                                        Min           Typ             Max                Unit
+  DVDD                   Digital core supply voltage                      -0.3          -               2.16               V
+  AVDD                   Analog core supply voltage                       -0.3          -               2.16               V
+  VDD_IO                 Analog I/O supply voltage                        -0.3          -               3.96               V
+  TJ                     Junction temperature                             -40           —               125                °C
+  TSTG                   Storage temperature1                             -65           —               150                °C
+  ESDHBM                 ESD protection (Human body model)                              4                                  kV
+    1.       Max 260°C can be guaranteed with max 8 sec soldering time.
+
+
+
+5.2 Operating Conditions
+
+Table 5-2 Normal Operating Conditions
+  Symbol                    Parameter                                            Min          Typ              Max                Unit
+  DVDD                      Digital core supply voltage                          1.08         1.2-1.8          1.96               V
+
+  AVDD                      Analog core supply voltage                           1.08         1.2-1.8          1.96               V
+  VDD_IO                    Analog I/O supply voltage                            2.97         3.3              3.63               V
+
+  TA                        Ambient temperature for CS5211AN                     0                             70                 °C
+  TA                        Ambient temperature for CS5211AN-I                   -40                           85                 °C
+
+  QJA                       Package thermal resistance, no air flow              —            39.3             —                  °C/W
+
+
+
+5.3 Electrical Specification
+
+Table 5-3 DC Electrical Specification
+                                                                                              For 3.3V I/O
+         Symbol                       Parameter
+                                                                          Min                       Typ                         Max
+  Vil (V)                   Input low voltage                  —                        —                           0.8
+
+  Vih (V)                   Input high Voltage                 2.0                      —                           —
+
+  Vol (V)                   Output low voltage                 0                        —                           0.4
+
+  Voh (V)                   Output high voltage1               2.4                      —                           —
+
+  Iin (uA)                  Input leakage current              -10                      —                           +10
+
+
+                                                                                                                          Page 17 of 21
+                                                                                                                      CS5211
+                                                                                                                     Datasheet
+                                                                                        For 3.3V I/O
+        Symbol                     Parameter
+                                                                     Min                    Typ                          Max
+                        Output       tri-state    leakage
+  Ihiz (uA)                                                   -10                   —                        +10
+                        current
+
+Table 5-4 AC Electrical Specification
+          Symbol                                        Description                         Min        Typ         Max         Unit
+
+  UIHigh_Rate                     Unit Interval for High Bit Rate (2.7Gbps/lane)                       370                     ps
+
+  UIHigh_Rate                     Unit Interval for High Bit Rate (1.62Gbps/lane)                      617                     ps
+
+  tRX-EYE_CONN                    Minimum Receiver Minimum Eye Width at Rx-side connect 0.51                                   UI
+                                  pins
+
+  tRX-EYE_CONN                    Minimum Receiver Minimum Eye Width at Rx package pins 0.47                                   UI
+
+  TRX-EYE-                        Maximum time between the jitter median and maximum                               0.265       UI
+  MEDIAN-to- MAX- ITTER_CHIP      deviation from the median at Rx package pins
+  LRX-SKEWINTER_ PAIR             Lane-to-Lane Skew at RX package pins                                             5200        ps
+  LRX-SKEWINTRA_ PAIR             Lane Intra-pair Skew at RX package pins                                          100         ps
+  High-Bit-Rate
+  LRX-SKEWINTRA_ PAIR             Lane Intra-pair Skew at RX package pins                                          300         ps
+  _Reduced-Bit- Rate
+
+  FRX-TRACKINGBW                  Jitter Tracking Bandwidth                                 20                                 MHz
+
+  UI                              AUX Unit Interval                                         0.4        0.5         0.6         us
+  TAUX-BUS-Pre-charge             Number of pre-charge pulse                                10                     16
+
+
+
+
+                                                                                                               Page 18 of 21
+                                                                                      CS5211
+                                                                                     Datasheet
+
+6 Package Specification
+Figure 6-1 CS5211 Package Outline (QFN68 Leads 8x8mm 2)
+
+
+
+
+Table 6-1 Package Dimension
+                                 Dimension in mm                    Dimension in inch
+       Symbol
+                         Min         Normal          Max    Min         Normal           Max
+
+          A               7.9           8             8.1   0.311        0.315           0.319
+          B               4.2          4.3            4.4   0.165        0.169           0.173
+          C               4.2          4.3            4.4   0.165        0.169           0.173
+          D                          0.40 BSC                          0.016BSC
+          E              0.15          0.20          0.25   0.006       0.0078          0.0098
+          F               0.3          0.4            0.5   0.012        0.016           0.020
+          G               0.8          0.85           0.9   0.031        0.033           0.035
+          H               0             —            0.05    0            —              0.002
+           I                         0.20 REF                          0.008 REF
+
+
+
+
+                                                                                   Page 19 of 21
+                                                                                                      CS5211
+                                                                                                     Datasheet
+
+7 Ordering Information
+The CS5211 can be ordered using the part numbers in Table 7-1. Please consult sales for further details.
+
+Table 7-1 CS5211 Ordering Information
+  Part No.           Description                       Temperature Range                 Packing Type
+  CS5211AN           68 Pin (QFN) Lead-free packages   Industrial : -40 to 85 degree C   Tray
+
+
+
+
+                                                                                                   Page 20 of 21
+                                                     CS5211
+                                                    Datasheet
+
+8 Revision History
+Table 8-1 Document Revision History
+  Revision       Date           Changes
+  Release 1      Sep. 2019      Initial version
+  Release 2      May 2020       Update
+  Release 3      June 2020      Update
+  Release 4      June 2020      Update
+
+
+
+
+                                                  Page 21 of 21
+

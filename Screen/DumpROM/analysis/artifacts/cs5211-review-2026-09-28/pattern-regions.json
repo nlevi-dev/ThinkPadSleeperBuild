@@ -1,0 +1,34 @@
+[
+  {
+    "channel": "Grey",
+    "x": 188,
+    "sample_width": 4,
+    "normal_y": 110,
+    "compensated_y": 160,
+    "band_height": 40
+  },
+  {
+    "channel": "Red",
+    "x": 188,
+    "sample_width": 4,
+    "normal_y": 235,
+    "compensated_y": 285,
+    "band_height": 40
+  },
+  {
+    "channel": "Green",
+    "x": 188,
+    "sample_width": 4,
+    "normal_y": 360,
+    "compensated_y": 410,
+    "band_height": 40
+  },
+  {
+    "channel": "Blue",
+    "x": 188,
+    "sample_width": 4,
+    "normal_y": 485,
+    "compensated_y": 535,
+    "band_height": 40
+  }
+]

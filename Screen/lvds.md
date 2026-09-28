@@ -96,15 +96,15 @@ And voilà, we have a picture! Both the datasheet and the dumped panel EDID work
 
 The 18-bit format is identical between VESA and JEIDA, and JEIDA 24-bit would also work since it is backwards compatible — it simply drops the least significant bits. The color artifacts are caused by bits being read in the wrong significance order. That's why pure solid colors like #FF0000 display correctly (bit significance doesn't matter when all bits are the same), but in-between colors are heavily skewed.
 
-The fix is to switch the firmware to JEIDA convention. The Chinese electronics forums — particularly CSDN — had the most useful material on this, but they're largely inaccessible without a Chinese phone number. Eventually got unblocked by having someone from Fiverr help navigate them. The key resource was a [comprehensive CSDN guide](https://blog.csdn.net/q5r6s7/article/details/153856405) on customizing CS5211 EEPROM firmware, translated in full: [csdn_CS5211.md](docs/csdn_CS5211.md). Combined with analysis of config tool output, the firmware format is now fully understood.
+The fix is to switch the firmware to JEIDA convention. The Chinese electronics forums — particularly CSDN — had the most useful material on this, but they're largely inaccessible without a Chinese phone number. Eventually got unblocked by having someone from Fiverr help navigate them. The key resource was a [comprehensive CSDN guide](https://blog.csdn.net/q5r6s7/article/details/153856405) on customizing CS5211 EEPROM firmware, translated in full: [csdn_CS5211.md](docs/csdn_CS5211.md). Combined with analysis of config tool output, the colour-format setting and the corresponding checksum values for this image are now identified.
 
 ## Firmware Format
 
 The 8 kB EEPROM image has two regions of interest:
 
-**EDID region (0x0000–0x07FF):** The first 1024 bytes are the EDID repeated 16 times — one copy per slot, since the CS5211 supports 16 EDID slots selectable by pin.
+**EDID region (0x0000–0x07FF):** The first 2048 bytes are the EDID repeated 16 times — one copy per slot, since the CS5211 supports 16 EDID slots selectable by pin.
 
-**Slot configuration region (0x1010–0x108F):** 16 slots × 16 bytes each. The layout per slot:
+**Slot configuration region (0x1010–0x110F):** 16 slots × 16 bytes each. The layout per slot:
 
 | Offset | Value | Meaning |
 |---|---|---|
@@ -120,7 +120,7 @@ The mode byte at offset +3 encodes both bit depth and VESA/JEIDA:
 | 8-bit JEIDA | `0x05` |
 | 8-bit VESA | `0x01` |
 
-**Firmware checksum (0x0FFA–0x0FFD):** A 4-byte big-endian checksum covering the non-EDID firmware body. The value is fixed per mode (all 16 slots uniform) and does not depend on the EDID content:
+**Firmware checksum (0x0FFA–0x0FFD):** A 4-byte big-endian checksum covering the non-EDID firmware body. The following values were obtained for this firmware template with all 16 slots uniform; they do not depend on the EDID content. They are not a general checksum formula for other firmware edits:
 
 | Mode | Checksum |
 |---|---|
@@ -158,3 +158,11 @@ Then flash:
 ```
 ./arduino.sh Screen/FlashROM
 ```
+
+## Firmware reverse-engineering evidence
+
+The [collected investigation](DumpROM/analysis/README.md) includes disassembly,
+configuration/register maps, an executable firmware model, CPU experiments and
+independent checks. The [solution retrospective](DumpROM/analysis/SOLUTION.md)
+connects the working edit to `XDATA 0x01E1.bit2`, explains the missing image
+validation in the emulator, and tests a checksum-difference hypothesis.
