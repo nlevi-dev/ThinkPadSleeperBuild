@@ -88,12 +88,7 @@ The pinout already reveals that this chip does not support EDID passthrough, so 
 
 ## Flashing the EDID
 
-To make the eDP source recognize the correct EDID, it needs to be flashed to the EEPROM. Patch the firmware first, then flash:
-
-```
-python Screen/DumpROM/patch_cs5211.py <firmware.txt> <edid.csv>
-./arduino.sh Screen/FlashROM
-```
+To make the eDP source recognize the correct EDID, it needs to be flashed to the EEPROM. See [Patching](#patching) below for the full process.
 
 ## Color Format Problem
 
@@ -101,16 +96,65 @@ And voilà, we have a picture! Both the datasheet and the dumped panel EDID work
 
 The 18-bit format is identical between VESA and JEIDA, and JEIDA 24-bit would also work since it is backwards compatible — it simply drops the least significant bits. The color artifacts are caused by bits being read in the wrong significance order. That's why pure solid colors like #FF0000 display correctly (bit significance doesn't matter when all bits are the same), but in-between colors are heavily skewed.
 
-The fix is to switch the firmware to JEIDA convention. According to the datasheet this should be possible, as should switching to 18-bit directly — though JEIDA 24-bit alone should already be sufficient. The problem is there's no public documentation for the firmware register map, so it's not clear how to do it.
+The fix is to switch the firmware to JEIDA convention. The Chinese electronics forums — particularly CSDN — had the most useful material on this, but they're largely inaccessible without a Chinese phone number. Eventually got unblocked by having someone from Fiverr help navigate them. The key resource was a [comprehensive CSDN guide](https://blog.csdn.net/q5r6s7/article/details/153856405) on customizing CS5211 EEPROM firmware, translated in full: [csdn_CS5211.md](docs/csdn_CS5211.md). Combined with analysis of config tool output, the firmware format is now fully understood.
 
-## The Chinese Forum Dead End
+## Firmware Format
 
-And here comes the curse of the Chinese forums. They got us this far, but going further is difficult. A lot of these forums use monetization locked behind a paywall AND a reputation system, and some even forbid registration without a Chinese phone number and address. So we are largely locked out, even though there are some very promising leads:
+The 8 kB EEPROM image has two regions of interest:
 
-- [csdn.net] Most comprehensive guide: [CS5211: how to customize the eDP to LVDS configuration with EEPROM tool](https://blog.csdn.net/q5r6s7/article/details/153856405) — a short [excerpt](docs/csdn_CS5211_1.md) of the beginning is very promising, and confirms the existence of a `CS5211_Config_Tool.exe` for generating firmware.
-- [chinafix.com] Another appearance of the config tool: [CS5211 Software Generation Tool](https://www.chinafix.com/thread-1399802-1-1.html).
-- [csdn.net] Another appearance: [CS5211 Software Generation Tool V2.6](https://blog.csdn.net/gitblog_06790/article/details/147208478).
-- [csdn.net] Another appearance: [CS5211 DP to LVDS Converter Configurator V2.6](https://wenku.csdn.net/doc/31qdjpkypr).
-- [bbs.16rd.com] The CS5518 (MIPI DSI to LVDS) config tool: [CS5518 Development Materials](https://bbs.16rd.com/thread-600349-1-1.html).
+**EDID region (0x0000–0x07FF):** The first 1024 bytes are the EDID repeated 16 times — one copy per slot, since the CS5211 supports 16 EDID slots selectable by pin.
 
-So close yet so far. CSDN is practically inaccessible — I tried hard to register but couldn't get past the Chinese phone number requirement. Chinafix seemed more promising since you can register without a phone number, and after paying about 1 EUR worth of yuan (which was a challenge in itself — only AliPay worked), I got the download points but was still short on reputation, so downloads were still blocked. The one thing I accidentally stumbled upon was the CS5518 config tool, which I could actually download. It's not the chip we need, but it may reveal something about the firmware format, so I'll play around with it.
+**Slot configuration region (0x1010–0x108F):** 16 slots × 16 bytes each. The layout per slot:
+
+| Offset | Value | Meaning |
+|---|---|---|
+| +0 | `0x01` | Dual-channel flag |
+| +3 | mode byte | Bit depth + LVDS mapping standard |
+
+The mode byte at offset +3 encodes both bit depth and VESA/JEIDA:
+
+| Mode | b3 |
+|---|---|
+| 6-bit JEIDA | `0x07` |
+| 6-bit VESA | `0x03` |
+| 8-bit JEIDA | `0x05` |
+| 8-bit VESA | `0x01` |
+
+**Firmware checksum (0x0FFA–0x0FFD):** A 4-byte big-endian checksum covering the non-EDID firmware body. The value is fixed per mode (all 16 slots uniform) and does not depend on the EDID content:
+
+| Mode | Checksum |
+|---|---|
+| 6-bit JEIDA | `0x5DA247C5` |
+| 6-bit VESA | `0x9C58E855` |
+| 8-bit JEIDA | `0xDA960552` |
+| 8-bit VESA | `0x1B6CAAC2` |
+
+Without the correct checksum the chip rejects the firmware entirely — this was the missing piece.
+
+## Patching
+
+[patch_cs5211.py](DumpROM/patch_cs5211.py) handles the full patch in one shot. The mode is set at the top of the script:
+
+```python
+MODE_8BIT = True
+MODE_VESA = False
+```
+
+Run it against the dumped firmware and an EDID CSV:
+
+```
+python Screen/DumpROM/patch_cs5211.py Screen/DumpROM/dump_CS5211.txt Screen/DumpROM/edid_dump_LTN141P4.csv
+```
+
+What it does:
+1. Fixes the EDID checksum byte (`0x7F`) before writing
+2. Detects how many EDID copies are at the start of the ROM and replaces all of them
+3. Writes the mode byte (`b3`) into all 16 slots at `0x1010`
+4. Writes the corresponding firmware checksum at `0x0FFA`
+5. Outputs a new file alongside the input, e.g. `dump_CS5211_patched_8bit_jeida.txt`
+
+Then flash:
+
+```
+./arduino.sh Screen/FlashROM
+```
